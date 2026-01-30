@@ -4,97 +4,201 @@ Track your bot performance and make data-driven decisions.
 
 ## Dashboard Overview
 
-The main dashboard shows:
-
-- **Total P&L** — Cumulative profit/loss
-- **Active Bots** — Running bot count
-- **Total Volume** — Trading volume generated
-- **Current Positions** — Open positions across all bots
-
-## Bot-Level Metrics
-
-### Performance Tab
+The main dashboard shows aggregate statistics:
 
 | Metric | Description |
 |--------|-------------|
-| P&L | Profit and loss (realized + unrealized) |
-| ROI | Return on investment percentage |
-| Volume | Total trading volume |
-| Trades | Number of executed trades |
-| Win Rate | Percentage of profitable trades |
+| **Total Volume** | All-time trading volume across all bots |
+| **Active Bots** | Number of currently running bots |
+| **Total Fees & PnL** | Cumulative profit/loss and fees paid |
 
-### Position Tab
+### Bot Filtering
 
-| Metric | Description |
+Filter your bots by status:
+- **All** — Show all bots
+- **Active** — Currently running bots
+- **Inactive** — Stopped or idle bots
+- **Completed** — Finished bots
+
+## Bot Detail View
+
+Click any bot to see detailed analytics.
+
+### Stats Cards
+
+At the top, you'll see key metrics:
+
+| Card | What It Shows | Color Coding |
+|------|---------------|--------------|
+| **Volume** | Total trading volume | — |
+| **Fees/PnL** | Net profit or loss | Green = profit, Red = loss |
+| **Progress** | Volume % of target | Progress bar |
+| **Budget Used** | Fees % of budget | Progress bar |
+
+### Balance Chart
+
+Shows your account balance over time.
+
+**How to read it:**
+- **Upward trend** — Account growing (good)
+- **Downward trend** — Account shrinking (investigate)
+- **Flat line** — No change (bot may be idle)
+
+**Timeframes:**
+- 5m, 15m, 1h, 4h, 1d, 1w
+
+Select shorter timeframes for recent activity, longer for trends.
+
+### Volume Chart
+
+Shows trading activity over time.
+
+**How to read it:**
+- **Tall bars** — High trading activity
+- **Short bars** — Low activity
+- **No bars** — Bot idle or no fills
+
+**Interpreting patterns:**
+- Consistent volume = bot running smoothly
+- Sudden drops = possible issues
+- Spikes = high market activity
+
+## Events Table
+
+Real-time log of bot activity.
+
+### Event Types
+
+| Event | Icon | Meaning |
+|-------|------|---------|
+| **order_placed** | 📤 | New order sent to exchange |
+| **order_filled** | ✅ | Order executed (trade complete) |
+| **order_canceled** | ❌ | Order removed from book |
+| **error** | 🔴 | Something went wrong |
+| **warning** | ⚠️ | Non-critical issue |
+
+### Event Details
+
+Each event shows:
+- **Timestamp** — When it happened
+- **Type** — What kind of event
+- **Side** — Buy (green) or Sell (red)
+- **Details** — Price, size, or error message
+
+### Using Events for Troubleshooting
+
+**If you see many `error` events:**
+1. Check the error message
+2. Verify exchange connectivity
+3. Check your balance
+4. Review bot configuration
+
+**If you see only `order_placed` but no `order_filled`:**
+- Orders aren't filling
+- Try more aggressive mode
+- Check if spread is too wide
+
+**If you see `order_canceled` frequently:**
+- Normal behavior — bot refreshes orders
+- High cancellation = active rebalancing
+
+## Trades Table
+
+History of executed trades.
+
+### Trade Columns
+
+| Column | Description |
 |--------|-------------|
-| Size | Current position size |
-| Entry Price | Average entry price |
-| Mark Price | Current market price |
-| Unrealized P&L | Floating profit/loss |
-| Liquidation Price | Price at which position liquidates |
+| **Order ID** | Unique trade identifier |
+| **Time** | When trade executed |
+| **Asset** | Trading pair (ETH, BTC, etc.) |
+| **Side** | Buy or Sell |
+| **Size** | Trade amount |
+| **Entry Price** | Price you entered at |
+| **Exit Price** | Price you exited at (if closed) |
+| **PnL** | Profit/loss on this trade |
+| **Status** | Open or Closed |
 
-### Orders Tab
+### Reading Trade History
 
-- Open orders (pending)
-- Order history
-- Fill rates
-- Cancellation reasons
+**Profitable trades:** PnL shows positive (green)
+**Losing trades:** PnL shows negative (red)
+**Open positions:** No exit price yet, PnL is unrealized
 
-## Analytics
+### Trade Statistics
 
-### Time-Based Analysis
+Aggregated stats from all trades:
+- Total buy volume
+- Total sell volume
+- Net PnL
+- Number of round trips
 
-View performance over:
-- 24 hours
-- 7 days
-- 30 days
-- All time
-- Custom range
+## Positions Table
 
-### Breakdown Views
+Current open positions.
 
-- By exchange
-- By market
-- By bot
-- By time period
+### Position Columns
 
-## Charts
+| Column | Description |
+|--------|-------------|
+| **Symbol** | Market (ETH-PERP, etc.) |
+| **Side** | Long or Short |
+| **Size** | Position size |
+| **Entry Price** | Average entry |
+| **Mark Price** | Current market price |
+| **Liq. Price** | Liquidation price |
+| **Unrealized PnL** | Floating profit/loss |
 
-### P&L Chart
-Track cumulative P&L over time. Look for:
-- Steady growth (good)
-- Large drawdowns (investigate)
-- Correlation with market moves
+### Understanding Liquidation Price
 
-### Position History
-Visualize position changes. Monitor:
-- Delta deviation patterns
-- Rebalancing frequency
-- Position size trends
+The **liquidation price** is where your position would be forcefully closed.
 
-### Funding Earned
-Track funding rate income:
-- Positive vs negative funding periods
-- Net funding P&L
-- Funding as % of total returns
+**For long positions:** Liq price is below entry
+**For short positions:** Liq price is above entry
 
-## Export Data
+**Safety margin:** Keep price far from liquidation. If mark price approaches liq price, reduce position or add margin.
 
-Export your data for external analysis:
+## Interpreting Performance
 
-1. Go to **Analytics → Export**
-2. Select date range
-3. Choose format (CSV, JSON)
-4. Download
+### Healthy Bot Signs
 
-## API Access
+- ✅ Steady balance growth
+- ✅ Regular order fills
+- ✅ Balanced buy/sell volume
+- ✅ Low error rate
+- ✅ Inventory staying near neutral
 
-For programmatic access:
+### Warning Signs
+
+- ⚠️ Balance declining
+- ⚠️ Many errors in events
+- ⚠️ No fills for extended period
+- ⚠️ Inventory building up (high delta)
+- ⚠️ Approaching liquidation price
+
+### What to Do If Performance Is Poor
+
+1. **Check events** for errors
+2. **Review inventory** — is it too skewed?
+3. **Adjust execution mode** — try more aggressive
+4. **Check market conditions** — low liquidity?
+5. **Review configuration** — parameters appropriate?
+
+## Refresh & Polling
+
+- Dashboard auto-refreshes every **30 seconds**
+- Click the refresh button for immediate update
+- Events and trades paginate (10 items per page)
+
+## API Endpoints
+
+Access monitoring data programmatically:
 
 ```
-GET /api/v1/bots/{botId}/stats
-GET /api/v1/bots/{botId}/positions
-GET /api/v1/bots/{botId}/orders
+GET /api/v1/bots/{instanceId}/report/balance
+GET /api/v1/bots/{instanceId}/report/volume
+GET /api/v1/bots/{instanceId}/positions
 ```
 
-See API documentation for full details.
+See [API Reference](../reference/api.md) for details.
