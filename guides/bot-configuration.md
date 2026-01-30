@@ -2,97 +2,203 @@
 
 Fine-tune your Arbital bot for optimal performance.
 
+## Strategy Types
+
+Arbital supports two market-making strategies:
+
+### TWAP (Time-Weighted Average Price)
+
+Spreads orders over time to reduce market impact. Best for consistent execution.
+
+**Use when:**
+- You want steady, predictable execution
+- Trading larger positions
+- Market conditions are relatively stable
+
+### Grid Market Maker
+
+Places orders at fixed price intervals to profit from oscillation. Best for ranging markets.
+
+**Use when:**
+- Price is expected to oscillate within a range
+- You want to capture small price movements
+- Market is not trending strongly
+
 ## Core Parameters
 
-### Spread
+### Notional (TWAP)
 
-The distance from mid-price where orders are placed.
+The total USD value to trade, split between buy and sell orders (unless biased).
 
-| Spread | Risk | Reward | Best For |
-|--------|------|--------|----------|
-| 0.02-0.05% | Higher | Lower | High volume, tight markets |
-| 0.05-0.1% | Medium | Medium | Most users |
-| 0.1-0.2% | Lower | Higher | Volatile markets |
+| Setting | Description |
+|---------|-------------|
+| Small ($100-500) | Lower risk, suitable for testing |
+| Medium ($500-2000) | Balanced approach |
+| Large ($2000+) | Higher volume, more reward potential |
 
-### Order Size
+### Bias
 
-How much capital per order level.
+Directional preference from -1 (full short) to +1 (full long).
 
-**Rule of thumb:** 1-5% of total balance per order
+| Bias | Value | Behavior |
+|------|-------|----------|
+| **Short** | -1.0 | 100% sell orders, profits from price drops |
+| **Slight Short** | -0.5 | 75% sell, 25% buy |
+| **Neutral** | 0 | 50% buy, 50% sell (delta-neutral) |
+| **Slight Long** | +0.5 | 75% buy, 25% sell |
+| **Long** | +1.0 | 100% buy orders, profits from price increases |
 
-- Too small: Inefficient, many orders needed
-- Too large: Concentration risk, harder to fill
+**Margin Impact:** Higher bias increases margin requirement by up to 20%.
 
-### Layers
+## Execution Modes
 
-Number of order levels on each side.
+Control how frequently your bot refreshes orders:
 
-| Layers | Use Case |
+| Mode | Refresh Interval | Spread Offset | Max Skew Offset | Best For |
+|------|------------------|---------------|-----------------|----------|
+| **Aggressive** | 3 seconds | 0.1 bps | 5 bps | High-volatility, rapid response |
+| **Normal** | 5 seconds | 0.2 bps | 10 bps | Standard operation |
+| **Passive** | 7 seconds | 0.4 bps | 15 bps | Low-volatility, cost savings |
+
+**Trade-offs:**
+- More aggressive = faster response but higher gas/fees
+- More passive = lower costs but slower adaptation
+
+## Inventory Management
+
+Control your position exposure to manage risk.
+
+### Max Inventory (USD)
+
+Hard limit on directional exposure. When reached:
+- **At max long:** Bot only places sell orders
+- **At max short:** Bot only places buy orders
+
+| Setting | Range | Use Case |
+|---------|-------|----------|
+| Conservative | $100-500 | Lower risk, tighter control |
+| Moderate | $500-2000 | Balanced approach |
+| Aggressive | $2000+ | Higher exposure tolerance |
+
+**Default:** $2,000 USD
+
+### Inventory Skew Factor
+
+How aggressively the bot rebalances when inventory builds up.
+
+| Factor | Behavior |
 |--------|----------|
-| 1-2 | Simple, concentrated |
-| 3-5 | Balanced (recommended) |
-| 5-10 | Wide coverage, volatile markets |
+| **0%** | No adjustment (50/50 buy/sell regardless of inventory) |
+| **30%** | Lazy drift (Passive mode default) |
+| **50%** | Moderate rebalancing (Normal mode default) |
+| **70%** | Strong rebalancing (Aggressive mode default) |
+| **100%** | Full adjustment (0% on one side at max inventory) |
 
-## Advanced Parameters
+## Grid Strategy Parameters
 
-### Rebalance Threshold
+For Grid Market Maker strategy:
 
-When delta deviation triggers rebalancing.
+| Parameter | Range | Description |
+|-----------|-------|-------------|
+| **Levels per Side** | 1-20 | Number of buy/sell orders on each side |
+| **Spacing (%)** | 0.1-10% | Price distance between grid levels |
+| **Order Size (USD)** | Up to $100,000 | USD per order per level |
+| **Boundary (%)** | 0.5-50% | Stop-loss trigger distance from start price |
 
-- **5%**: Frequent rebalancing, tighter control
-- **10%**: Balanced approach
-- **20%**: Less frequent, lower costs
+**Total Capital Required:** `order_size × levels_per_side × 2`
 
-### Max Position
+### Grid Presets
 
-Hard limit on position size.
+**Tight Grid (ranging markets):**
+```
+Levels: 8 per side
+Spacing: 0.25%
+Order Size: $50
+Boundary: 2%
+Capital Needed: $800
+```
 
-Set based on:
-- Available collateral
-- Risk tolerance
-- Market liquidity
-
-### Cooldown Period
-
-Minimum time between bot actions.
-
-- **10-30s**: Aggressive, higher gas costs
-- **30-60s**: Balanced
-- **60s+**: Conservative, lower costs
+**Wide Grid (volatile markets):**
+```
+Levels: 5 per side
+Spacing: 1.0%
+Order Size: $200
+Boundary: 5%
+Capital Needed: $2,000
+```
 
 ## Configuration Examples
 
-### Conservative
+### Conservative TWAP
 ```
-Spread: 0.15%
-Order Size: 2% of balance
-Layers: 3
-Rebalance: 15%
-Cooldown: 60s
-```
-
-### Balanced
-```
-Spread: 0.08%
-Order Size: 3% of balance
-Layers: 4
-Rebalance: 10%
-Cooldown: 30s
+Notional: $500
+Bias: 0 (Neutral)
+Mode: Passive
+Max Inventory: $500
+Skew Factor: 30%
 ```
 
-### Aggressive
+### Balanced TWAP
 ```
-Spread: 0.04%
-Order Size: 5% of balance
-Layers: 5
-Rebalance: 5%
-Cooldown: 15s
+Notional: $1,500
+Bias: 0 (Neutral)
+Mode: Normal
+Max Inventory: $2,000
+Skew Factor: 50%
+```
+
+### Aggressive TWAP
+```
+Notional: $5,000
+Bias: 0 (Neutral)
+Mode: Aggressive
+Max Inventory: $2,000
+Skew Factor: 70%
+```
+
+### Directional Long
+```
+Notional: $2,000
+Bias: +0.5 (Slight Long)
+Mode: Normal
+Max Inventory: $3,000
+Skew Factor: 50%
 ```
 
 ## Editing Configuration
 
-1. **Pause** the bot first
-2. Click **Edit Configuration**
-3. Modify parameters
-4. **Review changes**
-5. **Resume** the bot
+Bot configuration can only be modified when the bot is in certain states:
+
+| State | Can Edit? |
+|-------|-----------|
+| Idle | Yes |
+| Stopped | Yes |
+| Failed | Yes |
+| Completed | No (create new bot) |
+| Pending | No |
+| Running | No (stop first) |
+| Stopping | No |
+
+**To edit a running bot:**
+1. Stop the bot from the dashboard
+2. Wait for status to change to "Stopped"
+3. Click **Edit Configuration**
+4. Modify parameters
+5. Start the bot again
+
+## Validation Rules
+
+### TWAP Validation
+- Notional: Required, must be > 0
+- Mode: Must be "aggressive", "normal", or "passive"
+- Bias: Must be between -1.0 and +1.0
+- Budget: Must be between $0 and $1,000,000
+- Max Inventory: Must be between $0 and $100,000
+- Skew Factor: Must be between 0.0 and 1.0
+
+### Grid Validation
+- Levels per Side: 1-20
+- Spacing: 0.1% to 10%
+- Order Size: > $0 and ≤ $100,000
+- Boundary: 0.5% to 50%
+- Max Duration: ≥ 60 seconds (if set)

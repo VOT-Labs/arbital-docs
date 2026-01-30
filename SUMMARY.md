@@ -15,17 +15,21 @@
 ## Exchanges
 
 * [Overview](exchanges/overview.md)
-* [Lighter (Solana)](exchanges/lighter.md)
+* [Lighter](exchanges/lighter.md)
 * [Pacifica](exchanges/pacifica.md)
-* [Hyperliquid](exchanges/hyperliquid.md)
+* [Extended (Hyperliquid)](exchanges/extended.md)
 
 ## Guides
 
 * [Bot Configuration](guides/bot-configuration.md)
+* [Grid Strategy](guides/grid-strategy.md)
 * [Risk Management](guides/risk-management.md)
 * [Monitoring & Analytics](guides/monitoring.md)
+* [Troubleshooting](guides/troubleshooting.md)
+* [Security Best Practices](guides/security.md)
 
 ## Reference
 
+* [API Reference](reference/api.md)
 * [Glossary](reference/glossary.md)
 * [FAQ](faq.md)
