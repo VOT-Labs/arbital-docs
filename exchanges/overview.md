@@ -4,45 +4,98 @@ Arbital integrates with leading perpetual DEXs across multiple chains.
 
 ## Currently Supported
 
-| Exchange | Chain | Status | Features |
-|----------|-------|--------|----------|
-| [Lighter](lighter.md) | Solana | Live | Full support |
-| [Pacifica](pacifica.md) | — | Live | Full support |
-| [Hyperliquid](hyperliquid.md) | L1 | Live | Full support |
-| Aster | — | Beta | Limited |
-| Hibachi | — | Beta | Limited |
-| Based App | Base | Beta | Limited |
+| Exchange | Chain | Wallet | Min Balance | Status |
+|----------|-------|--------|-------------|--------|
+| [Lighter](lighter.md) | EVM | MetaMask, WalletConnect | None | **Live** |
+| [Pacifica](pacifica.md) | Solana | Phantom, Solflare | $20 | **Live** |
+| [Extended](extended.md) | EVM (Hyperliquid) | MetaMask, WalletConnect | $20 | **Live** |
+
+## Exchange Comparison
+
+| Feature | Lighter | Pacifica | Extended |
+|---------|---------|----------|----------|
+| **Setup Complexity** | Simple | Medium | Simple |
+| **Fee Range** | 0.02-0.03% | 0.035-0.045% | 0.03-0.04% |
+| **Referral Required** | No | Yes | No |
+| **Min Balance** | None | $20 | $20 |
+| **Credential Type** | EVM Signature | Solana Agent | EVM Signature |
 
 ## Exchange Selection Guide
 
-**For beginners:** Start with Lighter — user-friendly, good liquidity, Solana-native.
+### For Beginners
+**Lighter** — Simplest setup, no minimum balance, low fees.
 
-**For high volume:** Hyperliquid — deep liquidity, fast execution, established.
+### For Solana Users
+**Pacifica** — Native Solana integration, fast transactions, points program.
 
-**For points farming:** Check current incentive programs on each exchange.
+### For High Volume
+**Extended (Hyperliquid)** — Deep liquidity, wide market selection, established platform.
 
-## API Key Requirements
+### For Points Farming
+Check current incentive programs on each exchange:
+- Pacifica has an active points program
+- Extended/Hyperliquid has a points program
+- Monitor announcements for seasonal campaigns
 
-All exchanges require API keys with:
-- **Read** — View balances and positions
-- **Trade** — Place and cancel orders
+## Credential Binding
 
-{% hint style="danger" %}
-Never enable withdrawal permissions on API keys used with Arbital.
-{% endhint %}
+Arbital uses secure credential binding instead of storing API keys:
 
-## Adding a New Exchange
+### How It Works
+1. Connect your wallet to Arbital
+2. Sign an authentication message
+3. Your wallet address is linked to trading permissions
+4. No private keys or API secrets are ever stored
 
-1. Go to **Settings → Exchanges**
-2. Click **Add Exchange**
-3. Select the exchange
-4. Follow exchange-specific setup instructions
-5. Enter API credentials
-6. Click **Verify & Save**
+### Security Benefits
+- **Non-custodial** — Your funds stay in your exchange account
+- **No key exposure** — Private keys never leave your wallet
+- **Trading only** — No withdrawal permissions granted
+- **Revocable** — Unbind credentials anytime from the dashboard
+
+## Available Markets
+
+All exchanges support trading on these markets:
+
+| Market | Description |
+|--------|-------------|
+| BTC | Bitcoin perpetual |
+| ETH | Ethereum perpetual |
+| SOL | Solana perpetual |
+| DOGE | Dogecoin perpetual |
+| XRP | Ripple perpetual |
+| LINK | Chainlink perpetual |
+| HYPE | Hyperliquid perpetual |
+| AAVE | Aave perpetual |
+| VIRTUAL | Virtual perpetual |
+| XPL | XPL perpetual |
+| ASTER | Aster perpetual |
 
 ## Coming Soon
 
-- dYdX v4
-- GMX
-- Vertex
-- More Solana perps
+Arbital is continuously expanding exchange support:
+
+- Aster
+- Hibachi
+- Based App
+- Additional perpetual DEXs
+
+## Troubleshooting
+
+### Exchange Not Connecting
+1. Ensure your wallet is on the correct network
+2. Try disconnecting and reconnecting
+3. Clear browser cache and reload
+4. Check the exchange's status page
+
+### Credential Binding Failed
+1. Make sure you signed the message in your wallet
+2. Check you have sufficient balance (if required)
+3. For Pacifica, complete referral approval first
+4. Try the process again
+
+### Balance Not Syncing
+1. Wait 10-15 seconds for balance to update
+2. Refresh the page
+3. Verify funds on the exchange directly
+4. Check network status for delays

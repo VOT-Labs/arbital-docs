@@ -4,55 +4,87 @@ Quick reference for terms used throughout Arbital documentation.
 
 ## A
 
-**API Key** — Credential for programmatic access to exchange features.
+**Agent Binding** — Solana-specific process for linking wallet credentials to Arbital. Used on Pacifica exchange.
+
+**Aggressive Mode** — Execution mode with 3-second refresh intervals. Fastest response to market changes, higher costs.
 
 ## B
 
-**Basis** — The difference between spot and futures prices.
+**Bias** — Directional preference from -1 (full short) to +1 (full long). A bias of 0 is neutral/delta-neutral.
 
-**Bot** — Automated trading program that executes your strategy.
+**Boundary** — In grid trading, the price distance from start that triggers a stop-loss.
+
+**Bot** — Automated trading program that executes your strategy on an exchange.
 
 ## C
 
 **Collateral** — Assets deposited as margin for trading positions.
 
-**Cooldown** — Minimum time between bot actions.
+**Credential Binding** — Process of securely linking exchange API access to your wallet via message signature. No private keys are stored.
 
 ## D
 
 **Delta** — Measure of position's directional exposure to price changes.
 
-**Delta-Neutral** — Strategy with zero net directional exposure.
+**Delta-Neutral** — Strategy with zero net directional exposure. Profits from fees and spreads rather than price direction.
+
+## E
+
+**Execution Mode** — How frequently the bot refreshes orders: Aggressive (3s), Normal (5s), or Passive (7s).
+
+**Extended** — Arbital's internal name for the Hyperliquid exchange integration.
 
 ## F
 
-**Funding Rate** — Periodic payment between long and short position holders.
+**Funding Rate** — Periodic payment between long and short position holders on perpetual futures.
 
-## H
+## G
 
-**Hedge** — Position taken to offset risk from another position.
+**Grid Market Maker** — Strategy that places orders at fixed price intervals to profit from oscillation.
+
+**Grid Spacing** — Percentage distance between price levels in a grid strategy.
+
+## I
+
+**Inventory** — Your current position exposure, measured in USD.
+
+**Inventory Skew Factor** — How aggressively the bot rebalances when inventory builds up. 0% = no adjustment, 100% = maximum adjustment.
 
 ## L
 
 **Leverage** — Trading with borrowed capital to amplify position size.
 
-**Liquidation** — Forced closure of position when margin is insufficient.
+**Lighter** — Supported exchange using EVM wallet for credential binding.
 
-**Liquidity** — Ease of buying/selling without significant price impact.
+**Liquidation** — Forced closure of position when margin is insufficient.
 
 ## M
 
 **Maker** — Trader who adds liquidity by placing limit orders.
 
-**Market Making** — Providing liquidity by quoting both buy and sell prices.
+**Market Making** — Providing liquidity by quoting both buy and sell prices, profiting from the spread.
 
-**Mark Price** — Fair price used for P&L and liquidation calculations.
+**Max Inventory** — Hard limit on directional position exposure in USD. When reached, bot only places orders to reduce position.
+
+**Mode** — See "Execution Mode".
+
+## N
+
+**Normal Mode** — Execution mode with 5-second refresh intervals. Balanced approach for most conditions.
+
+**Notional** — The total USD value to trade in a TWAP strategy, split between buy and sell orders based on bias.
 
 ## O
 
-**Order Book** — List of buy and sell orders at various prices.
+**Order Book** — List of buy and sell orders at various prices on an exchange.
 
 ## P
+
+**Pacifica** — Supported exchange on Solana requiring referral approval and agent binding.
+
+**Passive Mode** — Execution mode with 7-second refresh intervals. Slower response, lower costs.
+
+**Pending** — Bot state when queued and connecting to exchange before running.
 
 **Perpetual Futures (Perps)** — Futures contracts with no expiration date.
 
@@ -60,23 +92,31 @@ Quick reference for terms used throughout Arbital documentation.
 
 ## R
 
-**Rebalancing** — Adjusting positions to maintain target allocation or delta.
+**Reduce-Only** — Mode where bot only places orders to reduce existing positions, not increase them.
 
-**ROI** — Return on Investment, profit as percentage of capital.
+**Refresh Interval** — How often the bot re-evaluates and adjusts orders based on execution mode.
+
+**Round Trip** — In grid trading, a completed buy→sell or sell→buy cycle that captures profit.
 
 ## S
+
+**Skew Factor** — See "Inventory Skew Factor".
 
 **Slippage** — Difference between expected and actual execution price.
 
 **Spread** — Difference between best bid and ask prices.
 
+**Strategy** — The trading approach: TWAP Market Maker or Grid Market Maker.
+
 ## T
 
 **Taker** — Trader who removes liquidity by taking existing orders.
 
+**TWAP** — Time-Weighted Average Price. Strategy that spreads orders over time to reduce market impact.
+
 ## U
 
-**Unrealized P&L** — Profit/loss on open positions (not yet closed).
+**Unrealized P&L** — Profit/loss on open positions that hasn't been locked in by closing.
 
 ## V
 
@@ -84,4 +124,4 @@ Quick reference for terms used throughout Arbital documentation.
 
 ## W
 
-**Wallet** — Digital wallet holding your cryptocurrency assets.
+**Wallet** — Digital wallet (EVM or Solana) used for authentication and credential binding.
