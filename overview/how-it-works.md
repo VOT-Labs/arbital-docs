@@ -4,6 +4,15 @@ Arbital automates market-making strategies across perpetual DEXs, helping you ea
 
 ## The Core Loop
 
+```mermaid
+flowchart LR
+    A[Connect Wallet] --> B[Bind Credentials]
+    B --> C[Configure Bot]
+    C --> D[Bot Executes]
+    D --> E[Earn Rewards]
+    E --> D
+```
+
 1. **Connect Wallet** — Link your EVM or Solana wallet
 2. **Bind Credentials** — Securely link exchange API access via signature
 3. **Configure Bot** — Choose strategy, bias, execution mode, and budget
@@ -40,11 +49,11 @@ Places orders at fixed price intervals to profit from oscillation.
 
 Control your directional exposure:
 
-```
-Full Short ←——————————————→ Full Long
-   -1.0    -0.5    0    +0.5    +1.0
-           ↑
-      Neutral (delta-neutral)
+```mermaid
+flowchart LR
+    subgraph Bias Scale
+        A["-1.0<br/>Full Short"] --- B["-0.5"] --- C["0<br/>Neutral"] --- D["+0.5"] --- E["+1.0<br/>Full Long"]
+    end
 ```
 
 | Bias | Strategy | Market View |
@@ -55,16 +64,18 @@ Full Short ←——————————————→ Full Long
 
 ## Bot Lifecycle
 
-```
-┌──────┐      ┌─────────┐      ┌─────────┐      ┌─────────┐
-│ IDLE │ ───► │ PENDING │ ───► │ RUNNING │ ───► │STOPPING │
-└──────┘      └─────────┘      └─────────┘      └─────────┘
-                   │               │                │
-                   │               │                │
-                   ▼               ▼                ▼
-              ┌──────────┐   ┌───────────┐    ┌─────────┐
-              │  FAILED  │   │ COMPLETED │    │ STOPPED │
-              └──────────┘   └───────────┘    └─────────┘
+```mermaid
+stateDiagram-v2
+    [*] --> Idle: Create Bot
+    Idle --> Pending: Start
+    Pending --> Running: Connected
+    Pending --> Failed: Error
+    Running --> Stopping: Stop
+    Running --> Completed: Target Reached
+    Running --> Failed: Error
+    Stopping --> Stopped: Done
+    Stopped --> Pending: Restart
+    Failed --> Pending: Retry
 ```
 
 | State | Description | Actions Available |
@@ -79,30 +90,35 @@ Full Short ←——————————————→ Full Long
 
 ## Architecture Overview
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                      USER DASHBOARD                          │
-│                     (arbital.xyz)                           │
-└─────────────────────────┬───────────────────────────────────┘
-                          │
-                          ▼
-┌─────────────────────────────────────────────────────────────┐
-│                      BACKEND API                             │
-│              (Bot orchestration, Auth)                       │
-└─────────────────────────┬───────────────────────────────────┘
-                          │
-          ┌───────────────┼───────────────┐
-          ▼               ▼               ▼
-    ┌──────────┐    ┌──────────┐    ┌──────────┐
-    │  Lighter │    │ Pacifica │    │ Extended │
-    │   Bot    │    │   Bot    │    │   Bot    │
-    └──────────┘    └──────────┘    └──────────┘
-          │               │               │
-          ▼               ▼               ▼
-    ┌──────────┐    ┌──────────┐    ┌──────────┐
-    │ Exchange │    │ Exchange │    │ Exchange │
-    │   API    │    │   API    │    │   API    │
-    └──────────┘    └──────────┘    └──────────┘
+```mermaid
+flowchart TB
+    subgraph User
+        A[User Dashboard<br/>arbital.xyz]
+    end
+
+    subgraph Backend
+        B[Backend API<br/>Auth & Orchestration]
+    end
+
+    subgraph Bots
+        C1[Lighter Bot]
+        C2[Pacifica Bot]
+        C3[Extended Bot]
+    end
+
+    subgraph Exchanges
+        D1[Lighter API]
+        D2[Pacifica API]
+        D3[Hyperliquid API]
+    end
+
+    A --> B
+    B --> C1
+    B --> C2
+    B --> C3
+    C1 --> D1
+    C2 --> D2
+    C3 --> D3
 ```
 
 ## Non-Custodial Model
@@ -125,6 +141,15 @@ Control how responsive your bot is:
 | **Passive** | Every 7 seconds | Slower response, lower costs |
 
 ## Inventory Management
+
+```mermaid
+flowchart LR
+    A[Track Delta] --> B{At Max<br/>Inventory?}
+    B -->|No| C[Normal Trading<br/>Buy & Sell]
+    B -->|Yes| D[Reduce Only<br/>Close Positions]
+    C --> A
+    D --> A
+```
 
 The bot automatically manages your position exposure:
 

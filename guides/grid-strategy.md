@@ -6,14 +6,27 @@ A comprehensive guide to the Grid Market Maker strategy.
 
 Grid trading places buy and sell orders at preset price intervals, creating a "grid" of orders. When price oscillates within the grid, orders fill and you profit from the spread.
 
-```
-SELL ───────────────── $2,050  (Level 3)
-SELL ───────────────── $2,025  (Level 2)
-SELL ───────────────── $2,000  (Level 1)
-      ═══════════════ $1,975  ← Current Price
-BUY  ───────────────── $1,950  (Level 1)
-BUY  ───────────────── $1,925  (Level 2)
-BUY  ───────────────── $1,900  (Level 3)
+```mermaid
+flowchart TB
+    subgraph Grid["Grid Structure"]
+        S3["SELL $2,050 (Level 3)"]
+        S2["SELL $2,025 (Level 2)"]
+        S1["SELL $2,000 (Level 1)"]
+        CP[/"Current Price $1,975"/]
+        B1["BUY $1,950 (Level 1)"]
+        B2["BUY $1,925 (Level 2)"]
+        B3["BUY $1,900 (Level 3)"]
+    end
+
+    S3 --- S2 --- S1 --- CP --- B1 --- B2 --- B3
+
+    style S3 fill:#ff6b6b,color:#fff
+    style S2 fill:#ff6b6b,color:#fff
+    style S1 fill:#ff6b6b,color:#fff
+    style CP fill:#ffd93d,color:#000
+    style B1 fill:#6bcb77,color:#fff
+    style B2 fill:#6bcb77,color:#fff
+    style B3 fill:#6bcb77,color:#fff
 ```
 
 ## How It Works
