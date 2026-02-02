@@ -17,10 +17,15 @@ Arbital enables users to create and manage autonomous trading bots that farm poi
 
 ## Quick Links
 
-- [Getting Started](getting-started/quick-start.md) — Set up your first bot in minutes
-- [Supported Exchanges](exchanges/overview.md) — See all integrated platforms
-- [Bot Configuration](guides/bot-configuration.md) — Customize your trading parameters
-- [FAQ](faq.md) — Common questions answered
+<table data-view="cards">
+<thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead>
+<tbody>
+<tr><td>🚀 <strong>Create Your First Bot</strong><br>Get started in under 10 minutes</td><td><a href="getting-started/create-first-bot.md">create-first-bot.md</a></td></tr>
+<tr><td>🔗 <strong>Connect Wallet</strong><br>Link your Web3 wallet securely</td><td><a href="getting-started/connect-wallet.md">connect-wallet.md</a></td></tr>
+<tr><td>📊 <strong>Supported Exchanges</strong><br>Lighter, Pacifica, Hyperliquid & more</td><td><a href="exchanges/overview.md">overview.md</a></td></tr>
+<tr><td>📖 <strong>API Reference</strong><br>Integrate programmatically</td><td><a href="reference/api.md">api.md</a></td></tr>
+</tbody>
+</table>
 
 ## Need Help?
 
