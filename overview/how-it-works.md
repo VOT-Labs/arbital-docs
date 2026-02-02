@@ -90,36 +90,65 @@ stateDiagram-v2
 
 ## Architecture Overview
 
+Arbital is built on a modern, scalable stack designed for high-frequency trading operations.
+
 ```mermaid
 flowchart TB
-    subgraph User
-        A[User Dashboard<br/>arbital.xyz]
+    subgraph Client["👤 Client Layer"]
+        U[User Browser]
     end
 
-    subgraph Backend
-        B[Backend API<br/>Auth & Orchestration]
+    subgraph Frontend["🌐 Frontend · Vercel"]
+        FE[Next.js Dashboard<br/>arbital.xyz]
     end
 
-    subgraph Bots
-        C1[Lighter Bot]
-        C2[Pacifica Bot]
-        C3[Extended Bot]
+    subgraph Backend["⚙️ Backend · DigitalOcean"]
+        API[NestJS API<br/>Auth & Orchestration]
+        REDIS[(Redis<br/>Cache & Sessions)]
+        CH[(ClickHouse<br/>Analytics & Metrics)]
     end
 
-    subgraph Exchanges
-        D1[Lighter API]
-        D2[Pacifica API]
-        D3[Hyperliquid API]
+    subgraph BotEngine["🤖 Bot Engine · Kubernetes"]
+        BOT[Dex-Bot-V2<br/>Rust Trading Engine]
+        B1[Lighter Bot Pod]
+        B2[Pacifica Bot Pod]
+        B3[Extended Bot Pod]
     end
 
-    A --> B
-    B --> C1
-    B --> C2
-    B --> C3
-    C1 --> D1
-    C2 --> D2
-    C3 --> D3
+    subgraph DEX["📊 Exchanges"]
+        E1[Lighter<br/>EVM Perps]
+        E2[Pacifica<br/>Solana Perps]
+        E3[Hyperliquid<br/>L1 Perps]
+    end
+
+    U --> FE
+    FE <--> API
+    API <--> REDIS
+    API --> CH
+    API <--> BOT
+    BOT --> B1 & B2 & B3
+    B1 <-->|WebSocket| E1
+    B2 <-->|WebSocket| E2
+    B3 <-->|WebSocket| E3
 ```
+
+### Component Breakdown
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Frontend** | Next.js 15, React 18 | User dashboard, bot management UI |
+| **Backend** | NestJS 11 | API, authentication, bot orchestration |
+| **Bot Engine** | Rust, Tokio | High-performance order execution |
+| **Data** | ClickHouse, Redis | Analytics storage, session caching |
+| **Infrastructure** | Vercel, K8s, DigitalOcean | Scalable cloud deployment |
+
+### Data Flow
+
+1. **User Actions** → Frontend sends requests to Backend API
+2. **Bot Commands** → Backend orchestrates bot lifecycle via K8s
+3. **Trade Execution** → Rust bots maintain WebSocket connections to exchanges
+4. **Metrics** → Trading data streams to ClickHouse for analytics
+5. **Real-time Updates** → Dashboard polls API for live bot status
 
 ## Non-Custodial Model
 
