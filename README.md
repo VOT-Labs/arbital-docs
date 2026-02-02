@@ -1,5 +1,9 @@
 # Arbital Documentation
 
+{% hint style="warning" %}
+**Risk Warning:** Trading perpetual futures involves significant risk of loss. Past performance does not guarantee future results. Only trade with funds you can afford to lose. [Read full risk disclosure →](legal/risk-disclosure.md)
+{% endhint %}
+
 Welcome to the official documentation for **Arbital** — an automated delta-neutral market-making platform for perpetual DEXs.
 
 ## What is Arbital?

@@ -2,6 +2,10 @@
 
 Get your first Arbital bot running in under 10 minutes.
 
+{% hint style="info" %}
+**Before you begin:** Please review our [Risk Disclosure](../legal/risk-disclosure.md) to understand the risks associated with automated trading.
+{% endhint %}
+
 ## Prerequisites
 
 - A Web3 wallet (MetaMask for EVM, Phantom for Solana)

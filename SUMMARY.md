@@ -33,3 +33,7 @@
 * [API Reference](reference/api.md)
 * [Glossary](reference/glossary.md)
 * [FAQ](faq.md)
+
+## Legal
+
+* [Risk Disclosure](legal/risk-disclosure.md)
