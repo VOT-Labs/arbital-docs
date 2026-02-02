@@ -202,3 +202,7 @@ Bot configuration can only be modified when the bot is in certain states:
 - Order Size: > $0 and ≤ $100,000
 - Boundary: 0.5% to 50%
 - Max Duration: ≥ 60 seconds (if set)
+
+---
+
+*Last updated: 2026-02-02*

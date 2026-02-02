@@ -202,3 +202,7 @@ GET /api/v1/bots/{instanceId}/positions
 ```
 
 See [API Reference](../reference/api.md) for details.
+
+---
+
+*Last updated: 2026-02-02*

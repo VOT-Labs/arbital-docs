@@ -112,3 +112,7 @@ The credential binding process:
 - Pacifica's points program can provide additional rewards
 - Monitor Solana network status during high congestion periods
 - Keep extra USDC for trading fees and margin requirements
+
+---
+
+*Last updated: 2026-02-02*

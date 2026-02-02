@@ -105,3 +105,7 @@ Closing all positions uses market orders and may incur significant slippage in v
 3. **Monitor actively** — Especially in the first few days
 4. **Set alerts** — Don't rely on manual checking
 5. **Have a plan** — Know what you'll do in various scenarios
+
+---
+
+*Last updated: 2026-02-02*

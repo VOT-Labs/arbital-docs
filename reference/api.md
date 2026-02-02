@@ -521,3 +521,7 @@ Subscribe to bot events:
 - `bot.stopped`
 - `bot.error`
 - `trade.executed`
+
+---
+
+*Last updated: 2026-02-02*

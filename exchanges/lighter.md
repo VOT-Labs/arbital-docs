@@ -92,3 +92,7 @@ Lighter offers competitive maker fees, making it ideal for market-making strateg
 - Lighter's low fees make it excellent for frequent trading
 - Start with smaller positions to test your strategy
 - Monitor your positions through both Arbital and Lighter dashboards
+
+---
+
+*Last updated: 2026-02-02*

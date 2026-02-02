@@ -99,3 +99,7 @@ Arbital is continuously expanding exchange support:
 2. Refresh the page
 3. Verify funds on the exchange directly
 4. Check network status for delays
+
+---
+
+*Last updated: 2026-02-02*

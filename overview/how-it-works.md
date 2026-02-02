@@ -159,3 +159,7 @@ The bot automatically manages your position exposure:
 4. **Reduce-only mode** — Only closes positions when limits exceeded
 
 This keeps your exposure controlled without manual intervention.
+
+---
+
+*Last updated: 2026-02-02*

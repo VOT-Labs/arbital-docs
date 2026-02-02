@@ -32,3 +32,7 @@ Arbital enables users to create and manage autonomous trading bots that farm poi
 - **Discord** — Join our community (coming soon)
 - **Telegram** — Beta support channel
 - **Website** — [arbital.xyz](https://arbital.xyz)
+
+---
+
+*Last updated: 2026-02-02*

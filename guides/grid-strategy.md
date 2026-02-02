@@ -266,3 +266,7 @@ Plus margin for positions that fill.
    - Grid works best in ranging markets
    - If market starts trending, let boundary stop protect you
    - Re-evaluate before restarting
+
+---
+
+*Last updated: 2026-02-02*

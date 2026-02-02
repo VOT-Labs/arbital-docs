@@ -150,3 +150,7 @@ After connecting your wallet, you'll bind exchange credentials:
 - Each wallet address = separate Arbital account
 - Bots and settings don't transfer between wallets
 - Switch wallets to access different accounts
+
+---
+
+*Last updated: 2026-02-02*

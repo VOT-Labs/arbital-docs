@@ -213,3 +213,7 @@ If you discover a security vulnerability:
 | **Browser** | Dedicated profile, verify URLs |
 | **Network** | Secure connections, avoid public WiFi |
 | **Monitoring** | Regular reviews, quick incident response |
+
+---
+
+*Last updated: 2026-02-02*

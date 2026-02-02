@@ -136,3 +136,7 @@ From the dashboard, you can:
 - **Stop:** Gracefully stop trading (cancels open orders)
 - **Edit:** Modify parameters (only when stopped/idle/failed)
 - **Delete:** Remove bot permanently
+
+---
+
+*Last updated: 2026-02-02*

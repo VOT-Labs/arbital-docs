@@ -71,3 +71,7 @@ From the dashboard, track:
 - [Bot Configuration](../guides/bot-configuration.md) — Fine-tune your strategy
 - [Understanding Analytics](../guides/monitoring.md) — Interpret your dashboard
 - [Troubleshooting](../guides/troubleshooting.md) — Common issues and fixes
+
+---
+
+*Last updated: 2026-02-02*

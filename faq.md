@@ -239,3 +239,7 @@ Check the exchange's official status pages:
 - Lighter: lighter.xyz
 - Pacifica: Official status page
 - Extended/Hyperliquid: hyperliquid.xyz
+
+---
+
+*Last updated: 2026-02-02*

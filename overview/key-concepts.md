@@ -33,3 +33,7 @@ The difference between expected and actual execution price. Larger orders typica
 ## Collateral
 
 Assets deposited as margin for trading. Required to open and maintain positions on perp exchanges.
+
+---
+
+*Last updated: 2026-02-02*

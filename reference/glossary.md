@@ -125,3 +125,7 @@ Quick reference for terms used throughout Arbital documentation.
 ## W
 
 **Wallet** — Digital wallet (EVM or Solana) used for authentication and credential binding.
+
+---
+
+*Last updated: 2026-02-02*

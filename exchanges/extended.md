@@ -94,3 +94,7 @@ The credential binding process:
 - Extended/Hyperliquid has excellent liquidity for larger positions
 - Monitor the Hyperliquid points program for additional rewards
 - Use EVM wallets that support message signing (MetaMask, Rainbow, etc.)
+
+---
+
+*Last updated: 2026-02-02*

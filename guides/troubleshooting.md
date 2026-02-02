@@ -255,3 +255,7 @@ When reporting issues, include:
 - Exchange you're using
 - Screenshots of error messages
 - Steps to reproduce the issue
+
+---
+
+*Last updated: 2026-02-02*
