@@ -11,8 +11,8 @@ Watch a complete walkthrough of creating and deploying your first bot:
 ## Before You Begin
 
 Ensure you have:
-- [ ] Connected your wallet (EVM for Lighter/Extended, Solana for Pacifica)
-- [ ] Sufficient balance on the exchange (minimum $20 for Pacifica/Extended)
+- [ ] Connected your wallet (EVM for Extended, Solana for Pacifica)
+- [ ] Sufficient balance on the exchange (minimum $20)
 
 ## Bot Creation Wizard
 
@@ -36,7 +36,6 @@ Select your exchange and connect the appropriate wallet:
 
 | Exchange | Wallet Type | Notes |
 |----------|-------------|-------|
-| **Lighter** | EVM (MetaMask, etc.) | Credential binding via signature |
 | **Pacifica** | Solana (Phantom, etc.) | Requires referral approval + $20 minimum |
 | **Extended** | EVM (MetaMask, etc.) | Credential binding + $20 minimum |
 
@@ -45,10 +44,6 @@ After wallet connection, your balance is automatically fetched and validated.
 ### 3. Exchange-Specific Requirements
 
 Each exchange has additional setup steps:
-
-**Lighter:**
-1. Sign message to create credentials
-2. Credentials bound to wallet address
 
 **Pacifica (Solana):**
 1. Sign message to approve Arbital referral
@@ -99,7 +94,6 @@ Configure your budget — the maximum amount (fees + PnL) you are willing to spe
 **Burn Rates by Exchange:**
 | Exchange | Fee Range |
 |----------|-----------|
-| Lighter | 0-0.01% |
 | Pacifica | 0.015-0.025% |
 | Extended | 0.01-0.02% |
 

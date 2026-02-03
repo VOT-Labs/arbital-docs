@@ -15,7 +15,7 @@ Arbital uses **non-custodial authentication**:
 
 ## Supported Wallets
 
-### EVM Wallets (for Lighter & Extended)
+### EVM Wallets (for Extended)
 
 | Wallet | Type | Recommended |
 |--------|------|-------------|
@@ -122,12 +122,6 @@ sequenceDiagram
     Note over U,E: Your keys never leave your wallet
     Note over A,E: Trading permissions only (no withdrawals)
 ```
-
-### For Lighter (EVM)
-1. Select Lighter as your exchange
-2. Click "Create Credentials"
-3. Sign the binding message
-4. Credentials linked to your wallet
 
 ### For Pacifica (Solana)
 1. Select Pacifica as your exchange

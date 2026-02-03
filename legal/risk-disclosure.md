@@ -33,7 +33,7 @@ Cryptocurrency markets are highly volatile. Prices can move significantly in sho
 ## Smart Contract & Technical Risks
 
 ### Exchange Smart Contract Risk
-- Arbital connects to third-party decentralized exchanges (Lighter, Pacifica, Hyperliquid, etc.)
+- Arbital connects to third-party decentralized exchanges (Pacifica, Hyperliquid, etc.)
 - These exchanges operate on smart contracts that may contain bugs or vulnerabilities
 - Smart contract failures could result in loss of funds
 - Arbital has no control over the security of connected exchanges

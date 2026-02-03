@@ -11,7 +11,7 @@ Welcome to the official documentation for **Arbital** — the **Decentralized Wi
 Arbital brings institutional-grade market-making capabilities to everyday users. Create and manage autonomous trading bots that farm points and rewards across multiple decentralized exchanges while maintaining market-neutral exposure. Our platform handles the complexity of:
 
 - **[Delta-Neutral](reference/glossary.md#delta-neutral) Strategies** — Automatically hedge positions to minimize directional risk
-- **Multi-Exchange Support** — Trade across [Lighter](reference/glossary.md#lighter), [Pacifica](reference/glossary.md#pacifica), Hyperliquid, and more
+- **Multi-Exchange Support** — Trade across [Pacifica](reference/glossary.md#pacifica), [Hyperliquid](reference/glossary.md#extended), and more
 - **Automated Execution** — 24/7 [bot](reference/glossary.md#bot) operation with real-time monitoring
 - **[Non-Custodial](reference/glossary.md#non-custodial)** — You control your keys and funds at all times
 
@@ -41,7 +41,7 @@ Arbital brings institutional-grade market-making capabilities to everyday users.
 <tbody>
 <tr><td>🚀 <strong>Create Your First Bot</strong><br>Get started in under 10 minutes</td><td><a href="getting-started/create-first-bot.md">create-first-bot.md</a></td></tr>
 <tr><td>🔗 <strong>Connect Wallet</strong><br>Link your Web3 wallet securely</td><td><a href="getting-started/connect-wallet.md">connect-wallet.md</a></td></tr>
-<tr><td>📊 <strong>Supported Exchanges</strong><br>Lighter, Pacifica, Hyperliquid & more</td><td><a href="exchanges/overview.md">overview.md</a></td></tr>
+<tr><td>📊 <strong>Supported Exchanges</strong><br>Pacifica, Hyperliquid & more</td><td><a href="exchanges/overview.md">overview.md</a></td></tr>
 <tr><td>📖 <strong>API Reference</strong><br>Integrate programmatically</td><td><a href="reference/api.md">api.md</a></td></tr>
 </tbody>
 </table>

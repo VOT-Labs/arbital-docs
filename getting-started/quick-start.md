@@ -33,7 +33,7 @@ Arbital is currently in beta. To get started:
 
 1. Click **Connect Wallet**
 2. Choose your wallet type:
-   - **EVM wallets** (MetaMask, Rainbow) for Lighter & Extended
+   - **EVM wallets** (MetaMask, Rainbow) for Extended
    - **Solana wallets** (Phantom, Solflare) for Pacifica
 3. Sign the authentication message
 4. You're connected
@@ -42,7 +42,7 @@ Arbital is currently in beta. To get started:
 
 1. Click **Create Bot** from the dashboard
 2. **Select Strategy:** [Neutral](../reference/glossary.md#delta-neutral) (recommended for beginners)
-3. **Select Exchange:** [Lighter](../reference/glossary.md#lighter), [Pacifica](../reference/glossary.md#pacifica), or [Extended](../reference/glossary.md#extended)
+3. **Select Exchange:** [Pacifica](../reference/glossary.md#pacifica) or [Extended](../reference/glossary.md#extended)
 4. **Connect Wallet:** Sign to [bind credentials](../reference/glossary.md#credential-binding)
 5. **Select Asset:** ETH, BTC, or other available pairs
 6. **Set [Budget](../reference/glossary.md#budget):** How much to allocate (default: 30% of balance)

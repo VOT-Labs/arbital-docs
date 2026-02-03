@@ -19,7 +19,6 @@ No. Arbital is fully non-custodial:
 ### Which exchanges are supported?
 
 Currently live:
-- **Lighter** — EVM wallet, no minimum balance
 - **Pacifica** — Solana wallet, $20 minimum
 - **Extended (Hyperliquid)** — EVM wallet, $20 minimum
 
@@ -27,7 +26,7 @@ Coming soon: Aster, Hibachi, Based App
 
 ### How much capital do I need?
 
-- **Minimum:** $20 for Pacifica/Extended, no minimum for Lighter
+- **Minimum:** $20 for Pacifica/Extended
 - **Recommended:** $500+ for meaningful returns
 - **Start small:** Test with smaller amounts before scaling up
 
@@ -146,7 +145,6 @@ Possible causes:
 
 | Exchange | Exchange Fee | Arbital Fee | Total |
 |----------|--------------|-------------|-------|
-| Lighter | 0-0.01% | 0.02% | 0.02-0.03% |
 | Pacifica | 0.015-0.025% | 0.02% | 0.035-0.045% |
 | Extended | 0.01-0.02% | 0.02% | 0.03-0.04% |
 
@@ -247,7 +245,6 @@ Contact us on Discord or Telegram with:
 ### Where can I see exchange status?
 
 Check the exchange's official status pages:
-- Lighter: lighter.xyz
 - Pacifica: Official status page
 - Extended/Hyperliquid: hyperliquid.xyz
 

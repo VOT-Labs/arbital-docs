@@ -66,8 +66,6 @@ Quick reference for terms used throughout Arbital documentation.
 
 **Leverage** — Trading with borrowed capital to amplify position size.
 
-**Lighter** — Supported exchange using EVM wallet for credential binding.
-
 **Liquidation** — Forced closure of position when margin is insufficient.
 
 ## M

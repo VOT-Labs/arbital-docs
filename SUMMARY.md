@@ -19,7 +19,6 @@
 ## Exchanges
 
 * [Overview](exchanges/overview.md)
-* [Lighter](exchanges/lighter.md)
 * [Pacifica](exchanges/pacifica.md)
 * [Extended (Hyperliquid)](exchanges/extended.md)
 

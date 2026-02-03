@@ -141,13 +141,11 @@ flowchart TB
 
     subgraph BotEngine["🤖 Bot Engine · Kubernetes"]
         BOT[Dex-Bot-V2<br/>Rust Trading Engine]
-        B1[Lighter Bot Pod]
         B2[Pacifica Bot Pod]
         B3[Extended Bot Pod]
     end
 
     subgraph DEX["📊 Exchanges"]
-        E1[Lighter<br/>EVM Perps]
         E2[Pacifica<br/>Solana Perps]
         E3[Hyperliquid<br/>L1 Perps]
     end
@@ -157,8 +155,7 @@ flowchart TB
     API <--> REDIS
     API --> CH
     API <--> BOT
-    BOT --> B1 & B2 & B3
-    B1 <-->|WebSocket| E1
+    BOT --> B2 & B3
     B2 <-->|WebSocket| E2
     B3 <-->|WebSocket| E3
 ```

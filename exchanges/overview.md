@@ -6,24 +6,23 @@ Arbital integrates with leading perpetual DEXs across multiple chains.
 
 | Exchange | Chain | Wallet | Min Balance | Status |
 |----------|-------|--------|-------------|--------|
-| [Lighter](lighter.md) | EVM | MetaMask, WalletConnect | None | **Live** |
 | [Pacifica](pacifica.md) | Solana | Phantom, Solflare | $20 | **Live** |
 | [Extended](extended.md) | EVM (Hyperliquid) | MetaMask, WalletConnect | $20 | **Live** |
 
 ## Exchange Comparison
 
-| Feature | Lighter | Pacifica | Extended |
-|---------|---------|----------|----------|
-| **Setup Complexity** | Simple | Medium | Simple |
-| **Fee Range** | 0.02-0.03% | 0.035-0.045% | 0.03-0.04% |
-| **Referral Required** | No | Yes | No |
-| **Min Balance** | None | $20 | $20 |
-| **Credential Type** | EVM Signature | Solana Agent | EVM Signature |
+| Feature | Pacifica | Extended |
+|---------|----------|----------|
+| **Setup Complexity** | Medium | Simple |
+| **Fee Range** | 0.035-0.045% | 0.03-0.04% |
+| **Referral Required** | Yes | No |
+| **Min Balance** | $20 | $20 |
+| **Credential Type** | Solana Agent | EVM Signature |
 
 ## Exchange Selection Guide
 
 ### For Beginners
-**Lighter** — Simplest setup, no minimum balance, low fees.
+**Extended (Hyperliquid)** — Simple setup, deep liquidity, wide market selection.
 
 ### For Solana Users
 **Pacifica** — Native Solana integration, fast transactions, points program.

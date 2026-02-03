@@ -26,7 +26,7 @@ Use your Ledger hardware wallet with Arbital for enhanced security on larger bal
 
 ---
 
-## EVM Setup (Lighter & Extended)
+## EVM Setup (Extended)
 
 ### Step 1: Connect Ledger to MetaMask
 
@@ -61,7 +61,7 @@ For EIP-712 typed data signing (used by Arbital):
 
 ### Step 4: Bind Exchange Credentials
 
-1. Select your exchange (Lighter or Extended)
+1. Select **Extended** as your exchange
 2. Click **Create Credentials**
 3. **Confirm on your Ledger** — Message appears on device
 4. Press both buttons to sign

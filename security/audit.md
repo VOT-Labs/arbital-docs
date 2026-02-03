@@ -65,7 +65,7 @@ flowchart LR
 {% hint style="warning" %}
 **Status: Pending**
 
-Arbital does not deploy its own smart contracts. We integrate with third-party exchanges (Lighter, Pacifica, Hyperliquid) that have their own audit histories.
+Arbital does not deploy its own smart contracts. We integrate with third-party exchanges (Pacifica, Hyperliquid) that have their own audit histories.
 
 When Arbital deploys on-chain components, this section will be updated with audit reports.
 {% endhint %}
@@ -74,7 +74,6 @@ When Arbital deploys on-chain components, this section will be updated with audi
 
 | Exchange | Audit Status | Reference |
 |----------|--------------|-----------|
-| **Lighter** | Audited | See Lighter documentation |
 | **Pacifica** | Audited | See Pacifica documentation |
 | **Hyperliquid** | Audited | See Hyperliquid documentation |
 

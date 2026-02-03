@@ -114,7 +114,6 @@ Create a separate browser profile for trading:
 
 Always check you're on the correct site:
 - `arbital.xyz` — Official Arbital
-- `lighter.xyz` — Official Lighter
 - `hyperliquid.xyz` — Official Hyperliquid
 
 Phishing sites often use:

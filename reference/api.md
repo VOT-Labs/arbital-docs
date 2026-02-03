@@ -211,7 +211,7 @@ curl -X POST https://api.arbital.xyz/bots \
     "credential_id": "uuid",
     "wallet_address": "0x...",
     "name": "my_eth_bot",
-    "exchange": "lighter",
+    "exchange": "extended",
     "market": "ETH",
     "strategy_type": "twap",
     "strategy_config": {
@@ -238,7 +238,7 @@ const response = await fetch('https://api.arbital.xyz/bots', {
     credential_id: 'uuid',
     wallet_address: '0x...',
     name: 'my_eth_bot',
-    exchange: 'lighter',
+    exchange: 'extended',
     market: 'ETH',
     strategy_type: 'twap',
     strategy_config: {
@@ -266,7 +266,7 @@ response = requests.post(
         'credential_id': 'uuid',
         'wallet_address': '0x...',
         'name': 'my_eth_bot',
-        'exchange': 'lighter',
+        'exchange': 'extended',
         'market': 'ETH',
         'strategy_type': 'twap',
         'strategy_config': {
@@ -346,7 +346,7 @@ bots = response.json()['bots']
     {
       "id": "uuid",
       "name": "my_eth_bot",
-      "exchange": "lighter",
+      "exchange": "extended",
       "market": "ETH",
       "status": "running",
       "pnl": 125.50
@@ -365,7 +365,7 @@ GET /bots/:instanceId
 {
   "id": "uuid",
   "name": "my_eth_bot",
-  "exchange": "lighter",
+  "exchange": "extended",
   "market": "ETH",
   "status": "running",
   "strategy_type": "twap",
@@ -656,7 +656,7 @@ GET /exchange/:exchange/sign/message
 
 Get the message to sign for credential binding.
 
-**Exchanges:** `lighter`, `pacifica`, `extended`, `hyperliquid`
+**Exchanges:** `pacifica`, `extended`, `hyperliquid`
 
 **Response:**
 ```json

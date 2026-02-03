@@ -1,6 +1,6 @@
 # MetaMask Setup Guide
 
-Connect your MetaMask wallet to Arbital for trading on EVM-based exchanges (Lighter & Extended).
+Connect your MetaMask wallet to Arbital for trading on EVM-based exchanges (Extended/Hyperliquid).
 
 ## Prerequisites
 
@@ -41,13 +41,6 @@ No ETH gas is required for Arbital operations (signing only).
    - Message includes timestamp for security
 
 ## Step 4: Bind Exchange Credentials
-
-### For Lighter Exchange
-
-1. Select **Lighter** as your exchange
-2. Click **Create Credentials**
-3. Sign the binding message in MetaMask
-4. Credentials are now linked to your wallet
 
 ### For Extended (Hyperliquid)
 
@@ -106,7 +99,6 @@ If you have multiple wallet extensions (Rainbow, Coinbase, etc.):
 ## Next Steps
 
 - [Create Your First Bot](../create-first-bot.md)
-- [Lighter Exchange Guide](../../exchanges/lighter.md)
 - [Extended (Hyperliquid) Guide](../../exchanges/extended.md)
 
 ---
