@@ -41,12 +41,12 @@ Arbital is currently in beta. To get started:
 ## Step 3: Create a Bot
 
 1. Click **Create Bot** from the dashboard
-2. **Select Strategy:** Neutral (recommended for beginners)
-3. **Select Exchange:** Lighter, Pacifica, or Extended
-4. **Connect Wallet:** Sign to bind credentials
+2. **Select Strategy:** [Neutral](../reference/glossary.md#delta-neutral) (recommended for beginners)
+3. **Select Exchange:** [Lighter](../reference/glossary.md#lighter), [Pacifica](../reference/glossary.md#pacifica), or [Extended](../reference/glossary.md#extended)
+4. **Connect Wallet:** Sign to [bind credentials](../reference/glossary.md#credential-binding)
 5. **Select Asset:** ETH, BTC, or other available pairs
-6. **Set Budget:** How much to allocate (default: 30% of balance)
-7. **Choose Mode:** Aggressive, Normal, or Passive
+6. **Set [Budget](../reference/glossary.md#budget):** How much to allocate (default: 30% of balance)
+7. **Choose [Mode](../reference/glossary.md#execution-mode):** Aggressive, Normal, or Passive
 8. Click **Create Bot**
 
 Your bot automatically starts after creation.

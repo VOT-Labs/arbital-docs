@@ -2,6 +2,10 @@
 
 Essential terminology for using Arbital effectively.
 
+{% hint style="info" %}
+**Looking for more terms?** See the full [Glossary](../reference/glossary.md) for 50+ definitions.
+{% endhint %}
+
 ## Delta-Neutral
 
 A trading strategy where the portfolio's total delta (directional exposure) equals zero. Price movements don't affect your P&L — you earn from other sources like funding rates and spreads.

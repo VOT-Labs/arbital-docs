@@ -2,6 +2,10 @@
 
 Quick reference for terms used throughout Arbital documentation.
 
+{% hint style="info" %}
+**Tip:** Use `Cmd/Ctrl + F` to search for specific terms.
+{% endhint %}
+
 ## A
 
 **Agent Binding** — Solana-specific process for linking wallet credentials to Arbital. Used on Pacifica exchange.
@@ -10,7 +14,13 @@ Quick reference for terms used throughout Arbital documentation.
 
 ## B
 
-**Bias** — Directional preference from -1 (full short) to +1 (full long). A bias of 0 is neutral/delta-neutral.
+**Balance Chart** — Dashboard visualization showing your account balance over time. Helps track bot performance.
+
+**Bias** — Directional preference from -1 (full short) to +1 (full long). A bias of 0 is neutral/delta-neutral. Also called "Position Bias".
+
+**Bot Lifecycle** — The states a bot transitions through: Idle → Pending → Running → Stopping → Stopped/Completed/Failed.
+
+**Budget** — The expected fee allocation for your bot in USD. Determines how much you're willing to spend on trading fees.
 
 **Boundary** — In grid trading, the price distance from start that triggers a stop-loss.
 
@@ -33,6 +43,8 @@ Quick reference for terms used throughout Arbital documentation.
 **Execution Mode** — How frequently the bot refreshes orders: Aggressive (3s), Normal (5s), or Passive (7s).
 
 **Extended** — Arbital's internal name for the Hyperliquid exchange integration.
+
+**EIP-712** — Ethereum signing standard for typed structured data. Used for secure wallet authentication without transactions.
 
 ## F
 
@@ -70,6 +82,8 @@ Quick reference for terms used throughout Arbital documentation.
 
 ## N
 
+**Non-Custodial** — Security model where Arbital never holds your funds or private keys. Your assets remain in your exchange account at all times.
+
 **Normal Mode** — Execution mode with 5-second refresh intervals. Balanced approach for most conditions.
 
 **Notional** — The total USD value to trade in a TWAP strategy, split between buy and sell orders based on bias.
@@ -88,7 +102,11 @@ Quick reference for terms used throughout Arbital documentation.
 
 **Perpetual Futures (Perps)** — Futures contracts with no expiration date.
 
+**Points** — Exchange reward tokens earned through trading activity. Many exchanges offer points programs to incentivize volume.
+
 **Position** — Your current holding in a market (long or short).
+
+**Position Bias** — See "Bias".
 
 ## R
 
