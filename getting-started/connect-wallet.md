@@ -97,6 +97,25 @@ For Solana wallets, you sign a simple text message:
 
 After connecting your wallet, you'll bind exchange credentials:
 
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant A as Arbital
+    participant W as Wallet
+    participant E as Exchange
+
+    U->>A: Select Exchange
+    A->>U: Request Credential Binding
+    U->>W: Approve Signature
+    W->>A: Signed Message
+    A->>E: Register Trading Agent
+    E->>A: Agent ID Confirmed
+    A->>U: ✅ Credentials Bound
+
+    Note over U,E: Your keys never leave your wallet
+    Note over A,E: Trading permissions only (no withdrawals)
+```
+
 ### For Lighter (EVM)
 1. Select Lighter as your exchange
 2. Click "Create Credentials"

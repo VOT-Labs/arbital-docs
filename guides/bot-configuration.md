@@ -24,6 +24,39 @@ Places orders at fixed price intervals to profit from oscillation. Best for rang
 - You want to capture small price movements
 - Market is not trending strongly
 
+### Strategy Comparison
+
+```mermaid
+flowchart LR
+    subgraph TWAP["📈 TWAP Strategy"]
+        T1[Continuous Orders]
+        T2[Time-Based Execution]
+        T3[Auto Inventory Mgmt]
+    end
+
+    subgraph Grid["📊 Grid Strategy"]
+        G1[Fixed Price Levels]
+        G2[Range-Bound Trading]
+        G3[Defined Profit/Fill]
+    end
+
+    subgraph When["When to Use"]
+        TW[/"Trending or<br/>Unknown Markets"/]
+        GW[/"Ranging or<br/>Sideways Markets"/]
+    end
+
+    TWAP --> TW
+    Grid --> GW
+```
+
+| Aspect | TWAP | Grid |
+|--------|------|------|
+| **Order Placement** | Continuous, time-weighted | Fixed price intervals |
+| **Best Market** | Any condition | Ranging/sideways |
+| **Profit Source** | Spread + volume | Price oscillation |
+| **Risk Profile** | Lower (auto-manages) | Higher (boundary stops) |
+| **Capital Efficiency** | Moderate | High in range |
+
 ## Core Parameters
 
 ### Notional (TWAP)
