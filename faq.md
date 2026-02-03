@@ -242,4 +242,30 @@ Check the exchange's official status pages:
 
 ---
 
-*Last updated: 2026-02-02*
+## Contributing
+
+### How can I improve these docs?
+
+We welcome community contributions! You can:
+
+1. **Report issues** — Found a typo or error? [Open an issue](https://github.com/VOT-Labs/arbital-docs/issues/new)
+2. **Suggest content** — Missing a topic? Let us know
+3. **Submit a PR** — Fix it yourself via our [GitHub repo](https://github.com/VOT-Labs/arbital-docs)
+
+See the full [Contributing Guide](https://github.com/VOT-Labs/arbital-docs/blob/main/CONTRIBUTING.md) for details.
+
+### How do I suggest a new FAQ?
+
+1. Check this page first — it may already be covered
+2. [Open an issue](https://github.com/VOT-Labs/arbital-docs/issues/new?labels=docs:content) with your question and suggested answer
+3. Community upvotes help us prioritize additions
+
+### Where can I discuss Arbital?
+
+- **Discord:** Community chat and support (coming soon)
+- **Telegram:** Beta support channel
+- **GitHub Issues:** Documentation feedback and suggestions
+
+---
+
+*Last updated: 2026-02-03*

@@ -57,6 +57,18 @@ Arbital enables users to create and manage autonomous trading bots that farm poi
 - **Website** — [arbital.xyz](https://arbital.xyz)
 - **Changelog** — [See what's new →](changelog.md)
 
+## Help Improve These Docs
+
+{% hint style="success" %}
+**Community-Driven Documentation**
+
+Found something wrong or missing? Help make these docs better:
+
+- **Edit on GitHub** — Every page can be edited via our [GitHub repo](https://github.com/VOT-Labs/arbital-docs)
+- **Report Issues** — [Open an issue](https://github.com/VOT-Labs/arbital-docs/issues/new) for bugs or suggestions
+- **Contribute** — See our [Contributing Guide](https://github.com/VOT-Labs/arbital-docs/blob/main/CONTRIBUTING.md)
+{% endhint %}
+
 ---
 
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-03*
