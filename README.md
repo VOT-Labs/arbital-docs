@@ -48,6 +48,10 @@ Arbital enables users to create and manage autonomous trading bots that farm poi
 
 ## Need Help?
 
+{% hint style="info" %}
+**Quick Search:** Press `Cmd/Ctrl + K` anywhere to search the docs instantly.
+{% endhint %}
+
 - **Discord** — Join our community (coming soon)
 - **Telegram** — Beta support channel
 - **Website** — [arbital.xyz](https://arbital.xyz)
