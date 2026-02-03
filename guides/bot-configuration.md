@@ -91,7 +91,18 @@ Directional preference from -1 (full short) to +1 (full long).
 | **Slight Long** | +0.5 | 75% buy, 25% sell |
 | **Long** | +1.0 | 100% buy orders, profits from price increases |
 
-**Margin Impact:** Higher bias increases margin requirement by up to 20%.
+{% hint style="info" %}
+**How Bias Actually Works**
+
+Bias only affects **when** buys and sells happen — not **whether** they happen. The bot will always place both buy and sell orders regardless of bias setting. Over a full run, total buy and sell volume still converges.
+
+Think of it as timing priority: a long bias means the bot prioritizes buying earlier and selling later, not that it only buys.
+{% endhint %}
+
+**Important Notes:**
+- Margin requirements increase by up to 20% at higher bias levels (closer to -1 or +1)
+- Higher bias means more directional exposure during the run, even though volume converges over time
+- For delta-neutral farming, keep bias at **0**
 
 ## Execution Modes
 

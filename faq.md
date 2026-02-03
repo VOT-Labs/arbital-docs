@@ -51,10 +51,12 @@ Coming soon: Aster, Hibachi, Based App
 
 ### What does bias mean?
 
-Bias controls your directional exposure:
-- **-1 (Short):** Only sell orders, profits from price drops
+Bias controls the **timing priority** of your buys and sells:
+- **-1 (Short):** Prioritizes selling early, profits from price drops
 - **0 (Neutral):** 50/50 buy/sell, delta-neutral
-- **+1 (Long):** Only buy orders, profits from price rises
+- **+1 (Long):** Prioritizes buying early, profits from price rises
+
+Bias only affects **when** buys and sells happen — not **whether** they happen. The bot always places both buy and sell orders, and total volume converges over the full run. Higher bias levels increase margin requirements by up to 20%.
 
 Most users start with **neutral (0)** to minimize directional risk.
 

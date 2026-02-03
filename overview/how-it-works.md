@@ -74,9 +74,13 @@ flowchart LR
 
 | Bias | Strategy | Market View |
 |------|----------|-------------|
-| **-1 (Short)** | Only sell orders | Bearish, expect price drop |
+| **-1 (Short)** | Prioritizes selling | Bearish, expect price drop |
 | **0 (Neutral)** | 50/50 buy/sell | No directional view |
-| **+1 (Long)** | Only buy orders | Bullish, expect price rise |
+| **+1 (Long)** | Prioritizes buying | Bullish, expect price rise |
+
+{% hint style="info" %}
+Bias affects **when** buys and sells happen — not **whether** they happen. The bot always places both buy and sell orders. Total volume converges over the full run. Margin requirements increase by up to 20% at higher bias levels.
+{% endhint %}
 
 ## Bot Lifecycle
 
