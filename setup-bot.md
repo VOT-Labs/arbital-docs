@@ -1,6 +1,8 @@
 # How to Set Up a Bot (Step-by-Step)
 
-**Demo Video:** [https://www.loom.com/share/009b1e3f75d14c38bcead32d1d3363da](https://www.loom.com/share/009b1e3f75d14c38bcead32d1d3363da)
+{% embed url="https://www.loom.com/share/009b1e3f75d14c38bcead32d1d3363da" %}
+Demo Video
+{% endembed %}
 
 ## Step 1: Connect Wallet & Create Bot
 
