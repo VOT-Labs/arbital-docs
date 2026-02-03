@@ -81,10 +81,10 @@ When Arbital deploys on-chain components, this section will be updated with audi
 
 | Component | Status | Last Review |
 |-----------|--------|-------------|
-| Authentication Flow | ✅ Internal Review | 2025-12 |
-| API Security | ✅ Internal Review | 2025-12 |
-| Bot Engine | ✅ Internal Review | 2026-01 |
-| External Audit | 🔄 Planned | TBD |
+| Authentication Flow | <i class="fa-circle-check">:circle-check:</i> Internal Review | 2025-12 |
+| API Security | <i class="fa-circle-check">:circle-check:</i> Internal Review | 2025-12 |
+| Bot Engine | <i class="fa-circle-check">:circle-check:</i> Internal Review | 2026-01 |
+| External Audit | <i class="fa-rotate">:rotate:</i> Planned | TBD |
 
 ---
 
