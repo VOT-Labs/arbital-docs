@@ -2,6 +2,22 @@
 
 Arbital automates market-making strategies across perpetual DEXs, helping you earn trading rewards while managing risk.
 
+## Why Use Arbital?
+
+### The Problem
+
+Perpetual DEXs need active market makers to provide tight spreads and deep order books. Historically, only professional firms with sophisticated infrastructure could participate — leaving exchanges with thin liquidity and traders with poor execution.
+
+### The Solution
+
+Arbital democratizes market making. By automating delta-neutral strategies, Arbital creates a win-win-win:
+
+- **Exchanges** benefit from tighter pricing and higher liquidity
+- **Traders** receive better execution with deeper order books
+- **Market makers (you)** generate sustained trading volume and earn rewards
+
+No quant background required. Configure a bot, deploy, and let Arbital's engine handle the rest.
+
 ## The Core Loop
 
 ```mermaid

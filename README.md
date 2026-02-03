@@ -4,11 +4,11 @@
 **Risk Warning:** Trading perpetual futures involves significant risk of loss. Past performance does not guarantee future results. Only trade with funds you can afford to lose. [Read full risk disclosure →](legal/risk-disclosure.md)
 {% endhint %}
 
-Welcome to the official documentation for **Arbital** — an automated [delta-neutral](reference/glossary.md#delta-neutral) market-making platform for [perpetual DEXs](reference/glossary.md#perpetual-futures-perps).
+Welcome to the official documentation for **Arbital** — the **Decentralized Wintermute**, accessible to everyone. An automated [delta-neutral](reference/glossary.md#delta-neutral) market-making platform for [perpetual DEXs](reference/glossary.md#perpetual-futures-perps).
 
 ## What is Arbital?
 
-Arbital enables users to create and manage autonomous trading bots that farm points and rewards across multiple decentralized exchanges while maintaining market-neutral exposure. Our platform handles the complexity of:
+Arbital brings institutional-grade market-making capabilities to everyday users. Create and manage autonomous trading bots that farm points and rewards across multiple decentralized exchanges while maintaining market-neutral exposure. Our platform handles the complexity of:
 
 - **[Delta-Neutral](reference/glossary.md#delta-neutral) Strategies** — Automatically hedge positions to minimize directional risk
 - **Multi-Exchange Support** — Trade across [Lighter](reference/glossary.md#lighter), [Pacifica](reference/glossary.md#pacifica), Hyperliquid, and more
