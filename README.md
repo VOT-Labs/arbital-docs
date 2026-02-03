@@ -15,6 +15,25 @@ Arbital enables users to create and manage autonomous trading bots that farm poi
 - **Automated Execution** — 24/7 [bot](reference/glossary.md#bot) operation with real-time monitoring
 - **[Non-Custodial](reference/glossary.md#non-custodial)** — You control your keys and funds at all times
 
+## Choose Your Path
+
+<table data-view="cards">
+<thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead>
+<tbody>
+<tr><td>🌱 <strong>New to Arbital?</strong><br>Start here — connect wallet, create your first bot, learn the basics</td><td><a href="getting-started/quick-start.md">quick-start.md</a></td></tr>
+<tr><td>📈 <strong>Experienced Trader</strong><br>Dive into strategies, advanced configuration, and optimization</td><td><a href="guides/bot-configuration.md">bot-configuration.md</a></td></tr>
+<tr><td>👨‍💻 <strong>Developer</strong><br>API reference, webhooks, and programmatic integration</td><td><a href="reference/api.md">api.md</a></td></tr>
+</tbody>
+</table>
+
+### Recommended Reading by Path
+
+| Path | Start Here | Then Explore | Advanced |
+|------|------------|--------------|----------|
+| 🌱 **New User** | [Quick Start](getting-started/quick-start.md) | [Connect Wallet](getting-started/connect-wallet.md) | [Create First Bot](getting-started/create-first-bot.md) |
+| 📈 **Trader** | [Bot Configuration](guides/bot-configuration.md) | [Grid Strategy](guides/grid-strategy.md) | [Risk Management](guides/risk-management.md) |
+| 👨‍💻 **Developer** | [API Reference](reference/api.md) | [Glossary](reference/glossary.md) | Webhooks (coming soon) |
+
 ## Quick Links
 
 <table data-view="cards">
