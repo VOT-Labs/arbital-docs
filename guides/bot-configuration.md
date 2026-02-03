@@ -79,6 +79,20 @@ The total USD value to trade, split between buy and sell orders (unless biased).
 | Medium ($500-2000) | Balanced approach |
 | Large ($2000+) | Higher volume, more reward potential |
 
+### Budget
+
+The maximum amount (fees + PnL) you are willing to spend before the bot automatically stops. This is not your trading capital — it's your loss threshold.
+
+| Setting | Description |
+|---------|-------------|
+| Small ($100-500) | Conservative, suitable for testing |
+| Medium ($500-1,000) | **Recommended starting range** |
+| Large ($1,000+) | For experienced users with higher risk tolerance |
+
+{% hint style="info" %}
+**Budget ≠ notional.** Notional is how much you trade per cycle. Budget is the total fees and PnL the bot can consume before it shuts down.
+{% endhint %}
+
 ### Bias
 
 Directional preference from -1 (full short) to +1 (full long).

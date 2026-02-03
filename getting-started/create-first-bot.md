@@ -85,15 +85,20 @@ Control how aggressively your bot trades:
 
 ### 6. Budget & Volume
 
-Configure your trading capital:
+Configure your budget — the maximum amount (fees + PnL) you are willing to spend before the bot automatically stops.
 
-- **Expected Budget (USD):** How much capital to allocate
+- **Expected Budget (USD):** Max fees + PnL spend before the bot stops
   - Minimum: $0.01
   - Maximum: Your wallet balance
   - Default: 30% of wallet balance
+  - **Recommended starting budget:** $500–$1,000
 
 - **Min Expected Volume (USD):** Calculated from budget × burn rate
   - Updates automatically when budget changes
+
+{% hint style="info" %}
+**Budget ≠ capital allocation.** Budget is the maximum you're willing to spend on fees and absorb in PnL before the bot shuts down. Your actual trading capital (notional) is configured separately.
+{% endhint %}
 
 **Burn Rates by Exchange:**
 | Exchange | Fee Range |
