@@ -33,6 +33,13 @@ Arbital uses **non-custodial authentication**:
 | **Solflare** | Browser + Mobile | Feature-rich |
 | **Backpack** | Browser extension | xNFT support |
 
+{% hint style="info" %}
+**Need detailed setup help?** See our wallet-specific guides:
+- [MetaMask Setup Guide](wallets/metamask.md)
+- [Phantom Setup Guide](wallets/phantom.md)
+- [Ledger Hardware Wallet Guide](wallets/ledger.md)
+{% endhint %}
+
 ## Connection Steps
 
 ### First Time Setup

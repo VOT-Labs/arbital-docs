@@ -11,6 +11,10 @@
 * [Quick Start](getting-started/quick-start.md)
 * [Connect Wallet](getting-started/connect-wallet.md)
 * [Create Your First Bot](getting-started/create-first-bot.md)
+* Wallet Guides
+  * [MetaMask](getting-started/wallets/metamask.md)
+  * [Phantom (Solana)](getting-started/wallets/phantom.md)
+  * [Ledger Hardware Wallet](getting-started/wallets/ledger.md)
 
 ## Exchanges
 
