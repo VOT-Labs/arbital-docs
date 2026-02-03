@@ -71,11 +71,11 @@ Real-time log of bot activity.
 
 | Event | Icon | Meaning |
 |-------|------|---------|
-| **order_placed** | 📤 | New order sent to exchange |
-| **order_filled** | ✅ | Order executed (trade complete) |
-| **order_canceled** | ❌ | Order removed from book |
-| **error** | 🔴 | Something went wrong |
-| **warning** | ⚠️ | Non-critical issue |
+| **order_placed** | <i class="fa-paper-plane">:paper-plane:</i> | New order sent to exchange |
+| **order_filled** | <i class="fa-circle-check">:circle-check:</i> | Order executed (trade complete) |
+| **order_canceled** | <i class="fa-circle-xmark">:circle-xmark:</i> | Order removed from book |
+| **error** | <i class="fa-circle-exclamation">:circle-exclamation:</i> | Something went wrong |
+| **warning** | <i class="fa-triangle-exclamation">:triangle-exclamation:</i> | Non-critical issue |
 
 ### Event Details
 
@@ -163,19 +163,19 @@ The **liquidation price** is where your position would be forcefully closed.
 
 ### Healthy Bot Signs
 
-- ✅ Steady balance growth
-- ✅ Regular order fills
-- ✅ Balanced buy/sell volume
-- ✅ Low error rate
-- ✅ Inventory staying near neutral
+- <i class="fa-circle-check">:circle-check:</i> Steady balance growth
+- <i class="fa-circle-check">:circle-check:</i> Regular order fills
+- <i class="fa-circle-check">:circle-check:</i> Balanced buy/sell volume
+- <i class="fa-circle-check">:circle-check:</i> Low error rate
+- <i class="fa-circle-check">:circle-check:</i> Inventory staying near neutral
 
 ### Warning Signs
 
-- ⚠️ Balance declining
-- ⚠️ Many errors in events
-- ⚠️ No fills for extended period
-- ⚠️ Inventory building up (high delta)
-- ⚠️ Approaching liquidation price
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Balance declining
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Many errors in events
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> No fills for extended period
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Inventory building up (high delta)
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Approaching liquidation price
 
 ### What to Do If Performance Is Poor
 

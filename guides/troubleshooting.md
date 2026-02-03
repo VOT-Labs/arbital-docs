@@ -2,7 +2,7 @@
 
 Common issues and how to resolve them.
 
-## 🎬 Video: Emergency Procedures
+## <i class="fa-video">:video:</i> Video: Emergency Procedures
 
 {% hint style="warning" %}
 **Coming Soon** — A video guide covering what to do when things go wrong: stopping bots, managing open positions, and contacting support.
