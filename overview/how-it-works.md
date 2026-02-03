@@ -18,6 +18,17 @@ Arbital democratizes market making. By automating delta-neutral strategies, Arbi
 
 No quant background required. Configure a bot, deploy, and let Arbital's engine handle the rest.
 
+## Who Is Arbital For?
+
+Arbital is built for users who:
+
+- **Want passive exposure to market making** — Earn from providing liquidity without building your own trading infrastructure
+- **Want to farm points on perp DEXes** — Capture exchange incentive programs ($HYPE, $LIT, $ASTER) that reward active market makers
+- **Don't want to actively trade** — Set up a bot once and let it run 24/7 with automated risk management
+- **Prefer systematic, rules-based strategies** — No discretionary trading decisions; your bot follows the configuration you set
+
+If you're looking for a hands-off way to participate in DeFi liquidity provision, Arbital handles the complexity so you can focus on strategy.
+
 ## The Core Loop
 
 ```mermaid
