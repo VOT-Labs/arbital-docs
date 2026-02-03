@@ -4,13 +4,9 @@ Step-by-step guide to deploying your first Arbital trading bot.
 
 ## 🎬 Video Walkthrough
 
-{% hint style="warning" %}
-**Coming Soon** — A complete video walkthrough of bot creation is in production. Check back soon!
-{% endhint %}
+Watch a complete walkthrough of creating and deploying your first bot:
 
-<!-- Video embed placeholder - replace with YouTube/Loom when ready:
-{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
--->
+{% embed url="https://www.loom.com/share/009b1e3f75d14c38bcead32d1d3363da" %}
 
 ## Before You Begin
 
