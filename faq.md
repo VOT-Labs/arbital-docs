@@ -230,6 +230,7 @@ Yes. See the [API Reference](reference/api.md) for endpoints to create, manage, 
 
 ### How do I get help?
 
+- **Twitter:** [@Arbital_XYZ](https://twitter.com/Arbital_XYZ) — Updates and support
 - **Discord:** Join our community for support
 - **Telegram:** Direct support from the team
 - **Docs:** You're here
@@ -272,6 +273,7 @@ See the full [Contributing Guide](https://github.com/VOT-Labs/arbital-docs/blob/
 
 ### Where can I discuss Arbital?
 
+- **Twitter:** [@Arbital_XYZ](https://twitter.com/Arbital_XYZ) — Follow for updates
 - **Discord:** Community chat and support (coming soon)
 - **Telegram:** Beta support channel
 - **GitHub Issues:** Documentation feedback and suggestions

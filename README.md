@@ -52,6 +52,7 @@ Arbital brings institutional-grade market-making capabilities to everyday users.
 **Quick Search:** Press `Cmd/Ctrl + K` anywhere to search the docs instantly.
 {% endhint %}
 
+- **Twitter** — [@Arbital_XYZ](https://twitter.com/Arbital_XYZ)
 - **Discord** — Join our community (coming soon)
 - **Telegram** — Beta support channel
 - **Website** — [arbital.xyz](https://arbital.xyz)
