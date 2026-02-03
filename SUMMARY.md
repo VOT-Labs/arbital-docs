@@ -33,6 +33,7 @@
 * [API Reference](reference/api.md)
 * [Glossary](reference/glossary.md)
 * [FAQ](faq.md)
+* [Changelog](changelog.md)
 
 ## Legal
 
