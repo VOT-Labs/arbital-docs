@@ -2,6 +2,34 @@
 
 Arbital provides a REST API for bot management and monitoring.
 
+---
+
+## Quick Start
+
+{% hint style="success" %}
+**Try the API interactively!**
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/arbital-team/workspace/arbital-public)
+
+- **Postman Collection:** Import our pre-built collection to test endpoints instantly
+- **OpenAPI Spec:** [Download arbital-api.yaml](https://api.arbital.xyz/docs/openapi.yaml) for code generation
+{% endhint %}
+
+### SDK & Code Generation
+
+Generate client libraries from our OpenAPI spec:
+
+```bash
+# JavaScript/TypeScript
+npx openapi-typescript https://api.arbital.xyz/docs/openapi.yaml -o arbital-api.d.ts
+
+# Python
+pip install openapi-python-client
+openapi-python-client generate --url https://api.arbital.xyz/docs/openapi.yaml
+```
+
+---
+
 ## Authentication
 
 All API requests require JWT authentication:
@@ -49,11 +77,33 @@ Exceeding limits returns `429 Too Many Requests`.
 ### Authentication
 
 #### Get Challenge
-```http
-GET /auth/challenge
-```
 
 Returns a challenge message for wallet signing.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.arbital.xyz/auth/challenge
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/auth/challenge');
+const { challenge, expiresAt } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.get('https://api.arbital.xyz/auth/challenge')
+data = response.json()
+challenge = data['challenge']
+```
+{% endtab %}
+{% endtabs %}
 
 **Response:**
 ```json
@@ -64,18 +114,50 @@ Returns a challenge message for wallet signing.
 ```
 
 #### Verify Signature
-```http
-POST /auth/verify
-```
 
-**Body:**
-```json
-{
-  "walletAddress": "0x...",
-  "signature": "0x...",
-  "challenge": "..."
-}
+Submit the signed challenge to receive a JWT token.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/auth/verify \
+  -H "Content-Type: application/json" \
+  -d '{
+    "walletAddress": "0x...",
+    "signature": "0x...",
+    "challenge": "..."
+  }'
 ```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/auth/verify', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    walletAddress: '0x...',
+    signature: '0x...',
+    challenge: '...'
+  })
+});
+const { token } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post('https://api.arbital.xyz/auth/verify', json={
+    'walletAddress': '0x...',
+    'signature': '0x...',
+    'challenge': '...'
+})
+token = response.json()['token']
+```
+{% endtab %}
+{% endtabs %}
 
 **Response:**
 ```json
@@ -116,31 +198,91 @@ Returns a new JWT token.
 ### Bot Management
 
 #### Create Bot
-```http
-POST /bots
-```
 
-**Limits:** Maximum 2 bots per user.
+Create a new trading bot. **Limit:** Maximum 2 bots per user.
 
-**Body:**
-```json
-{
-  "credential_id": "uuid",
-  "wallet_address": "0x...",
-  "name": "my_eth_bot",
-  "exchange": "lighter",
-  "market": "ETH",
-  "strategy_type": "twap",
-  "strategy_config": {
-    "notional": 1000,
-    "budget": 500,
-    "mode": "normal",
-    "bias": 0,
-    "max_inventory_usd": 2000,
-    "inventory_skew_factor": 0.5
-  }
-}
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/bots \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "credential_id": "uuid",
+    "wallet_address": "0x...",
+    "name": "my_eth_bot",
+    "exchange": "lighter",
+    "market": "ETH",
+    "strategy_type": "twap",
+    "strategy_config": {
+      "notional": 1000,
+      "budget": 500,
+      "mode": "normal",
+      "bias": 0,
+      "max_inventory_usd": 2000,
+      "inventory_skew_factor": 0.5
+    }
+  }'
 ```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/bots', {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    credential_id: 'uuid',
+    wallet_address: '0x...',
+    name: 'my_eth_bot',
+    exchange: 'lighter',
+    market: 'ETH',
+    strategy_type: 'twap',
+    strategy_config: {
+      notional: 1000,
+      budget: 500,
+      mode: 'normal',
+      bias: 0,
+      max_inventory_usd: 2000,
+      inventory_skew_factor: 0.5
+    }
+  })
+});
+const bot = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post(
+    'https://api.arbital.xyz/bots',
+    headers={'Authorization': f'Bearer {token}'},
+    json={
+        'credential_id': 'uuid',
+        'wallet_address': '0x...',
+        'name': 'my_eth_bot',
+        'exchange': 'lighter',
+        'market': 'ETH',
+        'strategy_type': 'twap',
+        'strategy_config': {
+            'notional': 1000,
+            'budget': 500,
+            'mode': 'normal',
+            'bias': 0,
+            'max_inventory_usd': 2000,
+            'inventory_skew_factor': 0.5
+        }
+    }
+)
+bot = response.json()
+```
+{% endtab %}
+{% endtabs %}
 
 **Strategy Config Parameters:**
 
@@ -164,11 +306,38 @@ POST /bots
 ```
 
 #### List Bots
-```http
-GET /bots
-```
 
 Returns all bots for the authenticated user.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.arbital.xyz/bots \
+  -H "Authorization: Bearer $TOKEN"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/bots', {
+  headers: { 'Authorization': `Bearer ${token}` }
+});
+const { bots } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.get(
+    'https://api.arbital.xyz/bots',
+    headers={'Authorization': f'Bearer {token}'}
+)
+bots = response.json()['bots']
+```
+{% endtab %}
+{% endtabs %}
 
 **Response:**
 ```json
@@ -247,11 +416,39 @@ Permanently removes the bot.
 ### Bot Control
 
 #### Start Bot
-```http
-POST /bots/:instanceId/start
-```
 
 Starts the bot. Status changes to `pending`, then `running`.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/bots/{instanceId}/start \
+  -H "Authorization: Bearer $TOKEN"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch(`https://api.arbital.xyz/bots/${instanceId}/start`, {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${token}` }
+});
+const { status } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post(
+    f'https://api.arbital.xyz/bots/{instance_id}/start',
+    headers={'Authorization': f'Bearer {token}'}
+)
+status = response.json()['status']
+```
+{% endtab %}
+{% endtabs %}
 
 **Response:**
 ```json
@@ -262,11 +459,39 @@ Starts the bot. Status changes to `pending`, then `running`.
 ```
 
 #### Stop Bot
-```http
-POST /bots/:instanceId/stop
-```
 
 Gracefully stops the bot. Cancels open orders.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/bots/{instanceId}/stop \
+  -H "Authorization: Bearer $TOKEN"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch(`https://api.arbital.xyz/bots/${instanceId}/stop`, {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${token}` }
+});
+const { status } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post(
+    f'https://api.arbital.xyz/bots/{instance_id}/stop',
+    headers={'Authorization': f'Bearer {token}'}
+)
+status = response.json()['status']
+```
+{% endtab %}
+{% endtabs %}
 
 **Response:**
 ```json
@@ -524,4 +749,24 @@ Subscribe to bot events:
 
 ---
 
-*Last updated: 2026-02-02*
+## API Playground
+
+{% hint style="info" %}
+**Interactive Testing**
+
+Use our Postman collection for hands-on API exploration:
+
+1. **Import Collection:** Click the "Run in Postman" button above
+2. **Set Environment:** Configure `base_url` and `token` variables
+3. **Test Endpoints:** Execute requests with pre-filled examples
+4. **Generate Code:** Export to any language from Postman
+
+For automated testing, download the [OpenAPI spec](https://api.arbital.xyz/docs/openapi.yaml) and use tools like:
+- **Swagger UI:** Interactive documentation
+- **Insomnia:** API client with OpenAPI import
+- **HTTPie:** Command-line testing
+{% endhint %}
+
+---
+
+*Last updated: 2026-02-03*
