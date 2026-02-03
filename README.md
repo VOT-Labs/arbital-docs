@@ -72,4 +72,42 @@ Found something wrong or missing? Help make these docs better:
 
 ---
 
+## Icon Test (Temporary — Remove After Verification)
+
+### Test A: Font Awesome (GitBook Native)
+
+- <i class="fa-seedling">:seedling:</i> New to Arbital?
+- <i class="fa-chart-line">:chart-line:</i> Experienced Trader
+- <i class="fa-code">:code:</i> Developer
+- <i class="fa-rocket">:rocket:</i> Create Your First Bot
+- <i class="fa-link">:link:</i> Connect Wallet
+- <i class="fa-chart-bar">:chart-bar:</i> Supported Exchanges
+- <i class="fa-book">:book:</i> API Reference
+- <i class="fa-shield-halved">:shield-halved:</i> Security
+- <i class="fa-circle-check">:circle-check:</i> Success indicator
+- <i class="fa-circle-xmark">:circle-xmark:</i> Error indicator
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Warning indicator
+
+### Test B: Phosphor Icons via CDN `<img>` Tags
+
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/plant.svg" alt="plant" data-size="line"> New to Arbital?
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/chart-line-up.svg" alt="chart" data-size="line"> Experienced Trader
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/code.svg" alt="code" data-size="line"> Developer
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/rocket-launch.svg" alt="rocket" data-size="line"> Create Your First Bot
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/link.svg" alt="link" data-size="line"> Connect Wallet
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/chart-bar.svg" alt="chart-bar" data-size="line"> Supported Exchanges
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/book-open.svg" alt="book" data-size="line"> API Reference
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/shield-check.svg" alt="shield" data-size="line"> Security
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/check-circle.svg" alt="check" data-size="line"> Success indicator
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/x-circle.svg" alt="x" data-size="line"> Error indicator
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/regular/warning.svg" alt="warning" data-size="line"> Warning indicator
+
+### Test C: Phosphor Icons (Bold Weight)
+
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/bold/plant-bold.svg" alt="plant" data-size="line"> New to Arbital?
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/bold/rocket-launch-bold.svg" alt="rocket" data-size="line"> Create Your First Bot
+- <img src="https://unpkg.com/@phosphor-icons/core/assets/bold/shield-check-bold.svg" alt="shield" data-size="line"> Security
+
+---
+
 *Last updated: 2026-02-03*
