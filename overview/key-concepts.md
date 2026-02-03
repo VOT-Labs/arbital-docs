@@ -79,4 +79,4 @@ Assets deposited as margin for trading. Required to open and maintain positions 
 
 ---
 
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-03*
