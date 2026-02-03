@@ -6,7 +6,7 @@ Essential terminology for using Arbital effectively.
 **Looking for more terms?** See the full [Glossary](../reference/glossary.md) for 50+ definitions.
 {% endhint %}
 
-## 🎬 Video: What is Delta-Neutral Market Making?
+## <i class="fa-video">:video:</i> Video: What is Delta-Neutral Market Making?
 
 {% hint style="warning" %}
 **Coming Soon** — We're creating a video explainer for delta-neutral strategies. Subscribe to our channels to be notified when it's ready.
