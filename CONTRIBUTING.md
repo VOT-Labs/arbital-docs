@@ -197,3 +197,7 @@ Common FAQ sources:
 - **Issues:** For specific bugs or improvements
 
 Thank you for helping make Arbital docs better!
+
+---
+
+*Last updated: 2026-02-03*
