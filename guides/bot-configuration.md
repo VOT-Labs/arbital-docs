@@ -278,4 +278,4 @@ Bot configuration can only be modified when the bot is in certain states:
 
 ---
 
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-03*
