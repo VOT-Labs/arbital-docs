@@ -1,0 +1,4713 @@
+# Arbital — Full Documentation
+
+> This file contains the complete Arbital documentation for LLM consumption.
+> Source: https://arbital-1.gitbook.io/docs
+> Generated: 2026-02-03T08:14:44Z
+
+---
+
+URL: https://arbital-1.gitbook.io/docs
+Source: README.md
+
+# Arbital Documentation
+
+{% hint style="warning" %}
+**Risk Warning:** Trading perpetual futures involves significant risk of loss. Past performance does not guarantee future results. Only trade with funds you can afford to lose. [Read full risk disclosure →](legal/risk-disclosure.md)
+{% endhint %}
+
+Welcome to the official documentation for **Arbital** — the **Decentralized Wintermute**, accessible to everyone. An automated [delta-neutral](reference/glossary.md#delta-neutral) market-making platform for [perpetual DEXs](reference/glossary.md#perpetual-futures-perps).
+
+## What is Arbital?
+
+Arbital brings institutional-grade market-making capabilities to everyday users. Create and manage autonomous trading bots that farm points and rewards across multiple decentralized exchanges while maintaining market-neutral exposure. Our platform handles the complexity of:
+
+- **[Delta-Neutral](reference/glossary.md#delta-neutral) Strategies** — Automatically hedge positions to minimize directional risk
+- **Multi-Exchange Support** — Trade across [Pacifica](reference/glossary.md#pacifica), [Hyperliquid](reference/glossary.md#extended), and more
+- **Automated Execution** — 24/7 [bot](reference/glossary.md#bot) operation with real-time monitoring
+- **[Non-Custodial](reference/glossary.md#non-custodial)** — You control your keys and funds at all times
+
+## Choose Your Path
+
+<table data-view="cards">
+<thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead>
+<tbody>
+<tr><td><i class="fa-seedling">:seedling:</i> <strong>New to Arbital?</strong><br>Start here — connect wallet, create your first bot, learn the basics</td><td><a href="getting-started/quick-start.md">quick-start.md</a></td></tr>
+<tr><td><i class="fa-chart-line">:chart-line:</i> <strong>Experienced Trader</strong><br>Dive into strategies, advanced configuration, and optimization</td><td><a href="guides/bot-configuration.md">bot-configuration.md</a></td></tr>
+<tr><td><i class="fa-code">:code:</i> <strong>Developer</strong><br>API reference, webhooks, and programmatic integration</td><td><a href="reference/api.md">api.md</a></td></tr>
+</tbody>
+</table>
+
+### Recommended Reading by Path
+
+| Path | Start Here | Then Explore | Advanced |
+|------|------------|--------------|----------|
+| <i class="fa-seedling">:seedling:</i> **New User** | [Quick Start](getting-started/quick-start.md) | [Connect Wallet](getting-started/connect-wallet.md) | [Create First Bot](getting-started/create-first-bot.md) |
+| <i class="fa-chart-line">:chart-line:</i> **Trader** | [Bot Configuration](guides/bot-configuration.md) | [Grid Strategy](guides/grid-strategy.md) | [Risk Management](guides/risk-management.md) |
+| <i class="fa-code">:code:</i> **Developer** | [API Reference](reference/api.md) | [Glossary](reference/glossary.md) | Webhooks (coming soon) |
+
+## Quick Links
+
+<table data-view="cards">
+<thead><tr><th></th><th data-hidden data-card-target data-type="content-ref"></th></tr></thead>
+<tbody>
+<tr><td><i class="fa-rocket">:rocket:</i> <strong>Create Your First Bot</strong><br>Get started in under 10 minutes</td><td><a href="getting-started/create-first-bot.md">create-first-bot.md</a></td></tr>
+<tr><td><i class="fa-link">:link:</i> <strong>Connect Wallet</strong><br>Link your Web3 wallet securely</td><td><a href="getting-started/connect-wallet.md">connect-wallet.md</a></td></tr>
+<tr><td><i class="fa-chart-bar">:chart-bar:</i> <strong>Supported Exchanges</strong><br>Pacifica, Hyperliquid & more</td><td><a href="exchanges/overview.md">overview.md</a></td></tr>
+<tr><td><i class="fa-book">:book:</i> <strong>API Reference</strong><br>Integrate programmatically</td><td><a href="reference/api.md">api.md</a></td></tr>
+</tbody>
+</table>
+
+## Need Help?
+
+{% hint style="info" %}
+**Quick Search:** Press `Cmd/Ctrl + K` anywhere to search the docs instantly.
+{% endhint %}
+
+- **Twitter** — [@Arbital_XYZ](https://twitter.com/Arbital_XYZ)
+- **Discord** — Join our community (coming soon)
+- **Telegram** — Beta support channel
+- **Website** — [arbital.xyz](https://arbital.xyz)
+- **Changelog** — [See what's new →](changelog.md)
+
+## Help Improve These Docs
+
+{% hint style="success" %}
+**Community-Driven Documentation**
+
+Found something wrong or missing? Help make these docs better:
+
+- **Edit on GitHub** — Every page can be edited via our [GitHub repo](https://github.com/VOT-Labs/arbital-docs)
+- **Report Issues** — [Open an issue](https://github.com/VOT-Labs/arbital-docs/issues/new) for bugs or suggestions
+- **Contribute** — See our [Contributing Guide](https://github.com/VOT-Labs/arbital-docs/blob/main/CONTRIBUTING.md)
+{% endhint %}
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/overview/how-it-works
+Source: overview/how-it-works.md
+
+# How It Works
+
+Arbital automates market-making strategies across perpetual DEXs, helping you earn trading rewards while managing risk.
+
+## Why Use Arbital?
+
+### The Problem
+
+Perpetual DEXs need active market makers to provide tight spreads and deep order books. Historically, only professional firms with sophisticated infrastructure could participate — leaving exchanges with thin liquidity and traders with poor execution.
+
+### The Solution
+
+Arbital democratizes market making. By automating delta-neutral strategies, Arbital creates a win-win-win:
+
+- **Exchanges** benefit from tighter pricing and higher liquidity
+- **Traders** receive better execution with deeper order books
+- **Market makers (you)** generate sustained trading volume and earn rewards
+
+No quant background required. Configure a bot, deploy, and let Arbital's engine handle the rest.
+
+## Who Is Arbital For?
+
+Arbital is built for users who:
+
+- **Want passive exposure to market making** — Earn from providing liquidity without building your own trading infrastructure
+- **Want to farm points on perp DEXes** — Capture exchange incentive programs ($HYPE, $LIT, $ASTER) that reward active market makers
+- **Don't want to actively trade** — Set up a bot once and let it run 24/7 with automated risk management
+- **Prefer systematic, rules-based strategies** — No discretionary trading decisions; your bot follows the configuration you set
+
+If you're looking for a hands-off way to participate in DeFi liquidity provision, Arbital handles the complexity so you can focus on strategy.
+
+## The Core Loop
+
+```mermaid
+flowchart LR
+    A[Connect Wallet] --> B[Bind Credentials]
+    B --> C[Configure Bot]
+    C --> D[Bot Executes]
+    D --> E[Earn Rewards]
+    E --> D
+```
+
+1. **Connect Wallet** — Link your EVM or Solana wallet
+2. **Bind Credentials** — Securely link exchange API access via signature
+3. **Configure Bot** — Choose strategy, bias, execution mode, and budget
+4. **Bot Executes** — Continuously places orders based on your configuration
+5. **Earn Rewards** — Collect trading fees, points, and exchange incentives
+
+## Strategy Types
+
+### TWAP Market Maker
+
+**Time-Weighted Average Price** execution spreads your orders over time.
+
+**How it works:**
+- Splits your notional across buy and sell orders
+- Adjusts order placement based on your bias setting
+- Refreshes orders at intervals based on execution mode
+- Auto-manages inventory to control exposure
+
+**Best for:** Consistent execution, larger positions, stable markets
+
+### Grid Market Maker
+
+Places orders at fixed price intervals to profit from oscillation.
+
+**How it works:**
+- Creates a grid of buy orders below current price
+- Creates a grid of sell orders above current price
+- Profits when price oscillates between grid levels
+- Stops when price hits boundary limits
+
+**Best for:** Ranging markets, capturing small price movements
+
+## Position Bias
+
+Control your directional exposure:
+
+```mermaid
+flowchart LR
+    subgraph Bias Scale
+        A["-1.0<br/>Full Short"] --- B["-0.5"] --- C["0<br/>Neutral"] --- D["+0.5"] --- E["+1.0<br/>Full Long"]
+    end
+```
+
+| Bias | Strategy | Market View |
+|------|----------|-------------|
+| **-1 (Short)** | Prioritizes selling | Bearish, expect price drop |
+| **0 (Neutral)** | 50/50 buy/sell | No directional view |
+| **+1 (Long)** | Prioritizes buying | Bullish, expect price rise |
+
+{% hint style="info" %}
+Bias affects **when** buys and sells happen — not **whether** they happen. The bot always places both buy and sell orders. Total volume converges over the full run. Margin requirements increase by up to 20% at higher bias levels.
+{% endhint %}
+
+## Bot Lifecycle
+
+```mermaid
+stateDiagram-v2
+    [*] --> Idle: Create Bot
+    Idle --> Pending: Start
+    Pending --> Running: Connected
+    Pending --> Failed: Error
+    Running --> Stopping: Stop
+    Running --> Completed: Target Reached
+    Running --> Failed: Error
+    Stopping --> Stopped: Done
+    Stopped --> Pending: Restart
+    Failed --> Pending: Retry
+```
+
+| State | Description | Actions Available |
+|-------|-------------|-------------------|
+| **Idle** | Created but never started | Start, Edit, Delete |
+| **Pending** | Connecting to exchange | Wait |
+| **Running** | Actively trading | Stop |
+| **Stopping** | Canceling orders, closing | Wait |
+| **Stopped** | Manually stopped | Start, Edit, Delete |
+| **Completed** | Target reached | Delete, View Report |
+| **Failed** | Error occurred | Restart, Edit, Delete |
+
+## Architecture Overview
+
+Arbital is built on a modern, scalable stack designed for high-frequency trading operations.
+
+```mermaid
+flowchart TB
+    subgraph Client["👤 Client Layer"]
+        U[User Browser]
+    end
+
+    subgraph Frontend["🌐 Frontend · Vercel"]
+        FE[Next.js Dashboard<br/>arbital.xyz]
+    end
+
+    subgraph Backend["⚙️ Backend · DigitalOcean"]
+        API[NestJS API<br/>Auth & Orchestration]
+        REDIS[(Redis<br/>Cache & Sessions)]
+        CH[(ClickHouse<br/>Analytics & Metrics)]
+    end
+
+    subgraph BotEngine["🤖 Bot Engine · Kubernetes"]
+        BOT[Dex-Bot-V2<br/>Rust Trading Engine]
+        B2[Pacifica Bot Pod]
+        B3[Extended Bot Pod]
+    end
+
+    subgraph DEX["📊 Exchanges"]
+        E2[Pacifica<br/>Solana Perps]
+        E3[Hyperliquid<br/>L1 Perps]
+    end
+
+    U --> FE
+    FE <--> API
+    API <--> REDIS
+    API --> CH
+    API <--> BOT
+    BOT --> B2 & B3
+    B2 <-->|WebSocket| E2
+    B3 <-->|WebSocket| E3
+```
+
+### Component Breakdown
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Frontend** | Next.js 15, React 18 | User dashboard, bot management UI |
+| **Backend** | NestJS 11 | API, authentication, bot orchestration |
+| **Bot Engine** | Rust, Tokio | High-performance order execution |
+| **Data** | ClickHouse, Redis | Analytics storage, session caching |
+| **Infrastructure** | Vercel, K8s, DigitalOcean | Scalable cloud deployment |
+
+### Data Flow
+
+1. **User Actions** → Frontend sends requests to Backend API
+2. **Bot Commands** → Backend orchestrates bot lifecycle via K8s
+3. **Trade Execution** → Rust bots maintain WebSocket connections to exchanges
+4. **Metrics** → Trading data streams to ClickHouse for analytics
+5. **Real-time Updates** → Dashboard polls API for live bot status
+
+## Non-Custodial Model
+
+Arbital never holds your funds:
+
+- **Your keys, your funds** — Assets stay in your exchange account
+- **Credential binding** — API access linked via wallet signature, not stored keys
+- **No withdrawal access** — Trading permissions only
+- **Revoke anytime** — Unbind credentials from the dashboard
+
+## Execution Modes
+
+Control how responsive your bot is:
+
+| Mode | Refresh Rate | Trade-off |
+|------|--------------|-----------|
+| **Aggressive** | Every 3 seconds | Maximum volume, higher slippage risk |
+| **Normal** | Every 5 seconds | Best balance of volume and execution quality |
+| **Passive** | Every 7 seconds | Best execution quality, lower costs |
+
+- **Aggressive** is more prone to slippage and faster inventory accumulation during volatile conditions
+- **Normal** offers the best balance between volume generation and execution quality — **recommended for most users**
+- **Passive** prioritizes execution quality and fee efficiency over speed
+
+## Incentive Opportunities
+
+Perpetual DEXs actively reward market makers who contribute liquidity. Professional firms have historically earned six to eight figure rewards from these programs — Arbital gives you access to the same opportunity.
+
+**Active incentive programs include:**
+
+| Exchange | Incentive | Token |
+|----------|-----------|-------|
+| **Extended** | Points program + token rewards | $HYPE |
+| **Pacifica** | Points farming program | $LIT |
+| **Aster** | Early liquidity incentives | $ASTER |
+
+Incentive structures vary by exchange and season. Check the [Exchanges Overview](../exchanges/overview.md) for current program details.
+
+## Inventory Management
+
+```mermaid
+flowchart LR
+    A[Track Delta] --> B{At Max<br/>Inventory?}
+    B -->|No| C[Normal Trading<br/>Buy & Sell]
+    B -->|Yes| D[Reduce Only<br/>Close Positions]
+    C --> A
+    D --> A
+```
+
+The bot automatically manages your position exposure:
+
+1. **Tracks position delta** — Monitors buys vs. sells in USD
+2. **Skews orders** — Adjusts bid/ask to naturally reduce inventory
+3. **Enforces limits** — Stops adding to positions at max inventory
+4. **Reduce-only mode** — Only closes positions when limits exceeded
+
+This keeps your exposure controlled without manual intervention.
+
+---
+
+*Last updated: 2026-02-03*
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/overview/key-concepts
+Source: overview/key-concepts.md
+
+# Key Concepts
+
+Essential terminology for using Arbital effectively.
+
+{% hint style="info" %}
+**Looking for more terms?** See the full [Glossary](../reference/glossary.md) for 50+ definitions.
+{% endhint %}
+
+## <i class="fa-video">:video:</i> Video: What is Delta-Neutral Market Making?
+
+{% hint style="warning" %}
+**Coming Soon** — We're creating a video explainer for delta-neutral strategies. Subscribe to our channels to be notified when it's ready.
+{% endhint %}
+
+<!-- Video embed placeholder - replace with YouTube/Loom when ready:
+{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
+-->
+
+## Delta-Neutral
+
+A trading strategy where the portfolio's total delta (directional exposure) equals zero. Price movements don't affect your P&L — you earn from other sources like funding rates and spreads.
+
+```mermaid
+flowchart TB
+    subgraph Portfolio["Delta-Neutral Portfolio"]
+        direction LR
+        L["🟢 Long Position<br/>+$1,000"]
+        S["🔴 Short Position<br/>-$1,000"]
+    end
+
+    subgraph Result["Net Exposure"]
+        D["Delta = $0<br/>Market Neutral"]
+    end
+
+    subgraph Profit["Profit Sources"]
+        F[Funding Rates]
+        SP[Bid-Ask Spread]
+        R[Exchange Rewards]
+    end
+
+    L --> D
+    S --> D
+    D --> Profit
+
+    style L fill:#22c55e,color:#fff
+    style S fill:#ef4444,color:#fff
+    style D fill:#3b82f6,color:#fff
+```
+
+**Key Benefit:** Whether the market goes up or down, your portfolio value stays stable while you earn from trading activity.
+
+## Perpetual Futures (Perps)
+
+Derivative contracts with no expiration date. They track the price of an underlying asset and use funding rates to stay aligned with spot prices.
+
+## Funding Rate
+
+Periodic payments between long and short traders on perp exchanges. When funding is positive, longs pay shorts. When negative, shorts pay longs.
+
+## Market Making
+
+Providing liquidity by placing both buy and sell orders. Market makers earn the spread between bid and ask prices.
+
+## Spread
+
+The difference between the best bid (buy) and ask (sell) prices. Tighter spreads = more competitive market.
+
+## Rebalancing
+
+Adjusting positions to maintain target allocations or delta-neutrality. Arbital bots auto-rebalance based on your configured thresholds.
+
+## Slippage
+
+The difference between expected and actual execution price. Larger orders typically experience more slippage.
+
+## Collateral
+
+Assets deposited as margin for trading. Required to open and maintain positions on perp exchanges.
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/getting-started/quick-start
+Source: getting-started/quick-start.md
+
+# Quick Start
+
+Get your first Arbital bot running in under 10 minutes.
+
+{% hint style="info" %}
+**Before you begin:** Please review our [Risk Disclosure](../legal/risk-disclosure.md) to understand the risks associated with automated trading.
+{% endhint %}
+
+## Prerequisites
+
+- A Web3 wallet (MetaMask for EVM, Phantom for Solana)
+- Funds on a supported exchange ($20+ for Pacifica/Extended)
+- An invite code (beta access required)
+
+## Step 1: Get Access
+
+Arbital is currently in beta. To get started:
+
+**Option A: Invite Code**
+1. Get an invite code from an existing user or the team
+2. Visit [arbital.xyz](https://arbital.xyz)
+3. Connect your wallet
+4. Enter your invite code when prompted
+5. Access granted
+
+**Option B: Join Waitlist**
+1. Visit [arbital.xyz](https://arbital.xyz)
+2. Click **Join Waitlist**
+3. Enter your Telegram ID
+4. You'll be notified when access is granted
+
+## Step 2: Connect Your Wallet
+
+1. Click **Connect Wallet**
+2. Choose your wallet type:
+   - **EVM wallets** (MetaMask, Rainbow) for Extended
+   - **Solana wallets** (Phantom, Solflare) for Pacifica
+3. Sign the authentication message
+4. You're connected
+
+## Step 3: Create a Bot
+
+1. Click **Create Bot** from the dashboard
+2. **Select Strategy:** [Neutral](../reference/glossary.md#delta-neutral) (recommended for beginners)
+3. **Select Exchange:** [Pacifica](../reference/glossary.md#pacifica) or [Extended](../reference/glossary.md#extended)
+4. **Connect Wallet:** Sign to [bind credentials](../reference/glossary.md#credential-binding)
+5. **Select Asset:** ETH, BTC, or other available pairs
+6. **Set [Budget](../reference/glossary.md#budget):** How much to allocate (default: 30% of balance)
+7. **Choose [Mode](../reference/glossary.md#execution-mode):** Aggressive, Normal, or Passive
+8. Click **Create Bot**
+
+Your bot automatically starts after creation.
+
+## Step 4: Monitor
+
+From the dashboard, track:
+
+- **Balance Chart** — Your account balance over time
+- **Volume Chart** — Trading activity
+- **Progress Bars** — Volume vs target, fees vs budget
+- **Events Table** — Order placements, fills, errors
+- **Positions** — Current open positions
+
+## Bot Limits
+
+- Maximum **2 active bots** per account
+- Minimum $20 balance for Pacifica and Extended
+
+## Next Steps
+
+- [Bot Configuration](../guides/bot-configuration.md) — Fine-tune your strategy
+- [Understanding Analytics](../guides/monitoring.md) — Interpret your dashboard
+- [Troubleshooting](../guides/troubleshooting.md) — Common issues and fixes
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/getting-started/connect-wallet
+Source: getting-started/connect-wallet.md
+
+# Connect Wallet
+
+Arbital uses wallet-based authentication — no email or password required.
+
+## How Authentication Works
+
+Arbital uses **non-custodial authentication**:
+
+1. You connect your wallet
+2. Sign a challenge message (not a transaction)
+3. The signature proves you own the wallet
+4. A session is created for your browser
+
+**Security:** Your private keys never leave your wallet. No transactions are sent. No tokens are spent.
+
+## Supported Wallets
+
+### EVM Wallets (for Extended)
+
+| Wallet | Type | Recommended |
+|--------|------|-------------|
+| **MetaMask** | Browser extension | <i class="fa-circle-check">:circle-check:</i> Most popular |
+| **Rainbow** | Mobile + Extension | Great UX |
+| **WalletConnect** | Mobile bridge | Any WC-compatible wallet |
+| **Coinbase Wallet** | Browser + Mobile | Easy onboarding |
+| **Rabby** | Browser extension | Multi-chain support |
+
+### Solana Wallets (for Pacifica)
+
+| Wallet | Type | Recommended |
+|--------|------|-------------|
+| **Phantom** | Browser + Mobile | <i class="fa-circle-check">:circle-check:</i> Most popular |
+| **Solflare** | Browser + Mobile | Feature-rich |
+| **Backpack** | Browser extension | xNFT support |
+
+{% hint style="info" %}
+**Need detailed setup help?** See our wallet-specific guides:
+- [MetaMask Setup Guide](wallets/metamask.md)
+- [Phantom Setup Guide](wallets/phantom.md)
+- [Ledger Hardware Wallet Guide](wallets/ledger.md)
+{% endhint %}
+
+## Connection Steps
+
+### First Time Setup
+
+1. **Visit** [arbital.xyz](https://arbital.xyz)
+2. **Click** "Connect Wallet"
+3. **Select** your wallet from the list
+4. **Approve** the connection in your wallet popup
+5. **Sign** the authentication message
+   - This is a text message, not a transaction
+   - No gas fees required
+   - Message includes a timestamp for security
+6. **Enter invite code** if prompted (beta access)
+7. **Done** — you're now logged in
+
+### EIP-712 Typed Data Signing
+
+For EVM wallets, Arbital uses EIP-712 typed data signing:
+
+```
+Domain: arbital.xyz
+Message: "Sign this message to authenticate with Arbital"
+Timestamp: [current time]
+Wallet: [your address]
+```
+
+This standard:
+- Shows you exactly what you're signing
+- Cannot be replayed (timestamp-bound)
+- Is widely supported by all major wallets
+
+### Solana Message Signing
+
+For Solana wallets, you sign a simple text message:
+- Message includes your wallet address
+- Timestamp prevents replay attacks
+- Standard Solana signing flow
+
+## Managing Your Session
+
+### Session Duration
+
+- Sessions last until you disconnect or clear cookies
+- Automatic refresh keeps you logged in
+- Multiple browser tabs share the same session
+
+### Switching Wallets
+
+1. Click your wallet address in the navbar
+2. Click **Disconnect**
+3. Connect with a different wallet
+4. Each wallet address has its own bots and history
+
+### Security Tips
+
+- **Lock your wallet** when not actively using Arbital
+- **Review signatures** before approving
+- **Never share** your seed phrase with anyone
+- **Use hardware wallets** for large balances
+
+## Exchange Credential Binding
+
+After connecting your wallet, you'll bind exchange credentials:
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant A as Arbital
+    participant W as Wallet
+    participant E as Exchange
+
+    U->>A: Select Exchange
+    A->>U: Request Credential Binding
+    U->>W: Approve Signature
+    W->>A: Signed Message
+    A->>E: Register Trading Agent
+    E->>A: Agent ID Confirmed
+    A->>U: ✅ Credentials Bound
+
+    Note over U,E: Your keys never leave your wallet
+    Note over A,E: Trading permissions only (no withdrawals)
+```
+
+### For Pacifica (Solana)
+1. Select Pacifica as your exchange
+2. Approve referral (sign message)
+3. Verify $20+ balance
+4. Create credentials (sign message)
+5. Agent bound to your wallet
+
+### For Extended (EVM)
+1. Select Extended as your exchange
+2. Click "Create Credentials"
+3. Sign the binding message
+4. Verify $20+ balance
+5. Credentials linked to your wallet
+
+## Troubleshooting
+
+### Wallet Not Connecting
+
+1. **Unlock your wallet** — ensure it's not locked
+2. **Check the popup** — it may be behind other windows
+3. **Refresh the page** — and try again
+4. **Try another browser** — some extensions conflict
+5. **Disable other wallet extensions** — temporarily
+
+### Signature Request Not Appearing
+
+1. **Check your wallet** — popup may be minimized
+2. **Click the wallet icon** — in your browser toolbar
+3. **Refresh** — and reconnect
+
+### Wrong Network Warning
+
+- Arbital auto-detects the appropriate network
+- Your wallet doesn't need to be on a specific chain
+- The signature works on any network
+
+### Already Connected But Shows Disconnected
+
+1. **Clear cookies** for arbital.xyz
+2. **Reconnect** your wallet
+3. **Sign** the authentication message again
+
+## Multiple Accounts
+
+- Each wallet address = separate Arbital account
+- Bots and settings don't transfer between wallets
+- Switch wallets to access different accounts
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/getting-started/create-first-bot
+Source: getting-started/create-first-bot.md
+
+# Create Your First Bot
+
+Step-by-step guide to deploying your first Arbital trading bot.
+
+## <i class="fa-video">:video:</i> Video Walkthrough
+
+Watch a complete walkthrough of creating and deploying your first bot:
+
+{% embed url="https://www.loom.com/share/009b1e3f75d14c38bcead32d1d3363da" %}
+
+## Before You Begin
+
+Ensure you have:
+- [ ] Connected your wallet (EVM for Extended, Solana for Pacifica)
+- [ ] Sufficient balance on the exchange (minimum $20)
+
+## Bot Creation Wizard
+
+The creation wizard is a single-page form with multiple sections. All sections are visible at once with a sticky summary card on the right.
+
+### 1. Strategy Selection
+
+Choose your directional bias:
+
+| Strategy | Bias Value | Description |
+|----------|------------|-------------|
+| **Short** | -1 | Bearish bias, aggressive early selling |
+| **Neutral** | 0 | No directional bias, balanced buying/selling |
+| **Long** | +1 | Bullish bias, aggressive early buying |
+
+**Default:** Neutral (recommended for beginners)
+
+### 2. Exchange & Wallet Connection
+
+Select your exchange and connect the appropriate wallet:
+
+| Exchange | Wallet Type | Notes |
+|----------|-------------|-------|
+| **Pacifica** | Solana (Phantom, etc.) | Requires referral approval + $20 minimum |
+| **Extended** | EVM (MetaMask, etc.) | Credential binding + $20 minimum |
+
+After wallet connection, your balance is automatically fetched and validated.
+
+### 3. Exchange-Specific Requirements
+
+Each exchange has additional setup steps:
+
+**Pacifica (Solana):**
+1. Sign message to approve Arbital referral
+2. Balance validation ($20+ required)
+3. Sign message to create credentials
+
+**Extended:**
+1. Sign message to create credentials
+2. Balance validation ($20+ required)
+
+### 4. Trading Asset Selection
+
+Choose the market to trade:
+
+**Available Assets:** BTC, ETH, SOL, DOGE, XRP, LINK, HYPE, AAVE, VIRTUAL, XPL, ASTER
+
+All assets are available on all exchanges. Your bot name auto-generates as `{exchange}_{asset}` when both are selected.
+
+### 5. Execution Mode
+
+Control how aggressively your bot trades:
+
+| Mode | Refresh Interval | Use Case |
+|------|------------------|----------|
+| **Aggressive** | 3 seconds | High-volatility markets, rapid position adjustment |
+| **Normal** | 5 seconds | Standard operation, balanced approach |
+| **Passive** | 7 seconds | Low-volatility markets, reduced costs |
+
+**Default:** Aggressive
+
+### 6. Budget & Volume
+
+Configure your budget — the maximum amount (fees + PnL) you are willing to spend before the bot automatically stops.
+
+- **Expected Budget (USD):** Max fees + PnL spend before the bot stops
+  - Minimum: $0.01
+  - Maximum: Your wallet balance
+  - Default: 30% of wallet balance
+  - **Recommended starting budget:** $500–$1,000
+
+- **Min Expected Volume (USD):** Calculated from budget × burn rate
+  - Updates automatically when budget changes
+
+{% hint style="info" %}
+**Budget ≠ capital allocation.** Budget is the maximum you're willing to spend on fees and absorb in PnL before the bot shuts down. Your actual trading capital (notional) is configured separately.
+{% endhint %}
+
+**Burn Rates by Exchange:**
+| Exchange | Fee Range |
+|----------|-----------|
+| Pacifica | 0.015-0.025% |
+| Extended | 0.01-0.02% |
+
+### 7. Inventory Management (Optional)
+
+Control position exposure:
+
+**Normal Mode (Default):** Auto-manages to keep exposure balanced
+
+**Advanced Mode:** Fine-tune for specific strategies
+- **Maximum Position Size:** $100-$500 USD hard cap on directional exposure
+- **Inventory Skew Factor:** 0-100% rebalancing aggressiveness
+  - 0% = Lazy drift (minimal rebalancing)
+  - 100% = Aggressive rebalance (frequent rebalancing)
+
+### 8. Review & Deploy
+
+The sticky summary card shows:
+- Bot name
+- Strategy (Short/Neutral/Long)
+- Exchange & wallet address
+- Trading asset
+- Execution mode
+- Expected budget & volume range
+
+Click **Create Bot** to deploy. The bot automatically starts after creation.
+
+## Bot States
+
+| State | Meaning |
+|-------|---------|
+| **Idle** | Created but never started |
+| **Pending** | Queued, connecting to exchange |
+| **Running** | Actively trading |
+| **Stopping** | Graceful shutdown in progress |
+| **Stopped** | Manually stopped by user |
+| **Completed** | Reached target or time limit |
+| **Failed** | Error occurred, needs attention |
+
+## Managing Your Bot
+
+From the dashboard, you can:
+
+- **Start:** Resume a stopped bot
+- **Stop:** Gracefully stop trading (cancels open orders)
+- **Edit:** Modify parameters (only when stopped/idle/failed)
+- **Delete:** Remove bot permanently
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/getting-started/wallets/metamask
+Source: getting-started/wallets/metamask.md
+
+# MetaMask Setup Guide
+
+Connect your MetaMask wallet to Arbital for trading on EVM-based exchanges (Extended/Hyperliquid).
+
+## Prerequisites
+
+- Chrome, Firefox, Brave, or Edge browser
+- MetaMask extension installed
+
+## Step 1: Install MetaMask
+
+If you don't have MetaMask yet:
+
+1. Visit [metamask.io](https://metamask.io/download/)
+2. Click **Download** for your browser
+3. Add the extension to your browser
+4. Create a new wallet or import an existing one
+
+{% hint style="warning" %}
+**Security:** Never share your seed phrase. MetaMask will never ask for it. Store it offline in a secure location.
+{% endhint %}
+
+## Step 2: Fund Your Wallet
+
+For trading on Arbital, you'll need funds on the exchange, not in MetaMask directly. However, MetaMask is used for:
+
+- **Authentication** — Proving wallet ownership
+- **Credential binding** — Linking your trading permissions
+
+No ETH gas is required for Arbital operations (signing only).
+
+## Step 3: Connect to Arbital
+
+1. Visit [arbital.xyz](https://arbital.xyz)
+2. Click **Connect Wallet**
+3. Select **MetaMask** from the wallet list
+4. MetaMask popup appears — click **Connect**
+5. Sign the authentication message
+   - This is a **text signature**, not a transaction
+   - No gas fees
+   - Message includes timestamp for security
+
+## Step 4: Bind Exchange Credentials
+
+### For Extended (Hyperliquid)
+
+1. Select **Extended** as your exchange
+2. Click **Create Credentials**
+3. Sign the binding message
+4. Ensure you have $20+ balance on Hyperliquid
+5. Credentials linked
+
+## Network Configuration
+
+Arbital works across multiple networks. MetaMask doesn't need to be on a specific chain for signing — the authentication works universally.
+
+**Supported networks for reference:**
+- Ethereum Mainnet
+- Arbitrum
+- Other EVM chains
+
+## Troubleshooting
+
+### MetaMask Popup Not Appearing
+
+1. Check if MetaMask icon shows a notification badge
+2. Click the MetaMask extension icon manually
+3. The pending request should appear
+
+### "User Rejected" Error
+
+- You clicked **Reject** in the MetaMask popup
+- Try again and click **Sign** or **Connect**
+
+### Wrong Account Connected
+
+1. Click your wallet address in Arbital navbar
+2. Click **Disconnect**
+3. In MetaMask, click your account icon
+4. Select the correct account
+5. Reconnect to Arbital
+
+### Multiple Wallet Extensions
+
+If you have multiple wallet extensions (Rainbow, Coinbase, etc.):
+
+1. Disable other extensions temporarily
+2. Or click the MetaMask option specifically in Arbital
+
+## Security Best Practices
+
+- <i class="fa-circle-check">:circle-check:</i> **Lock MetaMask** when not in use
+- <i class="fa-circle-check">:circle-check:</i> **Review all signature requests** before approving
+- <i class="fa-circle-check">:circle-check:</i> **Verify the domain** is arbital.xyz
+- <i class="fa-circle-check">:circle-check:</i> **Use a hardware wallet** for large balances (see [Ledger Guide](ledger.md))
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never share** your seed phrase
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never sign** messages you don't understand
+
+## Next Steps
+
+- [Create Your First Bot](../create-first-bot.md)
+- [Extended (Hyperliquid) Guide](../../exchanges/extended.md)
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/getting-started/wallets/phantom
+Source: getting-started/wallets/phantom.md
+
+# Phantom Wallet Setup Guide
+
+Connect your Phantom wallet to Arbital for trading on Solana-based exchanges (Pacifica).
+
+## Prerequisites
+
+- Chrome, Firefox, Brave, or Edge browser
+- Phantom extension installed
+
+## Step 1: Install Phantom
+
+If you don't have Phantom yet:
+
+1. Visit [phantom.app](https://phantom.app/download)
+2. Click **Download** for your browser
+3. Add the extension to your browser
+4. Create a new wallet or import an existing one
+
+{% hint style="warning" %}
+**Security:** Never share your recovery phrase. Phantom will never ask for it. Store it offline in a secure location.
+{% endhint %}
+
+## Step 2: Fund Your Wallet
+
+For Pacifica trading, you need:
+
+- **$20+ USDC** on Pacifica exchange
+- SOL for Solana transaction fees (small amount, ~0.01 SOL)
+
+Phantom is used for:
+- **Authentication** — Proving wallet ownership
+- **Agent binding** — Creating your Pacifica trading agent
+
+## Step 3: Connect to Arbital
+
+1. Visit [arbital.xyz](https://arbital.xyz)
+2. Click **Connect Wallet**
+3. Select **Phantom** from the wallet list
+4. Phantom popup appears — click **Connect**
+5. Sign the authentication message
+   - This is a **text signature**, not a transaction
+   - Minimal SOL fee (often zero)
+   - Message includes timestamp for security
+
+## Step 4: Bind Pacifica Credentials
+
+Pacifica requires additional steps compared to EVM exchanges:
+
+### 1. Approve Referral
+
+1. Select **Pacifica** as your exchange
+2. Click **Approve Referral**
+3. Sign the referral message in Phantom
+4. Wait for confirmation
+
+### 2. Verify Balance
+
+- Ensure you have **$20+ USDC** on Pacifica
+- Balance is automatically checked
+
+### 3. Create Agent
+
+1. Click **Create Credentials**
+2. Sign the agent binding message
+3. Your trading agent is now linked to your wallet
+
+{% hint style="info" %}
+**What's an Agent?** On Solana, Arbital creates a trading agent tied to your wallet. This agent executes trades on your behalf without needing your private keys.
+{% endhint %}
+
+## Network Configuration
+
+Phantom automatically connects to Solana Mainnet. No manual network configuration needed.
+
+**Verify you're on Mainnet:**
+1. Open Phantom
+2. Click the gear icon (Settings)
+3. Go to **Developer Settings**
+4. Ensure **Mainnet** is selected
+
+## Troubleshooting
+
+### Phantom Popup Not Appearing
+
+1. Check if Phantom icon shows a notification badge
+2. Click the Phantom extension icon manually
+3. The pending request should appear
+
+### "User Rejected" Error
+
+- You clicked **Cancel** in the Phantom popup
+- Try again and click **Approve** or **Confirm**
+
+### Insufficient Balance Error
+
+- Ensure you have $20+ USDC on Pacifica
+- Check you have a small amount of SOL for fees
+- Refresh the page and try again
+
+### Agent Already Exists
+
+If you previously created an agent:
+- Your existing agent will be used
+- No need to create a new one
+- If issues persist, contact support
+
+### Transaction Failed
+
+Solana network congestion can cause failures:
+1. Wait a few minutes
+2. Try again
+3. Check [Solana Status](https://status.solana.com) for network issues
+
+## Security Best Practices
+
+- <i class="fa-circle-check">:circle-check:</i> **Lock Phantom** when not in use (auto-lock in settings)
+- <i class="fa-circle-check">:circle-check:</i> **Review all signature requests** before approving
+- <i class="fa-circle-check">:circle-check:</i> **Verify the domain** is arbital.xyz
+- <i class="fa-circle-check">:circle-check:</i> **Enable transaction simulation** in Phantom settings
+- <i class="fa-circle-check">:circle-check:</i> **Use a hardware wallet** for large balances (see [Ledger Guide](ledger.md))
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never share** your recovery phrase
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never sign** messages you don't understand
+
+## Mobile App
+
+Phantom also has mobile apps for iOS and Android. While you can manage your wallet on mobile, **bot creation and management should be done on desktop** via arbital.xyz.
+
+## Next Steps
+
+- [Create Your First Bot](../create-first-bot.md)
+- [Pacifica Exchange Guide](../../exchanges/pacifica.md)
+- [Troubleshooting](../../guides/troubleshooting.md)
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/getting-started/wallets/ledger
+Source: getting-started/wallets/ledger.md
+
+# Ledger Hardware Wallet Guide
+
+Use your Ledger hardware wallet with Arbital for enhanced security on larger balances.
+
+## Why Use a Hardware Wallet?
+
+- **Private keys never leave the device** — Even if your computer is compromised
+- **Physical confirmation required** — Every signature must be approved on the device
+- **Best for larger balances** — Recommended for portfolios over $1,000
+
+{% hint style="info" %}
+**How it works:** Arbital only requires message signatures (not transactions). Your Ledger signs these messages, proving you own the wallet without exposing private keys.
+{% endhint %}
+
+## Supported Ledger Devices
+
+- Ledger Nano S / S Plus
+- Ledger Nano X
+- Ledger Stax
+
+## Prerequisites
+
+- Ledger device with firmware updated
+- Ledger Live installed
+- MetaMask (for EVM) or Phantom (for Solana) connected to Ledger
+
+---
+
+## EVM Setup (Extended)
+
+### Step 1: Connect Ledger to MetaMask
+
+1. **Install Ethereum app** on your Ledger via Ledger Live
+2. **Open MetaMask** browser extension
+3. Click **Menu** (three dots) → **Connect Hardware Wallet**
+4. Select **Ledger**
+5. Choose your account(s) to import
+6. Your Ledger accounts appear in MetaMask
+
+### Step 2: Enable Blind Signing
+
+For EIP-712 typed data signing (used by Arbital):
+
+1. Open the **Ethereum app** on your Ledger
+2. Go to **Settings** (within the app)
+3. Enable **Blind Signing**
+
+{% hint style="warning" %}
+**Blind Signing:** This allows signing structured data that can't be fully displayed on the Ledger screen. Only enable for trusted applications like Arbital.
+{% endhint %}
+
+### Step 3: Connect to Arbital
+
+1. **Unlock your Ledger** and open the Ethereum app
+2. Visit [arbital.xyz](https://arbital.xyz)
+3. Click **Connect Wallet** → Select **MetaMask**
+4. Choose your Ledger account
+5. **Sign on your Ledger device** when prompted
+   - Review the message on screen
+   - Press both buttons to confirm
+
+### Step 4: Bind Exchange Credentials
+
+1. Select **Extended** as your exchange
+2. Click **Create Credentials**
+3. **Confirm on your Ledger** — Message appears on device
+4. Press both buttons to sign
+5. Credentials bound successfully
+
+---
+
+## Solana Setup (Pacifica)
+
+### Step 1: Connect Ledger to Phantom
+
+1. **Install Solana app** on your Ledger via Ledger Live
+2. **Open Phantom** browser extension
+3. Click **Menu** → **Connect Hardware Wallet**
+4. Select **Ledger**
+5. Follow prompts to connect
+6. Your Ledger Solana account appears in Phantom
+
+### Step 2: Connect to Arbital
+
+1. **Unlock your Ledger** and open the Solana app
+2. Visit [arbital.xyz](https://arbital.xyz)
+3. Click **Connect Wallet** → Select **Phantom**
+4. Choose your Ledger account
+5. **Sign on your Ledger device** when prompted
+
+### Step 3: Bind Pacifica Credentials
+
+1. Select **Pacifica** as your exchange
+2. **Approve Referral** — Confirm on Ledger
+3. **Create Credentials** — Confirm on Ledger
+4. Agent bound to your hardware wallet
+
+---
+
+## Troubleshooting
+
+### "Ledger Device Not Found"
+
+1. Ensure Ledger is **unlocked** and **connected via USB**
+2. Open the correct app (Ethereum or Solana)
+3. Try a different USB port or cable
+4. Disable Ledger Live if open (can conflict)
+
+### "Blind Signing Not Enabled"
+
+For EVM:
+1. Open Ethereum app on Ledger
+2. Navigate to Settings
+3. Enable Blind Signing
+4. Try the signature again
+
+### Signature Timeout
+
+Ledger requires physical confirmation within ~30 seconds:
+1. Watch your Ledger screen for the prompt
+2. Press both buttons to confirm quickly
+3. If timed out, retry the action in Arbital
+
+### "Transport Error"
+
+1. Disconnect and reconnect your Ledger
+2. Close other apps that might use the device
+3. Restart your browser
+4. Try a different browser (Chrome recommended)
+
+### Transaction Shows Different on Screen
+
+The Ledger screen shows a hash/summary, not full details for EIP-712 messages. This is normal for typed data signing. **Verify you're on arbital.xyz** before signing.
+
+---
+
+## Security Best Practices
+
+- <i class="fa-circle-check">:circle-check:</i> **Always verify the domain** before signing
+- <i class="fa-circle-check">:circle-check:</i> **Keep firmware updated** via Ledger Live
+- <i class="fa-circle-check">:circle-check:</i> **Store recovery phrase offline** in multiple secure locations
+- <i class="fa-circle-check">:circle-check:</i> **Use a dedicated browser profile** for crypto activities
+- <i class="fa-circle-check">:circle-check:</i> **Physically verify** each signature request on device
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never enter recovery phrase** on any website or app
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never share** your device PIN
+
+## Next Steps
+
+- [Create Your First Bot](../create-first-bot.md)
+- [MetaMask Guide](metamask.md) (for EVM details)
+- [Phantom Guide](phantom.md) (for Solana details)
+- [Security Best Practices](../../guides/security.md)
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/exchanges/overview
+Source: exchanges/overview.md
+
+# Supported Exchanges
+
+Arbital integrates with leading perpetual DEXs across multiple chains.
+
+## Currently Supported
+
+| Exchange | Chain | Wallet | Min Balance | Status |
+|----------|-------|--------|-------------|--------|
+| [Pacifica](pacifica.md) | Solana | Phantom, Solflare | $20 | **Live** |
+| [Extended](extended.md) | EVM (Hyperliquid) | MetaMask, WalletConnect | $20 | **Live** |
+
+## Exchange Comparison
+
+| Feature | Pacifica | Extended |
+|---------|----------|----------|
+| **Setup Complexity** | Medium | Simple |
+| **Fee Range** | 0.035-0.045% | 0.03-0.04% |
+| **Referral Required** | Yes | No |
+| **Min Balance** | $20 | $20 |
+| **Credential Type** | Solana Agent | EVM Signature |
+
+## Exchange Selection Guide
+
+### For Beginners
+**Extended (Hyperliquid)** — Simple setup, deep liquidity, wide market selection.
+
+### For Solana Users
+**Pacifica** — Native Solana integration, fast transactions, points program.
+
+### For High Volume
+**Extended (Hyperliquid)** — Deep liquidity, wide market selection, established platform.
+
+### For Points Farming
+Perpetual DEXs actively reward liquidity providers. Professional market makers have historically earned six to eight figure rewards from these programs — Arbital gives everyday users access to the same opportunity.
+
+**Current incentive programs:**
+- **Extended/Hyperliquid** — $HYPE token rewards and points program
+- **Pacifica** — $LIT points farming program
+- **Aster** — $ASTER early liquidity incentives
+
+Monitor exchange announcements for seasonal campaigns and updated reward structures.
+
+## Fee Structure
+
+Arbital charges a builder fee of **2 bps (0.02%)** on executed volume, in addition to exchange fees.
+
+**Example:** For every **$1M in trading volume**, total fees are approximately **~$350** (1.5 bps average exchange fee + 2.0 bps Arbital fee = 3.5 bps total).
+
+## Credential Binding
+
+Arbital uses secure credential binding instead of storing API keys:
+
+### How It Works
+1. Connect your wallet to Arbital
+2. Sign an authentication message
+3. Your wallet address is linked to trading permissions
+4. No private keys or API secrets are ever stored
+
+### Security Benefits
+- **Non-custodial** — Your funds stay in your exchange account
+- **No key exposure** — Private keys never leave your wallet
+- **Trading only** — No withdrawal permissions granted
+- **Revocable** — Unbind credentials anytime from the dashboard
+
+## Available Markets
+
+All exchanges support trading on these markets:
+
+| Market | Description |
+|--------|-------------|
+| BTC | Bitcoin perpetual |
+| ETH | Ethereum perpetual |
+| SOL | Solana perpetual |
+| DOGE | Dogecoin perpetual |
+| XRP | Ripple perpetual |
+| LINK | Chainlink perpetual |
+| HYPE | Hyperliquid perpetual |
+| AAVE | Aave perpetual |
+| VIRTUAL | Virtual perpetual |
+| XPL | XPL perpetual |
+| ASTER | Aster perpetual |
+
+## Coming Soon
+
+Arbital is continuously expanding exchange support:
+
+- Aster
+- Hibachi
+- Based App
+- Additional perpetual DEXs
+
+## Troubleshooting
+
+### Exchange Not Connecting
+1. Ensure your wallet is on the correct network
+2. Try disconnecting and reconnecting
+3. Clear browser cache and reload
+4. Check the exchange's status page
+
+### Credential Binding Failed
+1. Make sure you signed the message in your wallet
+2. Check you have sufficient balance (if required)
+3. For Pacifica, complete referral approval first
+4. Try the process again
+
+### Balance Not Syncing
+1. Wait 10-15 seconds for balance to update
+2. Refresh the page
+3. Verify funds on the exchange directly
+4. Check network status for delays
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/exchanges/pacifica
+Source: exchanges/pacifica.md
+
+# Pacifica
+
+Pacifica is a perpetual DEX on Solana focused on capital efficiency.
+
+## Overview
+
+| Property | Value |
+|----------|-------|
+| **Chain** | Solana |
+| **Settlement** | USDC |
+| **Wallet Type** | Solana (Phantom, Solflare, etc.) |
+| **Min Balance** | $20 USD |
+| **Status** | Live |
+
+## Setup Guide
+
+### 1. Prepare Your Wallet
+
+1. Have a Solana wallet ready (Phantom or Solflare recommended)
+2. Ensure you have at least $20 USDC on Pacifica
+3. The minimum balance is required for credential binding
+
+### 2. Connect in Arbital
+
+1. Go to **Create Bot**
+2. Select **Pacifica** as your exchange
+3. Click **Connect Wallet**
+4. Approve the wallet connection in your Solana wallet
+
+### 3. Approve Referral
+
+Pacifica requires referral approval as part of the setup:
+
+1. After wallet connection, you'll see the referral approval step
+2. Click **Approve Referral**
+3. Sign the message in your Solana wallet
+4. Wait for referral approval confirmation
+
+### 4. Verify Balance
+
+1. Your Pacifica balance is automatically checked
+2. Minimum $20 USD required to proceed
+3. If insufficient, deposit more USDC to Pacifica first
+
+### 5. Bind Credentials
+
+1. Click **Create Credentials**
+2. Sign the agent binding message in your wallet
+3. Wait for credential binding confirmation
+
+The credential binding process:
+- Uses Solana message signing (Ed25519)
+- Creates an agent binding linked to your wallet
+- Grants trading permissions only
+
+## Available Markets
+
+| Market | Price Decimals | Size Decimals | Min Order |
+|--------|----------------|---------------|-----------|
+| BTC | — | — | $10 |
+| ETH | 1 | 4 | $10 |
+| SOL | 2 | 2 | $10 |
+| DOGE | — | — | $10 |
+| XRP | — | — | $10 |
+| LINK | — | — | $10 |
+| HYPE | — | — | $10 |
+| AAVE | — | — | $10 |
+| VIRTUAL | — | — | $10 |
+| XPL | — | — | $10 |
+| ASTER | — | — | $10 |
+
+## Fee Structure
+
+| Type | Rate |
+|------|------|
+| Exchange Fee | 0.015-0.025% |
+| Arbital Fee | 0.02% |
+| **Total** | **0.035-0.045%** |
+
+## Pacifica Advantages
+
+- **Solana-native** — Fast, low-cost transactions
+- **High capital efficiency** — Competitive margin requirements
+- **Points program** — Earn rewards while trading
+- **Referral benefits** — Arbital referral provides fee discounts
+
+## Troubleshooting
+
+### Referral Approval Failed
+- Ensure you signed the message correctly
+- Try disconnecting and reconnecting your wallet
+- Check your Solana wallet for pending signature requests
+
+### Insufficient Balance
+- Minimum $20 USD required
+- Deposit more USDC to Pacifica
+- Wait for balance to sync (may take a few seconds)
+
+### Credential Binding Failed
+- Complete the referral approval step first
+- Ensure sufficient balance ($20+)
+- Try the process again from the beginning
+
+### Balance Not Showing
+- Wait a few seconds for balance to sync
+- Refresh the page
+- Ensure your wallet is the same one with funds on Pacifica
+
+## Tips
+
+- Complete all three steps in order: Referral → Balance Check → Credentials
+- Pacifica's points program can provide additional rewards
+- Monitor Solana network status during high congestion periods
+- Keep extra USDC for trading fees and margin requirements
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/exchanges/extended
+Source: exchanges/extended.md
+
+# Extended (Hyperliquid)
+
+Extended is Arbital's integration with Hyperliquid, a high-performance L1 built specifically for trading.
+
+> **Note:** "Extended" is the internal name used in Arbital. It connects to Hyperliquid exchange.
+
+## Overview
+
+| Property | Value |
+|----------|-------|
+| **Chain** | Hyperliquid L1 (EVM-compatible) |
+| **Settlement** | USDC |
+| **Wallet Type** | EVM (MetaMask, WalletConnect, etc.) |
+| **Min Balance** | $20 USD |
+| **Status** | Live |
+
+## Setup Guide
+
+### 1. Prepare Your Wallet
+
+1. Have an EVM wallet ready (MetaMask recommended)
+2. Ensure you have USDC on Hyperliquid
+3. Minimum $20 balance required for credential binding
+
+### 2. Connect in Arbital
+
+1. Go to **Create Bot**
+2. Select **Extended** as your exchange
+3. Click **Connect Wallet**
+4. Approve the wallet connection
+
+### 3. Bind Credentials
+
+1. After wallet connection, click **Create Credentials**
+2. Sign the authentication message in your wallet
+3. Wait for credential binding confirmation
+4. Your balance will be verified automatically
+
+The credential binding process:
+- Links your wallet to Arbital securely
+- Uses EVM message signing (no private key sharing)
+- Grants trading permissions only (no withdrawal access)
+
+## Available Markets
+
+| Market | Price Decimals | Size Decimals |
+|--------|----------------|---------------|
+| BTC | 1 | 5 |
+| ETH | 1 | 3 |
+| SOL | 2 | 2 |
+| DOGE | 4 | 0 |
+| XRP | 4 | 1 |
+| LINK | 3 | 2 |
+| HYPE | 3 | 2 |
+| AAVE | 2 | 2 |
+| VIRTUAL | 4 | 1 |
+| XPL | 4 | 1 |
+| ASTER | 4 | 1 |
+
+## Fee Structure
+
+| Type | Rate |
+|------|------|
+| Exchange Fee | 0.01-0.02% |
+| Arbital Fee | 0.02% |
+| **Total** | **0.03-0.04%** |
+
+## Hyperliquid Advantages
+
+- **Sub-second finality** — Fast order execution
+- **Deep liquidity** — Suitable for larger positions
+- **Wide market selection** — 50+ perpetual markets
+- **Points program** — Earn additional rewards
+
+## Troubleshooting
+
+### Credential Binding Failed
+- Ensure you signed the message correctly
+- Check your wallet is connected to the right network
+- Try disconnecting and reconnecting your wallet
+
+### Insufficient Balance
+- Minimum $20 USD required
+- Check your USDC balance on Hyperliquid
+- Bridge more USDC if needed
+
+### Balance Not Showing
+- Wait a few seconds for balance to sync
+- Refresh the page
+- Ensure your wallet is the same one with funds on Hyperliquid
+
+## Tips
+
+- Extended/Hyperliquid has excellent liquidity for larger positions
+- Monitor the Hyperliquid points program for additional rewards
+- Use EVM wallets that support message signing (MetaMask, Rainbow, etc.)
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/guides/bot-configuration
+Source: guides/bot-configuration.md
+
+# Bot Configuration
+
+Fine-tune your Arbital bot for optimal performance.
+
+## <i class="fa-video">:video:</i> Video: Grid vs TWAP Strategy
+
+{% hint style="warning" %}
+**Coming Soon** — A side-by-side comparison video explaining when to use each strategy is being created.
+{% endhint %}
+
+<!-- Video embed placeholder - replace with YouTube/Loom when ready:
+{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
+-->
+
+## Strategy Types
+
+Arbital supports two market-making strategies:
+
+### TWAP (Time-Weighted Average Price)
+
+Spreads orders over time to reduce market impact. Best for consistent execution.
+
+**Use when:**
+- You want steady, predictable execution
+- Trading larger positions
+- Market conditions are relatively stable
+
+### Grid Market Maker
+
+Places orders at fixed price intervals to profit from oscillation. Best for ranging markets.
+
+**Use when:**
+- Price is expected to oscillate within a range
+- You want to capture small price movements
+- Market is not trending strongly
+
+### Strategy Comparison
+
+```mermaid
+flowchart LR
+    subgraph TWAP["📈 TWAP Strategy"]
+        T1[Continuous Orders]
+        T2[Time-Based Execution]
+        T3[Auto Inventory Mgmt]
+    end
+
+    subgraph Grid["📊 Grid Strategy"]
+        G1[Fixed Price Levels]
+        G2[Range-Bound Trading]
+        G3[Defined Profit/Fill]
+    end
+
+    subgraph When["When to Use"]
+        TW[/"Trending or<br/>Unknown Markets"/]
+        GW[/"Ranging or<br/>Sideways Markets"/]
+    end
+
+    TWAP --> TW
+    Grid --> GW
+```
+
+| Aspect | TWAP | Grid |
+|--------|------|------|
+| **Order Placement** | Continuous, time-weighted | Fixed price intervals |
+| **Best Market** | Any condition | Ranging/sideways |
+| **Profit Source** | Spread + volume | Price oscillation |
+| **Risk Profile** | Lower (auto-manages) | Higher (boundary stops) |
+| **Capital Efficiency** | Moderate | High in range |
+
+## Core Parameters
+
+### Notional (TWAP)
+
+The total USD value to trade, split between buy and sell orders (unless biased).
+
+| Setting | Description |
+|---------|-------------|
+| Small ($100-500) | Lower risk, suitable for testing |
+| Medium ($500-2000) | Balanced approach |
+| Large ($2000+) | Higher volume, more reward potential |
+
+### Budget
+
+The maximum amount (fees + PnL) you are willing to spend before the bot automatically stops. This is not your trading capital — it's your loss threshold.
+
+| Setting | Description |
+|---------|-------------|
+| Small ($100-500) | Conservative, suitable for testing |
+| Medium ($500-1,000) | **Recommended starting range** |
+| Large ($1,000+) | For experienced users with higher risk tolerance |
+
+{% hint style="info" %}
+**Budget ≠ notional.** Notional is how much you trade per cycle. Budget is the total fees and PnL the bot can consume before it shuts down.
+{% endhint %}
+
+### Bias
+
+Directional preference from -1 (full short) to +1 (full long).
+
+| Bias | Value | Behavior |
+|------|-------|----------|
+| **Short** | -1.0 | 100% sell orders, profits from price drops |
+| **Slight Short** | -0.5 | 75% sell, 25% buy |
+| **Neutral** | 0 | 50% buy, 50% sell (delta-neutral) |
+| **Slight Long** | +0.5 | 75% buy, 25% sell |
+| **Long** | +1.0 | 100% buy orders, profits from price increases |
+
+{% hint style="info" %}
+**How Bias Actually Works**
+
+Bias only affects **when** buys and sells happen — not **whether** they happen. The bot will always place both buy and sell orders regardless of bias setting. Over a full run, total buy and sell volume still converges.
+
+Think of it as timing priority: a long bias means the bot prioritizes buying earlier and selling later, not that it only buys.
+{% endhint %}
+
+**Important Notes:**
+- Margin requirements increase by up to 20% at higher bias levels (closer to -1 or +1)
+- Higher bias means more directional exposure during the run, even though volume converges over time
+- For delta-neutral farming, keep bias at **0**
+
+## Execution Modes
+
+Control how frequently your bot refreshes orders:
+
+| Mode | Refresh Interval | Spread Offset | Max Skew Offset | Best For |
+|------|------------------|---------------|-----------------|----------|
+| **Aggressive** | 3 seconds | 0.1 bps | 5 bps | High-volatility, rapid response |
+| **Normal** | 5 seconds | 0.2 bps | 10 bps | Standard operation |
+| **Passive** | 7 seconds | 0.4 bps | 15 bps | Low-volatility, cost savings |
+
+**Risk characteristics:**
+- **Aggressive** — Maximizes volume but is more prone to slippage and faster inventory accumulation during volatile conditions
+- **Normal** — Best balance between volume generation and execution quality. **Recommended starting mode** for most users
+- **Passive** — Prioritizes execution quality and fee efficiency over speed. Ideal for stable markets or cost-sensitive strategies
+
+{% hint style="info" %}
+**Recommendation:** Start with **Normal** mode to understand how your bot behaves, then adjust based on market conditions and your goals.
+{% endhint %}
+
+## Inventory Management
+
+Control your position exposure to manage risk.
+
+### Max Inventory (USD)
+
+Hard limit on directional exposure. When reached:
+- **At max long:** Bot only places sell orders
+- **At max short:** Bot only places buy orders
+
+| Setting | Range | Use Case |
+|---------|-------|----------|
+| Conservative | $100-500 | Lower risk, tighter control |
+| Moderate | $500-2000 | Balanced approach |
+| Aggressive | $2000+ | Higher exposure tolerance |
+
+**Default:** $2,000 USD
+
+### Inventory Skew Factor
+
+How aggressively the bot rebalances when inventory builds up.
+
+| Factor | Behavior |
+|--------|----------|
+| **0%** | No adjustment (50/50 buy/sell regardless of inventory) |
+| **30%** | Lazy drift (Passive mode default) |
+| **50%** | Moderate rebalancing (Normal mode default) |
+| **70%** | Strong rebalancing (Aggressive mode default) |
+| **100%** | Full adjustment (0% on one side at max inventory) |
+
+## Grid Strategy Parameters
+
+For Grid Market Maker strategy:
+
+| Parameter | Range | Description |
+|-----------|-------|-------------|
+| **Levels per Side** | 1-20 | Number of buy/sell orders on each side |
+| **Spacing (%)** | 0.1-10% | Price distance between grid levels |
+| **Order Size (USD)** | Up to $100,000 | USD per order per level |
+| **Boundary (%)** | 0.5-50% | Stop-loss trigger distance from start price |
+
+**Total Capital Required:** `order_size × levels_per_side × 2`
+
+### Grid Presets
+
+**Tight Grid (ranging markets):**
+```
+Levels: 8 per side
+Spacing: 0.25%
+Order Size: $50
+Boundary: 2%
+Capital Needed: $800
+```
+
+**Wide Grid (volatile markets):**
+```
+Levels: 5 per side
+Spacing: 1.0%
+Order Size: $200
+Boundary: 5%
+Capital Needed: $2,000
+```
+
+## Configuration Examples
+
+### Conservative TWAP
+```
+Notional: $500
+Bias: 0 (Neutral)
+Mode: Passive
+Max Inventory: $500
+Skew Factor: 30%
+```
+
+### Balanced TWAP
+```
+Notional: $1,500
+Bias: 0 (Neutral)
+Mode: Normal
+Max Inventory: $2,000
+Skew Factor: 50%
+```
+
+### Aggressive TWAP
+```
+Notional: $5,000
+Bias: 0 (Neutral)
+Mode: Aggressive
+Max Inventory: $2,000
+Skew Factor: 70%
+```
+
+### Directional Long
+```
+Notional: $2,000
+Bias: +0.5 (Slight Long)
+Mode: Normal
+Max Inventory: $3,000
+Skew Factor: 50%
+```
+
+## Editing Configuration
+
+Bot configuration can only be modified when the bot is in certain states:
+
+| State | Can Edit? |
+|-------|-----------|
+| Idle | Yes |
+| Stopped | Yes |
+| Failed | Yes |
+| Completed | No (create new bot) |
+| Pending | No |
+| Running | No (stop first) |
+| Stopping | No |
+
+**To edit a running bot:**
+1. Stop the bot from the dashboard
+2. Wait for status to change to "Stopped"
+3. Click **Edit Configuration**
+4. Modify parameters
+5. Start the bot again
+
+## Validation Rules
+
+### TWAP Validation
+- Notional: Required, must be > 0
+- Mode: Must be "aggressive", "normal", or "passive"
+- Bias: Must be between -1.0 and +1.0
+- Budget: Must be between $0 and $1,000,000
+- Max Inventory: Must be between $0 and $100,000
+- Skew Factor: Must be between 0.0 and 1.0
+
+### Grid Validation
+- Levels per Side: 1-20
+- Spacing: 0.1% to 10%
+- Order Size: > $0 and ≤ $100,000
+- Boundary: 0.5% to 50%
+- Max Duration: ≥ 60 seconds (if set)
+
+---
+
+*Last updated: 2026-02-03*
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/guides/grid-strategy
+Source: guides/grid-strategy.md
+
+# Grid Strategy Guide
+
+A comprehensive guide to the Grid Market Maker strategy.
+
+## What is Grid Trading?
+
+Grid trading places buy and sell orders at preset price intervals, creating a "grid" of orders. When price oscillates within the grid, orders fill and you profit from the spread.
+
+```mermaid
+flowchart TB
+    subgraph Grid["Grid Structure"]
+        S3["SELL $2,050 (Level 3)"]
+        S2["SELL $2,025 (Level 2)"]
+        S1["SELL $2,000 (Level 1)"]
+        CP[/"Current Price $1,975"/]
+        B1["BUY $1,950 (Level 1)"]
+        B2["BUY $1,925 (Level 2)"]
+        B3["BUY $1,900 (Level 3)"]
+    end
+
+    S3 --- S2 --- S1 --- CP --- B1 --- B2 --- B3
+
+    style S3 fill:#ff6b6b,color:#fff
+    style S2 fill:#ff6b6b,color:#fff
+    style S1 fill:#ff6b6b,color:#fff
+    style CP fill:#ffd93d,color:#000
+    style B1 fill:#6bcb77,color:#fff
+    style B2 fill:#6bcb77,color:#fff
+    style B3 fill:#6bcb77,color:#fff
+```
+
+## How It Works
+
+1. **Setup:** Bot places buy orders below current price, sell orders above
+2. **Buy Fill:** When price drops, buy order fills → you accumulate position
+3. **Sell Fill:** When price rises, sell order fills → you close position
+4. **Repeat:** Grid rebuilds, capturing profits from oscillation
+
+### Profit Calculation
+
+**Per Round Trip:**
+```
+Profit = Spacing × Order Size - Fees
+```
+
+**Example:**
+- Spacing: 0.5%
+- Order Size: $100
+- Fees: 0.04%
+
+```
+Profit = (0.5% × $100) - (0.04% × $100 × 2)
+       = $0.50 - $0.08
+       = $0.42 per round trip
+```
+
+## Configuration Parameters
+
+### Levels per Side
+
+Number of buy and sell orders on each side of current price.
+
+| Setting | Orders | Capital Required | Use Case |
+|---------|--------|------------------|----------|
+| 1-3 | 2-6 total | Low | Conservative, small range |
+| 4-7 | 8-14 total | Medium | Balanced approach |
+| 8-20 | 16-40 total | High | Wide coverage, volatile markets |
+
+### Spacing Percentage
+
+Price distance between each grid level.
+
+| Spacing | Profit per Fill | Fill Frequency | Best For |
+|---------|-----------------|----------------|----------|
+| 0.1-0.3% | Low | High | Stable, tight range markets |
+| 0.3-0.7% | Medium | Medium | Most conditions |
+| 0.7-1.5% | High | Low | Volatile markets |
+| 1.5%+ | Very High | Very Low | Extreme volatility |
+
+### Order Size (USD)
+
+How much capital per order.
+
+**Considerations:**
+- Larger orders = more profit per fill, but more capital tied up
+- Smaller orders = more flexibility, less exposure per level
+- Exchange minimum order sizes apply ($10 on Pacifica)
+
+**Recommended:**
+```
+Order Size = Total Budget ÷ (Levels × 2) ÷ 2
+```
+This keeps 50% in reserve for position management.
+
+### Boundary Percentage
+
+Stop-loss trigger distance from starting price.
+
+| Boundary | Protection | Grid Range | Trade-off |
+|----------|------------|------------|-----------|
+| 1-2% | Tight | Narrow | Quick stops, may miss recovery |
+| 3-5% | Medium | Standard | Balanced protection |
+| 5-10% | Wide | Large | More room, higher max loss |
+
+When price moves beyond boundary:
+- All orders cancelled
+- Position closed (if possible)
+- Bot stops with status `StoppedUpperBoundary` or `StoppedLowerBoundary`
+
+## Preset Configurations
+
+### Tight Grid (Ranging Markets)
+
+For markets expected to stay in a narrow range.
+
+```
+Levels per Side: 8
+Spacing: 0.25%
+Order Size: $50
+Boundary: 2%
+─────────────────
+Total Capital: $800
+Grid Width: 4% (8 × 0.25% × 2 sides)
+Expected Profit: $0.10 per round trip
+```
+
+**Best for:**
+- Stable pairs (BTC, ETH)
+- Low volatility periods
+- Accumulating many small profits
+
+### Wide Grid (Volatile Markets)
+
+For markets with larger price swings.
+
+```
+Levels per Side: 5
+Spacing: 1.0%
+Order Size: $200
+Boundary: 5%
+─────────────────
+Total Capital: $2,000
+Grid Width: 10% (5 × 1.0% × 2 sides)
+Expected Profit: $1.80 per round trip
+```
+
+**Best for:**
+- Altcoins with higher volatility
+- News-driven markets
+- Larger swing opportunities
+
+### Balanced Grid
+
+Middle ground for most market conditions.
+
+```
+Levels per Side: 6
+Spacing: 0.5%
+Order Size: $100
+Boundary: 3%
+─────────────────
+Total Capital: $1,200
+Grid Width: 6%
+Expected Profit: $0.42 per round trip
+```
+
+## Grid vs TWAP: When to Use Each
+
+| Factor | Grid | TWAP |
+|--------|------|------|
+| **Market Condition** | Ranging/oscillating | Any direction |
+| **Profit Source** | Price oscillation | Spread capture |
+| **Position Risk** | Can accumulate | Managed by inventory |
+| **Complexity** | More parameters | Simpler |
+| **Best For** | Predictable ranges | Continuous market making |
+
+**Choose Grid when:**
+- Price has been oscillating in a range
+- You have a view on support/resistance levels
+- You want defined profit targets per fill
+
+**Choose TWAP when:**
+- You want continuous market making
+- No strong view on price range
+- You prefer automatic inventory management
+
+## Risk Management
+
+### Inventory Accumulation
+
+Grid trading can accumulate significant positions:
+- If price trends down: accumulates long
+- If price trends up: accumulates short (if short-selling)
+
+**Mitigation:**
+- Use boundaries to limit exposure
+- Monitor position size
+- Consider bias settings if trending
+
+### Boundary Hits
+
+When price hits boundary, the grid stops. This protects against:
+- Unlimited losses in trending markets
+- Holding large positions in unfavorable direction
+
+**After Boundary Stop:**
+1. Review why boundary was hit
+2. Assess if range assumption was wrong
+3. Adjust grid parameters if restarting
+
+### Capital Efficiency
+
+Grid trading ties up capital across multiple levels:
+```
+Capital Locked = Order Size × Levels × 2
+```
+
+Plus margin for positions that fill.
+
+**Optimize by:**
+- Using only necessary levels
+- Keeping reserve for position margin
+- Monitoring utilization
+
+## Monitoring Your Grid
+
+### Key Metrics
+
+| Metric | What It Shows |
+|--------|---------------|
+| **Round Trips** | Completed buy→sell cycles |
+| **Gross Profit** | Total profit from fills |
+| **Fees Paid** | Exchange and Arbital fees |
+| **Net Profit** | Gross - Fees |
+| **Max Drawdown** | Largest unrealized loss |
+
+### Warning Signs
+
+- **No fills for extended time:** Grid might be too wide
+- **All buys or all sells:** Price trending, approaching boundary
+- **High fees vs profit:** Spacing might be too tight
+
+## Tips for Success
+
+1. **Match grid to market:**
+   - Check historical volatility
+   - Identify support/resistance levels
+   - Set boundaries just beyond normal range
+
+2. **Start conservative:**
+   - Use smaller order sizes initially
+   - Run for a day to observe behavior
+   - Adjust based on actual fills
+
+3. **Monitor regularly:**
+   - Check position accumulation
+   - Watch for boundary approach
+   - Adjust if market conditions change
+
+4. **Account for fees:**
+   - Ensure spacing > total fees (both sides)
+   - Factor Arbital + exchange fees
+   - Wider spacing = more profitable fills
+
+5. **Don't fight trends:**
+   - Grid works best in ranging markets
+   - If market starts trending, let boundary stop protect you
+   - Re-evaluate before restarting
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/guides/risk-management
+Source: guides/risk-management.md
+
+# Risk Management
+
+Protect your capital with proper risk controls.
+
+## Understanding Risks
+
+### Market Risk
+Price moves against your position before rebalancing.
+
+**Mitigation:**
+- Tighter rebalance thresholds
+- Smaller position sizes
+- Faster cooldown periods
+
+### Liquidity Risk
+Unable to exit positions at expected prices.
+
+**Mitigation:**
+- Trade liquid markets
+- Avoid oversized positions
+- Monitor order book depth
+
+### Exchange Risk
+Exchange downtime, bugs, or security issues.
+
+**Mitigation:**
+- Diversify across exchanges
+- Don't over-allocate to one platform
+- Monitor exchange status
+
+### Smart Contract Risk
+Vulnerabilities in exchange contracts.
+
+**Mitigation:**
+- Use established, audited exchanges
+- Start with smaller amounts
+- Stay informed about security updates
+
+## Setting Up Alerts
+
+### Position Alerts
+
+Configure notifications for:
+- Position size exceeds threshold
+- Delta deviation beyond limit
+- Unrealized P&L drops below threshold
+
+### System Alerts
+
+Get notified when:
+- Bot stops unexpectedly
+- API connection fails
+- Order execution fails repeatedly
+
+### Setting Alerts
+
+1. Go to **Settings → Notifications**
+2. Enable desired alert types
+3. Configure thresholds
+4. Add notification channels (Discord, Telegram, Email)
+
+## Position Limits
+
+### Per-Bot Limits
+
+| Setting | Purpose |
+|---------|---------|
+| Max Position | Cap total exposure |
+| Max Order Size | Limit single order impact |
+| Daily Loss Limit | Auto-pause on losses |
+
+### Account-Wide Limits
+
+| Setting | Purpose |
+|---------|---------|
+| Total Exposure | Across all bots |
+| Exchange Allocation | Max per exchange |
+| Drawdown Limit | Account-level stop |
+
+## Emergency Procedures
+
+### Pause All Bots
+
+One-click emergency stop:
+1. Dashboard → **Emergency Stop**
+2. All bots pause immediately
+3. Positions remain open
+
+### Close All Positions
+
+Nuclear option:
+1. **Emergency Stop** first
+2. Click **Close All Positions**
+3. Market orders close everything
+4. Review slippage after
+
+{% hint style="danger" %}
+Closing all positions uses market orders and may incur significant slippage in volatile markets.
+{% endhint %}
+
+## Best Practices
+
+1. **Start small** — Test with minimal capital first
+2. **Diversify** — Don't put everything in one bot/exchange
+3. **Monitor actively** — Especially in the first few days
+4. **Set alerts** — Don't rely on manual checking
+5. **Have a plan** — Know what you'll do in various scenarios
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/guides/monitoring
+Source: guides/monitoring.md
+
+# Monitoring & Analytics
+
+Track your bot performance and make data-driven decisions.
+
+## Dashboard Overview
+
+The main dashboard shows aggregate statistics:
+
+| Metric | Description |
+|--------|-------------|
+| **Total Volume** | All-time trading volume across all bots |
+| **Active Bots** | Number of currently running bots |
+| **Total Fees & PnL** | Cumulative profit/loss and fees paid |
+
+### Bot Filtering
+
+Filter your bots by status:
+- **All** — Show all bots
+- **Active** — Currently running bots
+- **Inactive** — Stopped or idle bots
+- **Completed** — Finished bots
+
+## Bot Detail View
+
+Click any bot to see detailed analytics.
+
+### Stats Cards
+
+At the top, you'll see key metrics:
+
+| Card | What It Shows | Color Coding |
+|------|---------------|--------------|
+| **Volume** | Total trading volume | — |
+| **Fees/PnL** | Net profit or loss | Green = profit, Red = loss |
+| **Progress** | Volume % of target | Progress bar |
+| **Budget Used** | Fees % of budget | Progress bar |
+
+### Balance Chart
+
+Shows your account balance over time.
+
+**How to read it:**
+- **Upward trend** — Account growing (good)
+- **Downward trend** — Account shrinking (investigate)
+- **Flat line** — No change (bot may be idle)
+
+**Timeframes:**
+- 5m, 15m, 1h, 4h, 1d, 1w
+
+Select shorter timeframes for recent activity, longer for trends.
+
+### Volume Chart
+
+Shows trading activity over time.
+
+**How to read it:**
+- **Tall bars** — High trading activity
+- **Short bars** — Low activity
+- **No bars** — Bot idle or no fills
+
+**Interpreting patterns:**
+- Consistent volume = bot running smoothly
+- Sudden drops = possible issues
+- Spikes = high market activity
+
+## Events Table
+
+Real-time log of bot activity.
+
+### Event Types
+
+| Event | Icon | Meaning |
+|-------|------|---------|
+| **order_placed** | <i class="fa-paper-plane">:paper-plane:</i> | New order sent to exchange |
+| **order_filled** | <i class="fa-circle-check">:circle-check:</i> | Order executed (trade complete) |
+| **order_canceled** | <i class="fa-circle-xmark">:circle-xmark:</i> | Order removed from book |
+| **error** | <i class="fa-circle-exclamation">:circle-exclamation:</i> | Something went wrong |
+| **warning** | <i class="fa-triangle-exclamation">:triangle-exclamation:</i> | Non-critical issue |
+
+### Event Details
+
+Each event shows:
+- **Timestamp** — When it happened
+- **Type** — What kind of event
+- **Side** — Buy (green) or Sell (red)
+- **Details** — Price, size, or error message
+
+### Using Events for Troubleshooting
+
+**If you see many `error` events:**
+1. Check the error message
+2. Verify exchange connectivity
+3. Check your balance
+4. Review bot configuration
+
+**If you see only `order_placed` but no `order_filled`:**
+- Orders aren't filling
+- Try more aggressive mode
+- Check if spread is too wide
+
+**If you see `order_canceled` frequently:**
+- Normal behavior — bot refreshes orders
+- High cancellation = active rebalancing
+
+## Trades Table
+
+History of executed trades.
+
+### Trade Columns
+
+| Column | Description |
+|--------|-------------|
+| **Order ID** | Unique trade identifier |
+| **Time** | When trade executed |
+| **Asset** | Trading pair (ETH, BTC, etc.) |
+| **Side** | Buy or Sell |
+| **Size** | Trade amount |
+| **Entry Price** | Price you entered at |
+| **Exit Price** | Price you exited at (if closed) |
+| **PnL** | Profit/loss on this trade |
+| **Status** | Open or Closed |
+
+### Reading Trade History
+
+**Profitable trades:** PnL shows positive (green)
+**Losing trades:** PnL shows negative (red)
+**Open positions:** No exit price yet, PnL is unrealized
+
+### Trade Statistics
+
+Aggregated stats from all trades:
+- Total buy volume
+- Total sell volume
+- Net PnL
+- Number of round trips
+
+## Positions Table
+
+Current open positions.
+
+### Position Columns
+
+| Column | Description |
+|--------|-------------|
+| **Symbol** | Market (ETH-PERP, etc.) |
+| **Side** | Long or Short |
+| **Size** | Position size |
+| **Entry Price** | Average entry |
+| **Mark Price** | Current market price |
+| **Liq. Price** | Liquidation price |
+| **Unrealized PnL** | Floating profit/loss |
+
+### Understanding Liquidation Price
+
+The **liquidation price** is where your position would be forcefully closed.
+
+**For long positions:** Liq price is below entry
+**For short positions:** Liq price is above entry
+
+**Safety margin:** Keep price far from liquidation. If mark price approaches liq price, reduce position or add margin.
+
+## Interpreting Performance
+
+### Healthy Bot Signs
+
+- <i class="fa-circle-check">:circle-check:</i> Steady balance growth
+- <i class="fa-circle-check">:circle-check:</i> Regular order fills
+- <i class="fa-circle-check">:circle-check:</i> Balanced buy/sell volume
+- <i class="fa-circle-check">:circle-check:</i> Low error rate
+- <i class="fa-circle-check">:circle-check:</i> Inventory staying near neutral
+
+### Warning Signs
+
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Balance declining
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Many errors in events
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> No fills for extended period
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Inventory building up (high delta)
+- <i class="fa-triangle-exclamation">:triangle-exclamation:</i> Approaching liquidation price
+
+### What to Do If Performance Is Poor
+
+1. **Check events** for errors
+2. **Review inventory** — is it too skewed?
+3. **Adjust execution mode** — try more aggressive
+4. **Check market conditions** — low liquidity?
+5. **Review configuration** — parameters appropriate?
+
+## Refresh & Polling
+
+- Dashboard auto-refreshes every **30 seconds**
+- Click the refresh button for immediate update
+- Events and trades paginate (10 items per page)
+
+## API Endpoints
+
+Access monitoring data programmatically:
+
+```
+GET /api/v1/bots/{instanceId}/report/balance
+GET /api/v1/bots/{instanceId}/report/volume
+GET /api/v1/bots/{instanceId}/positions
+```
+
+See [API Reference](../reference/api.md) for details.
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/guides/troubleshooting
+Source: guides/troubleshooting.md
+
+# Troubleshooting
+
+Common issues and how to resolve them.
+
+## <i class="fa-video">:video:</i> Video: Emergency Procedures
+
+{% hint style="warning" %}
+**Coming Soon** — A video guide covering what to do when things go wrong: stopping bots, managing open positions, and contacting support.
+{% endhint %}
+
+<!-- Video embed placeholder - replace with YouTube/Loom when ready:
+{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
+-->
+
+## Connection Issues
+
+### Wallet Won't Connect
+
+**Symptoms:**
+- Wallet popup doesn't appear
+- Connection times out
+- "User rejected" error
+
+**Solutions:**
+1. Ensure your wallet extension is unlocked
+2. Check you're on the correct network (EVM or Solana)
+3. Try disconnecting and reconnecting
+4. Clear browser cache and reload
+5. Disable other wallet extensions that may conflict
+6. Try a different browser
+
+### Credential Binding Failed
+
+**Symptoms:**
+- "Signature failed" error
+- Binding process hangs
+- Credentials not saving
+
+**Solutions:**
+1. Make sure you signed the message in your wallet
+2. Don't modify the message before signing
+3. Check your wallet didn't timeout
+4. For Pacifica: complete referral approval first
+5. Ensure minimum balance requirements are met
+6. Try the entire process again from wallet connection
+
+### Exchange Connection Lost
+
+**Symptoms:**
+- Bot shows "disconnected" status
+- Orders not placing
+- Balance not updating
+
+**Solutions:**
+1. Check the exchange's status page for outages
+2. Verify your credentials are still valid
+3. Re-bind credentials if necessary
+4. Check network connectivity
+
+---
+
+## Bot Issues
+
+### Bot Stuck in Pending
+
+**Symptoms:**
+- Status shows "pending" for extended time
+- Bot never transitions to "running"
+
+**Causes:**
+- Exchange API issues
+- Network congestion
+- Invalid credentials
+
+**Solutions:**
+1. Wait 2-3 minutes (normal startup can take time)
+2. Check exchange status page
+3. Stop and restart the bot
+4. Verify credentials are valid
+5. Check if you have sufficient balance
+
+### Bot Stuck in Stopping
+
+**Symptoms:**
+- Status shows "stopping" indefinitely
+- Can't restart the bot
+
+**Causes:**
+- Open orders taking time to cancel
+- Exchange API delays
+- Network issues
+
+**Solutions:**
+1. Wait 5 minutes for graceful shutdown
+2. Check exchange for any remaining open orders
+3. Contact support if stuck for >10 minutes
+
+### Bot Shows Failed Status
+
+**Symptoms:**
+- Status changed to "failed"
+- Bot stopped unexpectedly
+
+**Causes:**
+- Insufficient balance
+- Exchange API error
+- Position limit reached
+- Credential invalidation
+
+**Solutions:**
+1. Check the error message in bot details
+2. Verify sufficient balance on exchange
+3. Check if credentials are still valid
+4. Review position limits
+5. Restart the bot after fixing the issue
+
+### Orders Not Filling
+
+**Symptoms:**
+- Bot is running but no trades
+- Volume shows 0
+
+**Causes:**
+- Spread too wide
+- Market too illiquid
+- Price moving faster than refresh rate
+
+**Solutions:**
+1. Use more aggressive execution mode
+2. Check the market has sufficient liquidity
+3. Reduce order size
+4. Try a more liquid market (BTC, ETH)
+
+---
+
+## Balance & Funding Issues
+
+### Insufficient Balance Error
+
+**Symptoms:**
+- Can't create bot
+- Bot fails to start
+- "Insufficient balance" message
+
+**Solutions:**
+1. Check your actual balance on the exchange
+2. Ensure balance meets minimum requirements:
+   - Pacifica: $20 minimum
+   - Extended: $20 minimum
+3. Account for existing positions/margin
+4. Deposit more funds if needed
+
+### Balance Not Showing
+
+**Symptoms:**
+- Balance shows $0 or outdated amount
+- Refresh doesn't update
+
+**Solutions:**
+1. Wait 10-15 seconds for sync
+2. Refresh the page
+3. Verify funds on exchange directly
+4. Disconnect and reconnect wallet
+5. Check if correct wallet is connected
+
+### Balance Mismatch
+
+**Symptoms:**
+- Arbital shows different balance than exchange
+
+**Causes:**
+- Sync delay
+- Unrealized PnL not reflected
+- Different margin calculations
+
+**Solutions:**
+1. Balance syncs every few seconds
+2. Check exchange for accurate real-time balance
+3. Account for open positions and unrealized PnL
+
+---
+
+## Strategy Issues
+
+### Inventory Building Up
+
+**Symptoms:**
+- Position size keeps growing
+- Bot not rebalancing
+
+**Solutions:**
+1. Increase inventory skew factor
+2. Reduce max inventory limit
+3. Use more neutral bias
+4. Switch to more aggressive mode
+5. Manually close some position on exchange
+
+### High Slippage
+
+**Symptoms:**
+- Fill prices worse than expected
+- Large spreads on trades
+
+**Solutions:**
+1. Use smaller order sizes
+2. Trade more liquid markets
+3. Use passive execution mode
+4. Avoid trading during high volatility
+
+### Negative PnL
+
+**Symptoms:**
+- Losing money despite market making
+
+**Causes:**
+- Adverse selection (trading against informed flow)
+- Inventory risk during trends
+- Fee costs exceeding spread profits
+
+**Solutions:**
+1. Review your strategy parameters
+2. Use tighter inventory management
+3. Consider more neutral bias
+4. Evaluate if market conditions suit market making
+5. Try different markets or exchanges
+
+---
+
+## Account Issues
+
+### Can't Access Dashboard
+
+**Solutions:**
+1. Clear browser cache and cookies
+2. Try incognito/private window
+3. Disable browser extensions
+4. Try different browser
+5. Check if your wallet is connected
+
+### Multiple Wallets Confusion
+
+**Symptoms:**
+- Seeing wrong bots
+- Balance from different account
+
+**Solutions:**
+1. Check which wallet is currently connected
+2. Disconnect and connect correct wallet
+3. Each wallet address has separate bots
+
+---
+
+## Getting Help
+
+If these solutions don't resolve your issue:
+
+1. **Check Status:** [status.arbital.xyz](https://status.arbital.xyz) for outages
+2. **Discord:** Join our Discord for community support
+3. **Telegram:** Contact support team directly
+4. **Email:** support@arbital.xyz
+
+When reporting issues, include:
+- Your wallet address (public)
+- Bot ID (if applicable)
+- Exchange you're using
+- Screenshots of error messages
+- Steps to reproduce the issue
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/guides/security
+Source: guides/security.md
+
+# Security Best Practices
+
+Keep your trading operations secure with these guidelines.
+
+## Non-Custodial Architecture
+
+Arbital is designed with security first:
+
+- **Your funds stay on the exchange** — Arbital never holds your assets
+- **Credential binding, not key storage** — We link via wallet signatures
+- **Trading permissions only** — No withdrawal access granted
+- **Revocable access** — Unbind credentials anytime
+
+## Credential Security
+
+### How Credential Binding Works
+
+Instead of storing your API keys, Arbital uses wallet-based authentication:
+
+1. You connect your wallet to Arbital
+2. Sign an authentication message
+3. The signature links your wallet to trading permissions
+4. Your private keys never leave your wallet
+
+This approach:
+- Eliminates API key storage risks
+- Uses cryptographic proof of ownership
+- Can be revoked by unbinding
+
+### Best Practices
+
+**DO:**
+- Only bind credentials on the official Arbital website
+- Verify you're on `arbital.xyz` before signing
+- Review signature messages before approving
+- Unbind credentials you're no longer using
+
+**DON'T:**
+- Share your wallet seed phrase with anyone
+- Sign messages on unofficial sites
+- Approve signatures you don't understand
+
+## Wallet Security
+
+### Hardware Wallets (Recommended)
+
+Use hardware wallets for maximum security:
+- **Ledger** — Supports EVM and Solana
+- **Trezor** — Supports EVM
+
+Benefits:
+- Private keys never touch your computer
+- Physical confirmation required for signatures
+- Protected from malware
+
+### Hot Wallet Best Practices
+
+If using browser wallets (MetaMask, Phantom):
+
+1. **Use a dedicated trading wallet**
+   - Don't use your main savings wallet
+   - Fund only what you need for trading
+
+2. **Secure your seed phrase**
+   - Write it down physically
+   - Store in secure location (safe, bank)
+   - Never store digitally
+
+3. **Enable additional security**
+   - Set a strong password
+   - Enable auto-lock timeout
+   - Consider hardware wallet integration
+
+## Exchange Security
+
+### Permission Principles
+
+When Arbital binds credentials:
+- **Read** — View balances and positions
+- **Trade** — Place and cancel orders
+- **No Withdraw** — Cannot move funds out
+
+### What to Monitor
+
+Regularly check on your exchange:
+- Active API connections/sessions
+- Recent trading activity
+- Any unexpected positions
+
+### Revoking Access
+
+If you suspect unauthorized access:
+
+1. **On the exchange:**
+   - Revoke all API sessions
+   - Change your password
+   - Enable 2FA if not already
+
+2. **On Arbital:**
+   - Go to dashboard
+   - Unbind all credentials
+   - Re-bind only after securing exchange
+
+## Operational Security
+
+### Use Dedicated Browser Profile
+
+Create a separate browser profile for trading:
+- No random extensions
+- Bookmarked official sites only
+- Reduced phishing risk
+
+### Verify URLs
+
+Always check you're on the correct site:
+- `arbital.xyz` — Official Arbital
+- `hyperliquid.xyz` — Official Hyperliquid
+
+Phishing sites often use:
+- Misspellings (`arbita1.xyz`)
+- Extra words (`arbital-app.xyz`)
+- Different TLDs (`arbital.com`)
+
+### Network Security
+
+**DO:**
+- Use secure, private networks
+- Keep your operating system updated
+- Use reputable VPN if on public networks
+
+**DON'T:**
+- Trade on public WiFi without VPN
+- Ignore security warnings
+- Click links in unsolicited messages
+
+## Incident Response
+
+### If You Suspect Compromise
+
+**Immediate steps:**
+
+1. **Stop all bots** from Arbital dashboard
+2. **Unbind credentials** on Arbital
+3. **Revoke API access** on exchange
+4. **Close positions** manually if needed
+5. **Change exchange password**
+6. **Enable 2FA** if not enabled
+
+### Reporting Security Issues
+
+If you discover a security vulnerability:
+- Email: security@arbital.xyz
+- Do not disclose publicly
+- Include detailed reproduction steps
+- We appreciate responsible disclosure
+
+## Regular Security Checklist
+
+### Weekly
+
+- [ ] Review open positions match expected
+- [ ] Check bot activity logs
+- [ ] Verify no unexpected trades
+
+### Monthly
+
+- [ ] Review all bound credentials
+- [ ] Unbind any unused credentials
+- [ ] Check exchange API session list
+- [ ] Update wallet software if needed
+
+### Quarterly
+
+- [ ] Rotate wallet if using hot wallet
+- [ ] Review security of seed phrase storage
+- [ ] Verify backup procedures
+- [ ] Test credential unbinding process
+
+## Common Scams to Avoid
+
+### Phishing
+
+- Fake websites asking for seed phrases
+- Emails claiming urgent action needed
+- Social media impersonators
+
+**Protection:** Always type URLs directly, never click email links
+
+### Fake Support
+
+- DMs offering to "help"
+- Requests for private keys or signatures
+- "Sync wallet" popups
+
+**Protection:** Official support never asks for private keys
+
+### Malicious Approvals
+
+- Token approval scams
+- Unlimited spending allowances
+- Fake airdrop claims
+
+**Protection:** Review all transactions before signing
+
+## Summary
+
+| Layer | Best Practice |
+|-------|---------------|
+| **Wallet** | Hardware wallet or dedicated hot wallet |
+| **Credentials** | Bind only on official site, unbind when not needed |
+| **Exchange** | Monitor activity, enable 2FA |
+| **Browser** | Dedicated profile, verify URLs |
+| **Network** | Secure connections, avoid public WiFi |
+| **Monitoring** | Regular reviews, quick incident response |
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/reference/api
+Source: reference/api.md
+
+# API Reference
+
+Arbital provides a REST API for bot management and monitoring.
+
+---
+
+## Quick Start
+
+{% hint style="success" %}
+**Try the API interactively!**
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://www.postman.com/arbital-team/workspace/arbital-public)
+
+- **Postman Collection:** Import our pre-built collection to test endpoints instantly
+- **OpenAPI Spec:** [Download arbital-api.yaml](https://api.arbital.xyz/docs/openapi.yaml) for code generation
+{% endhint %}
+
+### SDK & Code Generation
+
+Generate client libraries from our OpenAPI spec:
+
+```bash
+# JavaScript/TypeScript
+npx openapi-typescript https://api.arbital.xyz/docs/openapi.yaml -o arbital-api.d.ts
+
+# Python
+pip install openapi-python-client
+openapi-python-client generate --url https://api.arbital.xyz/docs/openapi.yaml
+```
+
+---
+
+## Authentication
+
+All API requests require JWT authentication:
+
+```
+Authorization: Bearer <your_jwt_token>
+```
+
+Tokens are obtained through wallet-based authentication:
+1. Request a challenge from `/auth/challenge`
+2. Sign the challenge with your wallet
+3. Verify the signature at `/auth/verify`
+4. Receive JWT token for subsequent requests
+
+## Base URL
+
+```
+https://api.arbital.xyz
+```
+
+---
+
+## Rate Limits
+
+| Endpoint Type | Limit |
+|---------------|-------|
+| Authentication (`/auth/*`) | 5 requests/minute |
+| API (`/bots/*`, `/exchange/*`) | 10 requests/minute |
+
+Exceeding limits returns `429 Too Many Requests`.
+
+---
+
+## Account Limits
+
+| Limit | Value |
+|-------|-------|
+| Maximum active bots | 2 per user |
+| Minimum balance (Pacifica/Extended) | $20 USD |
+
+---
+
+## Endpoints
+
+### Authentication
+
+#### Get Challenge
+
+Returns a challenge message for wallet signing.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.arbital.xyz/auth/challenge
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/auth/challenge');
+const { challenge, expiresAt } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.get('https://api.arbital.xyz/auth/challenge')
+data = response.json()
+challenge = data['challenge']
+```
+{% endtab %}
+{% endtabs %}
+
+**Response:**
+```json
+{
+  "challenge": "Sign this message to authenticate: abc123...",
+  "expiresAt": "2024-01-15T12:00:00Z"
+}
+```
+
+#### Verify Signature
+
+Submit the signed challenge to receive a JWT token.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/auth/verify \
+  -H "Content-Type: application/json" \
+  -d '{
+    "walletAddress": "0x...",
+    "signature": "0x...",
+    "challenge": "..."
+  }'
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/auth/verify', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    walletAddress: '0x...',
+    signature: '0x...',
+    challenge: '...'
+  })
+});
+const { token } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post('https://api.arbital.xyz/auth/verify', json={
+    'walletAddress': '0x...',
+    'signature': '0x...',
+    'challenge': '...'
+})
+token = response.json()['token']
+```
+{% endtab %}
+{% endtabs %}
+
+**Response:**
+```json
+{
+  "token": "eyJhbG...",
+  "expiresAt": "2024-01-15T12:00:00Z"
+}
+```
+
+#### Redeem Access Code
+```http
+POST /auth/redeem
+```
+
+Redeem an invite code for beta access.
+
+**Body:**
+```json
+{
+  "accessCode": "ABC123",
+  "walletAddress": "0x...",
+  "telegramId": "@username",
+  "signature": "0x..."
+}
+```
+
+**Note:** The access code must be signed by the wallet to prevent unauthorized redemption.
+
+#### Refresh Token
+```http
+GET /auth/refresh
+```
+
+Returns a new JWT token.
+
+---
+
+### Bot Management
+
+#### Create Bot
+
+Create a new trading bot. **Limit:** Maximum 2 bots per user.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/bots \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "credential_id": "uuid",
+    "wallet_address": "0x...",
+    "name": "my_eth_bot",
+    "exchange": "extended",
+    "market": "ETH",
+    "strategy_type": "twap",
+    "strategy_config": {
+      "notional": 1000,
+      "budget": 500,
+      "mode": "normal",
+      "bias": 0,
+      "max_inventory_usd": 2000,
+      "inventory_skew_factor": 0.5
+    }
+  }'
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/bots', {
+  method: 'POST',
+  headers: {
+    'Authorization': `Bearer ${token}`,
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    credential_id: 'uuid',
+    wallet_address: '0x...',
+    name: 'my_eth_bot',
+    exchange: 'extended',
+    market: 'ETH',
+    strategy_type: 'twap',
+    strategy_config: {
+      notional: 1000,
+      budget: 500,
+      mode: 'normal',
+      bias: 0,
+      max_inventory_usd: 2000,
+      inventory_skew_factor: 0.5
+    }
+  })
+});
+const bot = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post(
+    'https://api.arbital.xyz/bots',
+    headers={'Authorization': f'Bearer {token}'},
+    json={
+        'credential_id': 'uuid',
+        'wallet_address': '0x...',
+        'name': 'my_eth_bot',
+        'exchange': 'extended',
+        'market': 'ETH',
+        'strategy_type': 'twap',
+        'strategy_config': {
+            'notional': 1000,
+            'budget': 500,
+            'mode': 'normal',
+            'bias': 0,
+            'max_inventory_usd': 2000,
+            'inventory_skew_factor': 0.5
+        }
+    }
+)
+bot = response.json()
+```
+{% endtab %}
+{% endtabs %}
+
+**Strategy Config Parameters:**
+
+| Parameter | Type | Required | Description |
+|-----------|------|----------|-------------|
+| `notional` | number | Yes | Total USD to trade |
+| `budget` | number | No | Collateral budget |
+| `mode` | string | Yes | "aggressive", "normal", or "passive" |
+| `bias` | number | No | -1 to +1 (default: 0) |
+| `max_inventory_usd` | number | No | Max position exposure |
+| `inventory_skew_factor` | number | No | 0-1 rebalancing aggressiveness |
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "name": "my_eth_bot",
+  "status": "idle",
+  "createdAt": "2024-01-15T12:00:00Z"
+}
+```
+
+#### List Bots
+
+Returns all bots for the authenticated user.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X GET https://api.arbital.xyz/bots \
+  -H "Authorization: Bearer $TOKEN"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch('https://api.arbital.xyz/bots', {
+  headers: { 'Authorization': `Bearer ${token}` }
+});
+const { bots } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.get(
+    'https://api.arbital.xyz/bots',
+    headers={'Authorization': f'Bearer {token}'}
+)
+bots = response.json()['bots']
+```
+{% endtab %}
+{% endtabs %}
+
+**Response:**
+```json
+{
+  "bots": [
+    {
+      "id": "uuid",
+      "name": "my_eth_bot",
+      "exchange": "extended",
+      "market": "ETH",
+      "status": "running",
+      "pnl": 125.50
+    }
+  ]
+}
+```
+
+#### Get Bot Details
+```http
+GET /bots/:instanceId
+```
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "name": "my_eth_bot",
+  "exchange": "extended",
+  "market": "ETH",
+  "status": "running",
+  "strategy_type": "twap",
+  "strategy_config": { ... },
+  "createdAt": "2024-01-15T12:00:00Z",
+  "startedAt": "2024-01-15T12:05:00Z"
+}
+```
+
+#### Update Bot
+```http
+PUT /bots/:instanceId
+```
+
+Update bot configuration. Only allowed when status is: `idle`, `stopped`, or `failed`.
+
+**Body:**
+```json
+{
+  "strategy_config": {
+    "notional": 2000,
+    "mode": "aggressive"
+  }
+}
+```
+
+#### Update Bot Name
+```http
+PUT /bots/:instanceId/name
+```
+
+**Body:**
+```json
+{
+  "name": "new_bot_name"
+}
+```
+
+#### Delete Bot
+```http
+DELETE /bots/:instanceId
+```
+
+Permanently removes the bot.
+
+---
+
+### Bot Control
+
+#### Start Bot
+
+Starts the bot. Status changes to `pending`, then `running`.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/bots/{instanceId}/start \
+  -H "Authorization: Bearer $TOKEN"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch(`https://api.arbital.xyz/bots/${instanceId}/start`, {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${token}` }
+});
+const { status } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post(
+    f'https://api.arbital.xyz/bots/{instance_id}/start',
+    headers={'Authorization': f'Bearer {token}'}
+)
+status = response.json()['status']
+```
+{% endtab %}
+{% endtabs %}
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "status": "pending"
+}
+```
+
+#### Stop Bot
+
+Gracefully stops the bot. Cancels open orders.
+
+{% tabs %}
+{% tab title="cURL" %}
+```bash
+curl -X POST https://api.arbital.xyz/bots/{instanceId}/stop \
+  -H "Authorization: Bearer $TOKEN"
+```
+{% endtab %}
+
+{% tab title="JavaScript" %}
+```javascript
+const response = await fetch(`https://api.arbital.xyz/bots/${instanceId}/stop`, {
+  method: 'POST',
+  headers: { 'Authorization': `Bearer ${token}` }
+});
+const { status } = await response.json();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+response = requests.post(
+    f'https://api.arbital.xyz/bots/{instance_id}/stop',
+    headers={'Authorization': f'Bearer {token}'}
+)
+status = response.json()['status']
+```
+{% endtab %}
+{% endtabs %}
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "status": "stopping"
+}
+```
+
+---
+
+### Reports & Monitoring
+
+#### Get Balance History
+```http
+GET /bots/:instanceId/report/balance
+```
+
+Returns account balance over time.
+
+**Query Parameters:**
+- `timeframe` — Aggregation period: "5m", "15m", "1h", "4h", "1d", "1w"
+
+**Response:**
+```json
+{
+  "data": [
+    {
+      "timestamp": "2024-01-15T12:00:00Z",
+      "balance": 1500.50
+    }
+  ]
+}
+```
+
+#### Get Volume Report
+```http
+GET /bots/:instanceId/report/volume
+```
+
+Returns trading volume metrics.
+
+**Response:**
+```json
+{
+  "volume_24h": 5000.00,
+  "volume_total": 50000.00,
+  "buy_volume": 25500.00,
+  "sell_volume": 24500.00
+}
+```
+
+#### Get Positions
+```http
+GET /bots/:instanceId/positions
+```
+
+Returns current open positions.
+
+**Response:**
+```json
+{
+  "positions": [
+    {
+      "symbol": "ETH-PERP",
+      "side": "long",
+      "size": 0.5,
+      "entry_price": 2100.00,
+      "mark_price": 2150.00,
+      "liquidation_price": 1800.00,
+      "unrealized_pnl": 25.00
+    }
+  ]
+}
+```
+
+#### Get Events
+```http
+GET /bots/:instanceId/events
+```
+
+Returns bot activity events.
+
+**Query Parameters:**
+- `page` — Page number (default: 1)
+- `limit` — Items per page (default: 10)
+
+**Response:**
+```json
+{
+  "events": [
+    {
+      "type": "order_filled",
+      "side": "buy",
+      "price": 2150.00,
+      "size": 0.1,
+      "timestamp": "2024-01-15T12:10:00Z"
+    }
+  ],
+  "pagination": {
+    "page": 1,
+    "total_pages": 5
+  }
+}
+```
+
+#### Get Trades
+```http
+GET /bots/:instanceId/trades
+```
+
+Returns executed trades.
+
+**Query Parameters:**
+- `page` — Page number (default: 1)
+- `limit` — Items per page (default: 10)
+
+**Response:**
+```json
+{
+  "trades": [
+    {
+      "id": "uuid",
+      "side": "buy",
+      "size": 0.5,
+      "entry_price": 2100.00,
+      "exit_price": 2150.00,
+      "pnl": 25.00,
+      "status": "closed",
+      "timestamp": "2024-01-15T12:10:00Z"
+    }
+  ]
+}
+```
+
+#### Get Trade Statistics
+```http
+GET /bots/:instanceId/trades/stats
+```
+
+Returns aggregated trade statistics.
+
+**Response:**
+```json
+{
+  "total_trades": 150,
+  "buy_volume": 25500.00,
+  "sell_volume": 24500.00,
+  "realized_pnl": 125.50,
+  "total_fees": 25.00
+}
+```
+
+---
+
+### Exchange Integration
+
+#### Get Signing Message
+```http
+GET /exchange/:exchange/sign/message
+```
+
+Get the message to sign for credential binding.
+
+**Exchanges:** `pacifica`, `extended`, `hyperliquid`
+
+**Response:**
+```json
+{
+  "message": "Sign this message to bind your account..."
+}
+```
+
+#### Bind Exchange Credentials
+```http
+POST /exchange/:exchange/sign
+```
+
+Submit signed message to bind credentials.
+
+**Body:**
+```json
+{
+  "signature": "0x...",
+  "walletAddress": "0x..."
+}
+```
+
+#### Get Exchange Balance
+```http
+GET /exchange/:exchange/balance
+```
+
+Returns your balance on the exchange.
+
+**Response:**
+```json
+{
+  "balance": 1500.50,
+  "currency": "USDC"
+}
+```
+
+#### Check Pacifica Referral
+```http
+GET /exchange/pacifica/referral/check
+```
+
+Check if Arbital referral is approved for Pacifica.
+
+#### Approve Pacifica Referral
+```http
+POST /exchange/pacifica/referral/approve
+```
+
+Approve Arbital referral on Pacifica.
+
+---
+
+## Error Responses
+
+All errors follow this format:
+
+```json
+{
+  "error": "error_code",
+  "message": "Human-readable description"
+}
+```
+
+### Common Error Codes
+
+| Code | HTTP Status | Description |
+|------|-------------|-------------|
+| `unauthorized` | 401 | Invalid or expired token |
+| `forbidden` | 403 | Action not permitted |
+| `not_found` | 404 | Resource doesn't exist |
+| `validation_error` | 400 | Invalid request body |
+| `bot_limit_exceeded` | 400 | Maximum 2 bots per user |
+| `bot_not_stopped` | 400 | Bot must be stopped to edit |
+| `insufficient_balance` | 400 | Not enough funds (min $20) |
+| `credential_not_found` | 400 | Exchange credentials missing |
+| `exchange_error` | 502 | Exchange API failure |
+| `rate_limited` | 429 | Too many requests |
+
+---
+
+## Webhooks (Coming Soon)
+
+Subscribe to bot events:
+- `bot.started`
+- `bot.stopped`
+- `bot.error`
+- `trade.executed`
+
+---
+
+## API Playground
+
+{% hint style="info" %}
+**Interactive Testing**
+
+Use our Postman collection for hands-on API exploration:
+
+1. **Import Collection:** Click the "Run in Postman" button above
+2. **Set Environment:** Configure `base_url` and `token` variables
+3. **Test Endpoints:** Execute requests with pre-filled examples
+4. **Generate Code:** Export to any language from Postman
+
+For automated testing, download the [OpenAPI spec](https://api.arbital.xyz/docs/openapi.yaml) and use tools like:
+- **Swagger UI:** Interactive documentation
+- **Insomnia:** API client with OpenAPI import
+- **HTTPie:** Command-line testing
+{% endhint %}
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/reference/glossary
+Source: reference/glossary.md
+
+# Glossary
+
+Quick reference for terms used throughout Arbital documentation.
+
+{% hint style="info" %}
+**Tip:** Use `Cmd/Ctrl + F` to search for specific terms.
+{% endhint %}
+
+## A
+
+**Agent Binding** — Solana-specific process for linking wallet credentials to Arbital. Used on Pacifica exchange.
+
+**Aggressive Mode** — Execution mode with 3-second refresh intervals. Fastest response to market changes, higher costs.
+
+## B
+
+**Balance Chart** — Dashboard visualization showing your account balance over time. Helps track bot performance.
+
+**Bias** — Directional preference from -1 (full short) to +1 (full long). A bias of 0 is neutral/delta-neutral. Also called "Position Bias".
+
+**Bot Lifecycle** — The states a bot transitions through: Idle → Pending → Running → Stopping → Stopped/Completed/Failed.
+
+**Budget** — The expected fee allocation for your bot in USD. Determines how much you're willing to spend on trading fees.
+
+**Boundary** — In grid trading, the price distance from start that triggers a stop-loss.
+
+**Bot** — Automated trading program that executes your strategy on an exchange.
+
+## C
+
+**Collateral** — Assets deposited as margin for trading positions.
+
+**Credential Binding** — Process of securely linking exchange API access to your wallet via message signature. No private keys are stored.
+
+## D
+
+**Delta** — Measure of position's directional exposure to price changes.
+
+**Delta-Neutral** — Strategy with zero net directional exposure. Profits from fees and spreads rather than price direction.
+
+## E
+
+**Execution Mode** — How frequently the bot refreshes orders: Aggressive (3s), Normal (5s), or Passive (7s).
+
+**Extended** — Arbital's internal name for the Hyperliquid exchange integration.
+
+**EIP-712** — Ethereum signing standard for typed structured data. Used for secure wallet authentication without transactions.
+
+## F
+
+**Funding Rate** — Periodic payment between long and short position holders on perpetual futures.
+
+## G
+
+**Grid Market Maker** — Strategy that places orders at fixed price intervals to profit from oscillation.
+
+**Grid Spacing** — Percentage distance between price levels in a grid strategy.
+
+## I
+
+**Inventory** — Your current position exposure, measured in USD.
+
+**Inventory Skew Factor** — How aggressively the bot rebalances when inventory builds up. 0% = no adjustment, 100% = maximum adjustment.
+
+## L
+
+**Leverage** — Trading with borrowed capital to amplify position size.
+
+**Liquidation** — Forced closure of position when margin is insufficient.
+
+## M
+
+**Maker** — Trader who adds liquidity by placing limit orders.
+
+**Market Making** — Providing liquidity by quoting both buy and sell prices, profiting from the spread.
+
+**Max Inventory** — Hard limit on directional position exposure in USD. When reached, bot only places orders to reduce position.
+
+**Mode** — See "Execution Mode".
+
+## N
+
+**Non-Custodial** — Security model where Arbital never holds your funds or private keys. Your assets remain in your exchange account at all times.
+
+**Normal Mode** — Execution mode with 5-second refresh intervals. Balanced approach for most conditions.
+
+**Notional** — The total USD value to trade in a TWAP strategy, split between buy and sell orders based on bias.
+
+## O
+
+**Order Book** — List of buy and sell orders at various prices on an exchange.
+
+## P
+
+**Pacifica** — Supported exchange on Solana requiring referral approval and agent binding.
+
+**Passive Mode** — Execution mode with 7-second refresh intervals. Slower response, lower costs.
+
+**Pending** — Bot state when queued and connecting to exchange before running.
+
+**Perpetual Futures (Perps)** — Futures contracts with no expiration date.
+
+**Points** — Exchange reward tokens earned through trading activity. Many exchanges offer points programs to incentivize volume.
+
+**Position** — Your current holding in a market (long or short).
+
+**Position Bias** — See "Bias".
+
+## R
+
+**Reduce-Only** — Mode where bot only places orders to reduce existing positions, not increase them.
+
+**Refresh Interval** — How often the bot re-evaluates and adjusts orders based on execution mode.
+
+**Round Trip** — In grid trading, a completed buy→sell or sell→buy cycle that captures profit.
+
+## S
+
+**Skew Factor** — See "Inventory Skew Factor".
+
+**Slippage** — Difference between expected and actual execution price.
+
+**Spread** — Difference between best bid and ask prices.
+
+**Strategy** — The trading approach: TWAP Market Maker or Grid Market Maker.
+
+## T
+
+**Taker** — Trader who removes liquidity by taking existing orders.
+
+**TWAP** — Time-Weighted Average Price. Strategy that spreads orders over time to reduce market impact.
+
+## U
+
+**Unrealized P&L** — Profit/loss on open positions that hasn't been locked in by closing.
+
+## V
+
+**Volatility** — Measure of price movement magnitude over time.
+
+## W
+
+**Wallet** — Digital wallet (EVM or Solana) used for authentication and credential binding.
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/faq
+Source: faq.md
+
+# FAQ
+
+Frequently asked questions about Arbital.
+
+## General
+
+### What is Arbital?
+
+Arbital is an automated market-making platform for perpetual DEXs. Create and manage trading bots that execute TWAP or Grid strategies across multiple exchanges.
+
+### Is Arbital custodial?
+
+No. Arbital is fully non-custodial:
+- Your funds stay on the exchange
+- We use credential binding (wallet signatures), not stored API keys
+- No withdrawal permissions are ever granted
+- Revoke access anytime from the dashboard
+
+### Which exchanges are supported?
+
+Currently live:
+- **Pacifica** — Solana wallet, $20 minimum
+- **Extended (Hyperliquid)** — EVM wallet, $20 minimum
+
+Coming soon: Aster, Hibachi, Based App
+
+### How much capital do I need?
+
+- **Minimum:** $20 for Pacifica/Extended
+- **Recommended:** $500+ for meaningful returns
+- **Start small:** Test with smaller amounts before scaling up
+
+---
+
+## Strategies
+
+### What's the difference between TWAP and Grid?
+
+**TWAP (Time-Weighted Average Price):**
+- Spreads orders over time
+- Continuous market making
+- Automatic inventory management
+- Best for: General market making, any market condition
+
+**Grid:**
+- Places orders at fixed price intervals
+- Profits from price oscillation
+- Defined profit per fill
+- Best for: Ranging markets, expected price bounds
+
+### What does bias mean?
+
+Bias controls the **timing priority** of your buys and sells:
+- **-1 (Short):** Prioritizes selling early, profits from price drops
+- **0 (Neutral):** 50/50 buy/sell, delta-neutral
+- **+1 (Long):** Prioritizes buying early, profits from price rises
+
+Bias only affects **when** buys and sells happen — not **whether** they happen. The bot always places both buy and sell orders, and total volume converges over the full run. Higher bias levels increase margin requirements by up to 20%.
+
+Most users start with **neutral (0)** to minimize directional risk.
+
+### Which execution mode should I use?
+
+| Mode | Refresh | Best For |
+|------|---------|----------|
+| **Aggressive** | 3 seconds | Volatile markets, maximum volume |
+| **Normal** | 5 seconds | Most situations, balanced approach |
+| **Passive** | 7 seconds | Stable markets, cost savings |
+
+- **Aggressive** maximizes volume but is more prone to slippage and faster inventory accumulation in volatile conditions
+- **Normal** provides the best balance between volume generation and execution quality
+- **Passive** prioritizes execution quality and fee efficiency over speed
+
+When in doubt, start with **Normal** — it suits most market conditions and lets you evaluate performance before adjusting.
+
+---
+
+## Bot Management
+
+### Why is my bot stuck in "pending"?
+
+Common causes:
+1. Exchange API is slow or down
+2. Network congestion
+3. Credential binding issue
+
+**Solution:** Wait 2-3 minutes. If still pending, stop the bot and try starting again.
+
+### Why did my bot fail?
+
+Check the error message. Common causes:
+- Insufficient balance on exchange
+- Credential binding expired
+- Position limits exceeded
+- Exchange maintenance
+
+### Can I edit a running bot?
+
+No. You must stop the bot first, then edit, then restart.
+
+Editable states: Idle, Stopped, Failed
+
+### Can I run multiple bots?
+
+Yes. You can run multiple bots on:
+- Different exchanges simultaneously
+- Different markets on the same exchange
+- Same market with different strategies (not recommended)
+
+---
+
+## Inventory & Risk
+
+### What is inventory management?
+
+Your "inventory" is your current position exposure in USD. Inventory management automatically:
+- Tracks your position size
+- Skews orders to reduce exposure
+- Stops adding to positions at max limits
+
+### What happens when I hit max inventory?
+
+The bot enters **reduce-only mode**:
+- If max long: only places sell orders
+- If max short: only places buy orders
+- Normal trading resumes when inventory decreases
+
+### Why is my inventory building up?
+
+Possible causes:
+- Price trending in one direction
+- Skew factor too low
+- Bias setting creating directional exposure
+
+**Solutions:**
+- Increase inventory skew factor
+- Use more neutral bias
+- Reduce max inventory limit
+
+---
+
+## Costs & Returns
+
+### What are the fees?
+
+| Exchange | Exchange Fee | Arbital Fee | Total |
+|----------|--------------|-------------|-------|
+| Pacifica | 0.015-0.025% | 0.02% | 0.035-0.045% |
+| Extended | 0.01-0.02% | 0.02% | 0.03-0.04% |
+
+**Arbital charges a builder fee of 2 bps (0.02%) on executed volume.** Combined with typical exchange fees:
+
+> **Example:** For every **$1M in volume**, you'll pay approximately **~$350 in total fees** (1.5 bps average exchange fee + 2.0 bps Arbital fee = 3.5 bps total).
+
+### What returns can I expect?
+
+Returns depend on:
+- Market volatility
+- Strategy configuration
+- Exchange incentive programs
+- Your execution mode
+
+**Important:** Past performance doesn't guarantee future results. Market making has risks.
+
+### Can I lose money?
+
+Yes. Risks include:
+- Adverse price movements (especially with biased strategies)
+- Inventory accumulation during trends
+- Exchange downtime or failures
+- Configuration errors
+
+Start small and understand your strategy before scaling.
+
+---
+
+## Security
+
+### Are my credentials safe?
+
+Yes. Arbital uses credential binding:
+- You sign a message with your wallet
+- Your private keys never leave your wallet
+- No API secrets are stored
+- Credentials can be revoked anytime
+
+### Can Arbital withdraw my funds?
+
+No. Credential binding only grants trading permissions. Withdrawals are never possible through Arbital.
+
+### What if my wallet is compromised?
+
+1. Unbind credentials on Arbital immediately
+2. Revoke API sessions on the exchange
+3. Secure your wallet
+4. Check for unauthorized trades
+
+---
+
+## Technical
+
+### Why aren't my orders filling?
+
+Possible causes:
+- Market too illiquid
+- Spread too wide compared to market
+- Price moving faster than your refresh rate
+
+**Solutions:**
+- Try a more liquid market (BTC, ETH)
+- Use more aggressive execution mode
+- Reduce order size
+
+### How do I see my trade history?
+
+From the dashboard:
+1. Click on your bot
+2. Go to **Reports** tab
+3. View trades, volume, and PnL
+
+### Can I use Arbital programmatically?
+
+Yes. See the [API Reference](reference/api.md) for endpoints to create, manage, and monitor bots.
+
+---
+
+## Support
+
+### How do I get help?
+
+- **Twitter:** [@Arbital_XYZ](https://twitter.com/Arbital_XYZ) — Updates and support
+- **Discord:** Join our community for support
+- **Telegram:** Direct support from the team
+- **Docs:** You're here
+
+### How do I report a bug?
+
+Contact us on Discord or Telegram with:
+- What you were trying to do
+- What you expected to happen
+- What actually happened
+- Screenshots if possible
+- Your wallet address and bot ID
+
+### Where can I see exchange status?
+
+Check the exchange's official status pages:
+- Pacifica: Official status page
+- Extended/Hyperliquid: hyperliquid.xyz
+
+---
+
+## Contributing
+
+### How can I improve these docs?
+
+We welcome community contributions! You can:
+
+1. **Report issues** — Found a typo or error? [Open an issue](https://github.com/VOT-Labs/arbital-docs/issues/new)
+2. **Suggest content** — Missing a topic? Let us know
+3. **Submit a PR** — Fix it yourself via our [GitHub repo](https://github.com/VOT-Labs/arbital-docs)
+
+See the full [Contributing Guide](https://github.com/VOT-Labs/arbital-docs/blob/main/CONTRIBUTING.md) for details.
+
+### How do I suggest a new FAQ?
+
+1. Check this page first — it may already be covered
+2. [Open an issue](https://github.com/VOT-Labs/arbital-docs/issues/new?labels=docs:content) with your question and suggested answer
+3. Community upvotes help us prioritize additions
+
+### Where can I discuss Arbital?
+
+- **Twitter:** [@Arbital_XYZ](https://twitter.com/Arbital_XYZ) — Follow for updates
+- **Discord:** Community chat and support (coming soon)
+- **Telegram:** Beta support channel
+- **GitHub Issues:** Documentation feedback and suggestions
+
+---
+
+*Last updated: 2026-02-03*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/changelog
+Source: changelog.md
+
+# Changelog
+
+All notable changes to Arbital will be documented in this page.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/), and this project adheres to [Semantic Versioning](https://semver.org/).
+
+---
+
+## [Unreleased]
+
+### Coming Soon
+- Aster exchange integration
+- Hibachi exchange integration
+- Based App exchange integration
+- Community Discord launch
+
+---
+
+## [1.2.0] - 2026-02-02
+
+### Added
+- Dark mode support for documentation
+- Risk disclosure page and compliance banners
+- Visual architecture diagrams
+- Flow diagrams for credential binding, strategies, and delta-neutral concepts
+- "Last updated" timestamps on all documentation pages
+
+### Changed
+- Quick Links section now uses card layout for better UX
+- Improved Getting Started flow with clearer steps
+
+---
+
+## [1.1.0] - 2026-01-15
+
+### Added
+- Grid Market Maker strategy
+- Extended (Hyperliquid) exchange support
+- Bot lifecycle state management
+- Inventory management with configurable skew factors
+- Advanced execution modes (Aggressive, Normal, Passive)
+
+### Changed
+- Improved credential binding flow
+- Enhanced dashboard analytics
+
+### Fixed
+- WebSocket reconnection handling
+- Balance sync delays on Pacifica
+
+---
+
+## [1.0.0] - 2025-12-01
+
+### Added
+- Initial platform launch (Beta)
+- TWAP Market Maker strategy
+- Lighter exchange integration
+- Pacifica exchange integration
+- Non-custodial credential binding
+- Real-time bot monitoring dashboard
+- Balance and volume charts
+- Events table with order tracking
+
+### Security
+- Wallet-based authentication (no passwords)
+- EIP-712 typed data signing for EVM
+- Solana message signing
+- Trading-only permissions (no withdrawal access)
+
+---
+
+## [0.9.0] - 2025-11-01
+
+### Added
+- Private beta launch
+- Core trading engine (Rust/Tokio)
+- Basic bot configuration
+- Lighter exchange proof-of-concept
+
+---
+
+## Historical Milestones
+
+| Date | Milestone |
+|------|-----------|
+| **2025-11** | Private beta launch |
+| **2025-12** | Public beta launch with Lighter & Pacifica |
+| **2026-01** | Grid strategy & Extended (Hyperliquid) support |
+| **2026-02** | Documentation overhaul & dark mode |
+
+---
+
+*Last updated: 2026-02-02*
+
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/security/audit
+Source: security/audit.md
+
+# Security & Transparency
+
+Arbital is committed to security transparency. This page documents our security architecture, audit status, and incident response procedures.
+
+---
+
+## Security Architecture
+
+### Non-Custodial Design
+
+Arbital operates on a **fully non-custodial model**:
+
+```mermaid
+flowchart LR
+    subgraph User["Your Control"]
+        W[Wallet]
+        K[Private Keys]
+    end
+
+    subgraph Arbital["Arbital Platform"]
+        A[Authentication]
+        B[Bot Orchestration]
+    end
+
+    subgraph Exchange["Exchange"]
+        E[Your Funds]
+        T[Trading API]
+    end
+
+    W -->|Signature Only| A
+    K -.->|Never Leaves| W
+    B -->|Trade Commands| T
+    E -.->|Stays On| Exchange
+```
+
+| Security Property | Implementation |
+|-------------------|----------------|
+| **No key storage** | Private keys never leave your wallet |
+| **No fund custody** | Assets remain on the exchange |
+| **Trading only** | No withdrawal permissions granted |
+| **Revocable access** | Unbind credentials anytime |
+
+### Authentication Security
+
+- **EIP-712 Typed Data Signing** — Structured, readable signatures for EVM wallets
+- **Solana Message Signing** — Standard Solana signature flow
+- **Timestamp Binding** — Signatures include timestamps to prevent replay attacks
+- **Session Management** — Secure, encrypted session tokens
+
+### Infrastructure Security
+
+| Layer | Security Measures |
+|-------|-------------------|
+| **Frontend** | HTTPS only, CSP headers, XSS protection |
+| **Backend** | Rate limiting, input validation, encrypted at rest |
+| **Bot Engine** | Isolated containers, no persistent credentials |
+| **Database** | Encrypted, access-controlled, regular backups |
+
+---
+
+## Audit Status
+
+### Smart Contract Audits
+
+{% hint style="warning" %}
+**Status: Pending**
+
+Arbital does not deploy its own smart contracts. We integrate with third-party exchanges (Pacifica, Hyperliquid) that have their own audit histories.
+
+When Arbital deploys on-chain components, this section will be updated with audit reports.
+{% endhint %}
+
+### Exchange Audit References
+
+| Exchange | Audit Status | Reference |
+|----------|--------------|-----------|
+| **Pacifica** | Audited | See Pacifica documentation |
+| **Hyperliquid** | Audited | See Hyperliquid documentation |
+
+### Platform Security Review
+
+| Component | Status | Last Review |
+|-----------|--------|-------------|
+| Authentication Flow | <i class="fa-circle-check">:circle-check:</i> Internal Review | 2025-12 |
+| API Security | <i class="fa-circle-check">:circle-check:</i> Internal Review | 2025-12 |
+| Bot Engine | <i class="fa-circle-check">:circle-check:</i> Internal Review | 2026-01 |
+| External Audit | <i class="fa-rotate">:rotate:</i> Planned | TBD |
+
+---
+
+## Bug Bounty Program
+
+{% hint style="info" %}
+**Status: Coming Soon**
+
+We are establishing a bug bounty program to reward security researchers who responsibly disclose vulnerabilities.
+
+Interested in participating? Contact us at **security@arbital.xyz** (coming soon).
+{% endhint %}
+
+### Scope (Planned)
+
+When launched, the program will cover:
+
+- Authentication bypass
+- Unauthorized access to user data
+- Bot manipulation vulnerabilities
+- API security issues
+
+### Out of Scope
+
+- Third-party exchange vulnerabilities (report to respective exchanges)
+- Social engineering attacks
+- Physical attacks
+- Denial of service
+
+---
+
+## Incident Response
+
+### Response Process
+
+```mermaid
+flowchart TB
+    A[Incident Detected] --> B{Severity?}
+    B -->|Critical| C[Immediate Response<br/>< 1 hour]
+    B -->|High| D[Rapid Response<br/>< 4 hours]
+    B -->|Medium| E[Standard Response<br/>< 24 hours]
+    B -->|Low| F[Scheduled Response<br/>< 1 week]
+
+    C --> G[Contain & Mitigate]
+    D --> G
+    E --> G
+    F --> G
+
+    G --> H[Investigate Root Cause]
+    H --> I[Implement Fix]
+    I --> J[Post-Incident Review]
+    J --> K[User Communication]
+```
+
+### Severity Levels
+
+| Level | Description | Response Time |
+|-------|-------------|---------------|
+| **Critical** | Active exploitation, fund risk | < 1 hour |
+| **High** | Significant vulnerability, no active exploit | < 4 hours |
+| **Medium** | Limited impact vulnerability | < 24 hours |
+| **Low** | Minor issue, no user impact | < 1 week |
+
+### Communication Policy
+
+In the event of a security incident:
+
+1. **Immediate:** Affected users notified directly (if identifiable)
+2. **24 hours:** Public status update on arbital.xyz
+3. **Post-incident:** Full transparency report published
+
+---
+
+## Responsible Disclosure
+
+If you discover a security vulnerability:
+
+1. **Do not** publicly disclose the vulnerability
+2. **Do not** exploit the vulnerability beyond verification
+3. **Contact us** at security@arbital.xyz (coming soon)
+4. **Provide** detailed information to help us reproduce the issue
+5. **Allow** reasonable time for us to address the issue
+
+We commit to:
+- Acknowledging receipt within 24 hours
+- Providing regular updates on remediation progress
+- Crediting researchers (with permission) in our security acknowledgments
+
+---
+
+## Security Best Practices for Users
+
+See our [Security Best Practices Guide](../guides/security.md) for:
+- Wallet security tips
+- Credential management
+- Safe trading practices
+- Recognizing phishing attempts
+
+---
+
+## Contact
+
+For security-related inquiries:
+
+- **Email:** security@arbital.xyz (coming soon)
+- **Response Time:** < 24 hours for security reports
+
+For general support, see [Need Help?](../README.md#need-help)
+
+---
+
+*Last updated: 2026-02-03*
+
+---
+
+URL: https://arbital-1.gitbook.io/docs/legal/risk-disclosure
+Source: legal/risk-disclosure.md
+
+# Risk Disclosure
+
+> **Important:** Please read this entire document carefully before using Arbital. Trading perpetual futures and market-making involves substantial risk of loss.
+
+## General Risk Warning
+
+**Trading perpetual futures and cryptocurrency derivatives involves significant risk and is not suitable for all users.** You should carefully consider whether trading is appropriate for you in light of your experience, objectives, financial resources, and other relevant circumstances.
+
+Arbital is a software platform that facilitates automated trading. **We do not provide financial advice, and nothing on this platform should be construed as such.**
+
+---
+
+## Market Risks
+
+### Volatility Risk
+Cryptocurrency markets are highly volatile. Prices can move significantly in short periods, which may result in:
+- Rapid depletion of your trading capital
+- Liquidation of positions
+- Losses exceeding your initial expectations
+
+### Liquidity Risk
+- Markets may lack sufficient liquidity to execute orders at expected prices
+- Wide spreads during volatile periods can impact bot performance
+- Low liquidity can lead to slippage and unexpected losses
+
+### Funding Rate Risk
+- Perpetual futures have funding rates that can be positive or negative
+- Adverse funding rates can erode profits over time
+- Funding rate volatility may impact delta-neutral strategy returns
+
+---
+
+## Smart Contract & Technical Risks
+
+### Exchange Smart Contract Risk
+- Arbital connects to third-party decentralized exchanges (Pacifica, Hyperliquid, etc.)
+- These exchanges operate on smart contracts that may contain bugs or vulnerabilities
+- Smart contract failures could result in loss of funds
+- Arbital has no control over the security of connected exchanges
+
+### Protocol Risk
+- DeFi protocols may be subject to exploits, hacks, or economic attacks
+- Oracle failures or manipulation can cause unexpected liquidations
+- Bridge failures (for cross-chain operations) may result in locked or lost funds
+
+### Technical Failures
+- Bot software may experience bugs, downtime, or connectivity issues
+- API rate limits or exchange maintenance can interrupt trading
+- Network congestion may delay transaction execution
+
+---
+
+## Counterparty Risks
+
+### Exchange Counterparty Risk
+- Centralized components of DEXs may fail or be compromised
+- Exchange operators may face regulatory action
+- Exchange insolvency could impact fund accessibility
+
+### No Insurance
+- Funds deposited on exchanges are not insured by any government agency
+- Arbital does not provide insurance or guarantees on user funds
+- You assume full responsibility for funds deposited on connected exchanges
+
+---
+
+## Platform-Specific Risks
+
+### Non-Custodial Model
+Arbital operates on a **non-custodial basis**:
+- You retain control of your private keys and funds at all times
+- You are solely responsible for the security of your wallet
+- Lost private keys cannot be recovered by Arbital
+- Compromised wallets are your responsibility
+
+### Credential Binding
+- Arbital uses credential binding to operate bots on your behalf
+- You grant trading permissions to our system
+- You can revoke these permissions at any time
+- Revoking permissions may leave open positions that require manual management
+
+### Strategy Risks
+- **Delta-neutral strategies are not risk-free** — they aim to reduce directional exposure but cannot eliminate all risks
+- Grid and TWAP strategies have their own risk profiles
+- Past performance does not guarantee future results
+- Backtested results may not reflect real-world performance
+
+---
+
+## Financial Risks
+
+### Loss of Capital
+- You may lose some or all of your invested capital
+- Losses can occur rapidly in volatile markets
+- Do not trade with funds you cannot afford to lose
+
+### No Guaranteed Returns
+- Arbital does not guarantee any returns or profits
+- Points and rewards programs are subject to exchange policies
+- Exchange incentive programs may change without notice
+
+### Hidden Costs
+- Trading involves fees (exchange fees, gas fees, funding rates)
+- These costs reduce overall returns
+- High-frequency strategies may accumulate significant fees
+
+---
+
+## Regulatory Risks
+
+### Changing Regulations
+- Cryptocurrency and DeFi regulations vary by jurisdiction and are evolving
+- Regulatory changes may impact your ability to use Arbital or connected exchanges
+- You are responsible for compliance with laws in your jurisdiction
+
+### Geographic Restrictions
+- Some exchanges and features may not be available in certain regions
+- Using VPNs or other methods to circumvent restrictions may violate exchange terms of service
+- Arbital is not available to users in jurisdictions where its use would be prohibited
+
+### Tax Obligations
+- Trading activity may create tax obligations in your jurisdiction
+- You are solely responsible for reporting and paying applicable taxes
+- Consult a qualified tax professional for advice
+
+---
+
+## Your Responsibilities
+
+By using Arbital, you acknowledge and agree that:
+
+1. **You have read and understood this risk disclosure**
+2. **You are trading with funds you can afford to lose**
+3. **You will not rely on Arbital for financial advice**
+4. **You are responsible for your own trading decisions**
+5. **You understand the risks of automated trading**
+6. **You will maintain the security of your wallet and credentials**
+7. **You will comply with applicable laws in your jurisdiction**
+
+---
+
+## Not Financial Advice
+
+**Nothing contained in this documentation, the Arbital platform, or any related communications constitutes financial, investment, legal, or tax advice.**
+
+- We do not recommend any particular trading strategy
+- We do not make representations about the profitability of any strategy
+- All trading decisions are made at your own discretion and risk
+- You should consult qualified professionals for personalized advice
+
+---
+
+## Contact
+
+If you have questions about these risks, please reach out:
+
+- **Website:** [arbital.xyz](https://arbital.xyz)
+- **Telegram:** Beta support channel
+
+---
+
+*Last updated: 2026-02-02*
+
+
