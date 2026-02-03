@@ -181,9 +181,13 @@ Control how responsive your bot is:
 
 | Mode | Refresh Rate | Trade-off |
 |------|--------------|-----------|
-| **Aggressive** | Every 3 seconds | Fastest response, higher costs |
-| **Normal** | Every 5 seconds | Balanced approach |
-| **Passive** | Every 7 seconds | Slower response, lower costs |
+| **Aggressive** | Every 3 seconds | Maximum volume, higher slippage risk |
+| **Normal** | Every 5 seconds | Best balance of volume and execution quality |
+| **Passive** | Every 7 seconds | Best execution quality, lower costs |
+
+- **Aggressive** is more prone to slippage and faster inventory accumulation during volatile conditions
+- **Normal** offers the best balance between volume generation and execution quality — **recommended for most users**
+- **Passive** prioritizes execution quality and fee efficiency over speed
 
 ## Incentive Opportunities
 

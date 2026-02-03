@@ -62,11 +62,15 @@ Most users start with **neutral (0)** to minimize directional risk.
 
 | Mode | Refresh | Best For |
 |------|---------|----------|
-| **Aggressive** | 3 seconds | Volatile markets, rapid response |
-| **Normal** | 5 seconds | Most situations |
+| **Aggressive** | 3 seconds | Volatile markets, maximum volume |
+| **Normal** | 5 seconds | Most situations, balanced approach |
 | **Passive** | 7 seconds | Stable markets, cost savings |
 
-When in doubt, use **Aggressive** for faster response.
+- **Aggressive** maximizes volume but is more prone to slippage and faster inventory accumulation in volatile conditions
+- **Normal** provides the best balance between volume generation and execution quality
+- **Passive** prioritizes execution quality and fee efficiency over speed
+
+When in doubt, start with **Normal** — it suits most market conditions and lets you evaluate performance before adjusting.
 
 ---
 

@@ -103,9 +103,14 @@ Control how frequently your bot refreshes orders:
 | **Normal** | 5 seconds | 0.2 bps | 10 bps | Standard operation |
 | **Passive** | 7 seconds | 0.4 bps | 15 bps | Low-volatility, cost savings |
 
-**Trade-offs:**
-- More aggressive = faster response but higher gas/fees
-- More passive = lower costs but slower adaptation
+**Risk characteristics:**
+- **Aggressive** — Maximizes volume but is more prone to slippage and faster inventory accumulation during volatile conditions
+- **Normal** — Best balance between volume generation and execution quality. **Recommended starting mode** for most users
+- **Passive** — Prioritizes execution quality and fee efficiency over speed. Ideal for stable markets or cost-sensitive strategies
+
+{% hint style="info" %}
+**Recommendation:** Start with **Normal** mode to understand how your bot behaves, then adjust based on market conditions and your goals.
+{% endhint %}
 
 ## Inventory Management
 
