@@ -32,10 +32,14 @@ Arbital integrates with leading perpetual DEXs across multiple chains.
 **Extended (Hyperliquid)** — Deep liquidity, wide market selection, established platform.
 
 ### For Points Farming
-Check current incentive programs on each exchange:
-- Pacifica has an active points program
-- Extended/Hyperliquid has a points program
-- Monitor announcements for seasonal campaigns
+Perpetual DEXs actively reward liquidity providers. Professional market makers have historically earned six to eight figure rewards from these programs — Arbital gives everyday users access to the same opportunity.
+
+**Current incentive programs:**
+- **Extended/Hyperliquid** — $HYPE token rewards and points program
+- **Pacifica** — $LIT points farming program
+- **Aster** — $ASTER early liquidity incentives
+
+Monitor exchange announcements for seasonal campaigns and updated reward structures.
 
 ## Credential Binding
 

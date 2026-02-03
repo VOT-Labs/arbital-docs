@@ -185,6 +185,20 @@ Control how responsive your bot is:
 | **Normal** | Every 5 seconds | Balanced approach |
 | **Passive** | Every 7 seconds | Slower response, lower costs |
 
+## Incentive Opportunities
+
+Perpetual DEXs actively reward market makers who contribute liquidity. Professional firms have historically earned six to eight figure rewards from these programs — Arbital gives you access to the same opportunity.
+
+**Active incentive programs include:**
+
+| Exchange | Incentive | Token |
+|----------|-----------|-------|
+| **Extended** | Points program + token rewards | $HYPE |
+| **Pacifica** | Points farming program | $LIT |
+| **Aster** | Early liquidity incentives | $ASTER |
+
+Incentive structures vary by exchange and season. Check the [Exchanges Overview](../exchanges/overview.md) for current program details.
+
 ## Inventory Management
 
 ```mermaid
