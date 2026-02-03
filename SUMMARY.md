@@ -39,6 +39,10 @@
 * [FAQ](faq.md)
 * [Changelog](changelog.md)
 
+## Security
+
+* [Security & Transparency](security/audit.md)
+
 ## Legal
 
 * [Risk Disclosure](legal/risk-disclosure.md)
