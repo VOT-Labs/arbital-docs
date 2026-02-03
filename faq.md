@@ -150,6 +150,10 @@ Possible causes:
 | Pacifica | 0.015-0.025% | 0.02% | 0.035-0.045% |
 | Extended | 0.01-0.02% | 0.02% | 0.03-0.04% |
 
+**Arbital charges a builder fee of 2 bps (0.02%) on executed volume.** Combined with typical exchange fees:
+
+> **Example:** For every **$1M in volume**, you'll pay approximately **~$350 in total fees** (1.5 bps average exchange fee + 2.0 bps Arbital fee = 3.5 bps total).
+
 ### What returns can I expect?
 
 Returns depend on:

@@ -41,6 +41,12 @@ Perpetual DEXs actively reward liquidity providers. Professional market makers h
 
 Monitor exchange announcements for seasonal campaigns and updated reward structures.
 
+## Fee Structure
+
+Arbital charges a builder fee of **2 bps (0.02%)** on executed volume, in addition to exchange fees.
+
+**Example:** For every **$1M in trading volume**, total fees are approximately **~$350** (1.5 bps average exchange fee + 2.0 bps Arbital fee = 3.5 bps total).
+
 ## Credential Binding
 
 Arbital uses secure credential binding instead of storing API keys:
