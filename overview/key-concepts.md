@@ -6,6 +6,16 @@ Essential terminology for using Arbital effectively.
 **Looking for more terms?** See the full [Glossary](../reference/glossary.md) for 50+ definitions.
 {% endhint %}
 
+## 🎬 Video: What is Delta-Neutral Market Making?
+
+{% hint style="warning" %}
+**Coming Soon** — We're creating a video explainer for delta-neutral strategies. Subscribe to our channels to be notified when it's ready.
+{% endhint %}
+
+<!-- Video embed placeholder - replace with YouTube/Loom when ready:
+{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
+-->
+
 ## Delta-Neutral
 
 A trading strategy where the portfolio's total delta (directional exposure) equals zero. Price movements don't affect your P&L — you earn from other sources like funding rates and spreads.

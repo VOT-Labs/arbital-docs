@@ -2,6 +2,16 @@
 
 Fine-tune your Arbital bot for optimal performance.
 
+## 🎬 Video: Grid vs TWAP Strategy
+
+{% hint style="warning" %}
+**Coming Soon** — A side-by-side comparison video explaining when to use each strategy is being created.
+{% endhint %}
+
+<!-- Video embed placeholder - replace with YouTube/Loom when ready:
+{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
+-->
+
 ## Strategy Types
 
 Arbital supports two market-making strategies:

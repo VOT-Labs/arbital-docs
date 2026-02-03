@@ -2,6 +2,16 @@
 
 Common issues and how to resolve them.
 
+## 🎬 Video: Emergency Procedures
+
+{% hint style="warning" %}
+**Coming Soon** — A video guide covering what to do when things go wrong: stopping bots, managing open positions, and contacting support.
+{% endhint %}
+
+<!-- Video embed placeholder - replace with YouTube/Loom when ready:
+{% embed url="https://www.youtube.com/watch?v=VIDEO_ID" %}
+-->
+
 ## Connection Issues
 
 ### Wallet Won't Connect
