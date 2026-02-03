@@ -28,6 +28,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 - Quick Links section now uses card layout for better UX
 - Improved Getting Started flow with clearer steps
+- Standardized all icons to Font Awesome (GitBook-native) for consistent dark/light mode rendering
 
 ---
 
