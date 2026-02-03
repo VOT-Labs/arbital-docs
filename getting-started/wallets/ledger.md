@@ -136,13 +136,13 @@ The Ledger screen shows a hash/summary, not full details for EIP-712 messages. T
 
 ## Security Best Practices
 
-- ✅ **Always verify the domain** before signing
-- ✅ **Keep firmware updated** via Ledger Live
-- ✅ **Store recovery phrase offline** in multiple secure locations
-- ✅ **Use a dedicated browser profile** for crypto activities
-- ✅ **Physically verify** each signature request on device
-- ❌ **Never enter recovery phrase** on any website or app
-- ❌ **Never share** your device PIN
+- <i class="fa-circle-check">:circle-check:</i> **Always verify the domain** before signing
+- <i class="fa-circle-check">:circle-check:</i> **Keep firmware updated** via Ledger Live
+- <i class="fa-circle-check">:circle-check:</i> **Store recovery phrase offline** in multiple secure locations
+- <i class="fa-circle-check">:circle-check:</i> **Use a dedicated browser profile** for crypto activities
+- <i class="fa-circle-check">:circle-check:</i> **Physically verify** each signature request on device
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never enter recovery phrase** on any website or app
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never share** your device PIN
 
 ## Next Steps
 

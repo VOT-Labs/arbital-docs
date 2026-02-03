@@ -113,13 +113,13 @@ Solana network congestion can cause failures:
 
 ## Security Best Practices
 
-- ✅ **Lock Phantom** when not in use (auto-lock in settings)
-- ✅ **Review all signature requests** before approving
-- ✅ **Verify the domain** is arbital.xyz
-- ✅ **Enable transaction simulation** in Phantom settings
-- ✅ **Use a hardware wallet** for large balances (see [Ledger Guide](ledger.md))
-- ❌ **Never share** your recovery phrase
-- ❌ **Never sign** messages you don't understand
+- <i class="fa-circle-check">:circle-check:</i> **Lock Phantom** when not in use (auto-lock in settings)
+- <i class="fa-circle-check">:circle-check:</i> **Review all signature requests** before approving
+- <i class="fa-circle-check">:circle-check:</i> **Verify the domain** is arbital.xyz
+- <i class="fa-circle-check">:circle-check:</i> **Enable transaction simulation** in Phantom settings
+- <i class="fa-circle-check">:circle-check:</i> **Use a hardware wallet** for large balances (see [Ledger Guide](ledger.md))
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never share** your recovery phrase
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never sign** messages you don't understand
 
 ## Mobile App
 

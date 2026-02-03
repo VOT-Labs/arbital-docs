@@ -2,7 +2,7 @@
 
 Step-by-step guide to deploying your first Arbital trading bot.
 
-## 🎬 Video Walkthrough
+## <i class="fa-video">:video:</i> Video Walkthrough
 
 Watch a complete walkthrough of creating and deploying your first bot:
 

@@ -19,7 +19,7 @@ Arbital uses **non-custodial authentication**:
 
 | Wallet | Type | Recommended |
 |--------|------|-------------|
-| **MetaMask** | Browser extension | ✅ Most popular |
+| **MetaMask** | Browser extension | <i class="fa-circle-check">:circle-check:</i> Most popular |
 | **Rainbow** | Mobile + Extension | Great UX |
 | **WalletConnect** | Mobile bridge | Any WC-compatible wallet |
 | **Coinbase Wallet** | Browser + Mobile | Easy onboarding |
@@ -29,7 +29,7 @@ Arbital uses **non-custodial authentication**:
 
 | Wallet | Type | Recommended |
 |--------|------|-------------|
-| **Phantom** | Browser + Mobile | ✅ Most popular |
+| **Phantom** | Browser + Mobile | <i class="fa-circle-check">:circle-check:</i> Most popular |
 | **Solflare** | Browser + Mobile | Feature-rich |
 | **Backpack** | Browser extension | xNFT support |
 

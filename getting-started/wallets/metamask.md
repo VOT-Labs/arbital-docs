@@ -89,12 +89,12 @@ If you have multiple wallet extensions (Rainbow, Coinbase, etc.):
 
 ## Security Best Practices
 
-- ✅ **Lock MetaMask** when not in use
-- ✅ **Review all signature requests** before approving
-- ✅ **Verify the domain** is arbital.xyz
-- ✅ **Use a hardware wallet** for large balances (see [Ledger Guide](ledger.md))
-- ❌ **Never share** your seed phrase
-- ❌ **Never sign** messages you don't understand
+- <i class="fa-circle-check">:circle-check:</i> **Lock MetaMask** when not in use
+- <i class="fa-circle-check">:circle-check:</i> **Review all signature requests** before approving
+- <i class="fa-circle-check">:circle-check:</i> **Verify the domain** is arbital.xyz
+- <i class="fa-circle-check">:circle-check:</i> **Use a hardware wallet** for large balances (see [Ledger Guide](ledger.md))
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never share** your seed phrase
+- <i class="fa-circle-xmark">:circle-xmark:</i> **Never sign** messages you don't understand
 
 ## Next Steps
 
