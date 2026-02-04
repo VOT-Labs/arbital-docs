@@ -4,37 +4,37 @@
 Demo Video
 {% endembed %}
 
-## Step 1: Connect Wallet & Create Bot
+### Step 1: Connect Wallet & Create Bot
 
 * Connect your wallet to Arbital
 * Enter access code and your telegram ID
 * Click Create Bot
 
-## Step 2: Choose Strategy Type
+### Step 2: Choose Strategy Type
 
 * Long / Neutral / Short
 * Most users should start with **Neutral**
 
-## Step 3: Select Exchange & Asset
+### Step 3: Select Exchange & Asset
 
 * Choose supported exchange
 * If you have not created the exchange accounts, feel free to use our referral links to get boosted points for your accounts
 * Choose trading pair
 * Most users should start with **BTC, ETH, SOL, HYPE**
 
-## Step 4: Choose Execution Mode
+### Step 4: Choose Execution Mode
 
 * Aggressive
 * Normal
 * Passive
 * Most users should start with **Normal**
 
-## Step 5: Set Budget & Volume
+### Step 5: Set Budget & Volume
 
 * Budget = maximum loss you're willing to tolerate
 * Most users should start with **$500 – $1000** to test out
 
-## Step 6: Create Bot
+### Step 6: Create Bot
 
 * Bot starts automatically
 * You can pause or stop anytime

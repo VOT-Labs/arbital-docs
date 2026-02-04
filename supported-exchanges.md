@@ -1,11 +1,11 @@
 # Supported Exchanges
 
-Arbital currently integrates with:
+**Arbital currently integrates with:**
 
 * Pacifica
 * Extended
 
-Each exchange has:
+**Each exchange has:**
 
 * Different maker fee structures
 * Different incentive / points programs

@@ -1,6 +1,6 @@
 # Strategies
 
-## Core Strategy: TWAP Market Making
+### Core Strategy: TWAP Market Making
 
 Arbital's core strategy is a TWAP-based passive market maker.
 
@@ -8,7 +8,7 @@ TWAP (Time-Weighted Average Price) means orders are placed gradually over time, 
 \
 But unlike traditional TWAP (used for execution), Arbital's TWAP is designed for market making, not directional trading.
 
-## What the Bot Actually Does
+### What the Bot Actually Does
 
 At all times, the bot:
 

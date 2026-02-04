@@ -1,14 +1,14 @@
 # Fee Structure
 
-**Total Fees Paid:** Exchange Maker Fee + Arbital Builder Fee
+**Total Fees Paid =** Exchange Maker Fee + Arbital Builder Fee
 
-## Arbital Builder Fee
+### Arbital Builder Fee
 
 For exchanges with a builder fee program:
 
 Arbital charges **2 bps (0.02%)** on executed volume.
 
-## Example
+### Example
 
 If:
 

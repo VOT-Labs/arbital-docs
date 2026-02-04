@@ -1,6 +1,6 @@
 # Inventory Management
 
-## What is Inventory?
+### What is Inventory?
 
 Inventory = how much of the asset the bot is currently holding (long or short).
 
@@ -9,7 +9,7 @@ Inventory = how much of the asset the bot is currently holding (long or short).
 * If the bot buys more than it sells → it becomes long
 * If it sells more than it buys → it becomes short
 
-## How Arbital Manages Inventory Automatically
+### How Arbital Manages Inventory Automatically
 
 Arbital actively prevents runaway exposure by:
 
@@ -20,7 +20,7 @@ Arbital actively prevents runaway exposure by:
 
 You don't need to manually rebalance - the bot does this continuously.
 
-## Directional Bias
+### Directional Bias
 
 Directional bias allows you to tilt execution toward buying or selling earlier in time, while still running a two-sided market making strategy.
 

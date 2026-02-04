@@ -1,6 +1,6 @@
 # Monitoring Your Bot
 
-## Bot Dashboard (Home Page)
+### Bot Dashboard (Home Page)
 
 You'll see:
 
@@ -10,7 +10,7 @@ You'll see:
 * Total volume generated
 * Total fees & PnL
 
-## Bot Stats Page
+### Bot Stats Page
 
 Each bot shows:
 
