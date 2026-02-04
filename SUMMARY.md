@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [What is Arbital?](what-is-arbital.md)
 * [Why Use Arbital?](why-use-arbital.md)
+* [Who Should Use Arbital?](when-to-use-arbital.md)
 * [Strategies](strategies.md)
 * [Execution Modes](execution-modes.md)
 * [Inventory Management](inventory-management.md)
@@ -12,5 +13,4 @@
 * [How to Set Up a Bot](setup-bot.md)
 * [Monitoring Your Bot](monitoring.md)
 * [Terminology](terminology.md)
-* [When Should You Use Arbital?](when-to-use-arbital.md)
 * [Support & Community](support.md)
