@@ -1,6 +1,6 @@
 # Introduction
 
-Arbital is building decentralized market making infrastructure - giving everyday traders access to strategies once reserved for professional market makers.
+**Arbital** is building decentralised market making infrastructure - giving everyday traders access to strategies once reserved for professional market makers.
 
 These are the same strategies used by:
 
