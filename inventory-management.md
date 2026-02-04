@@ -18,16 +18,16 @@ Arbital actively prevents runaway exposure by:
 * Adjusting spreads dynamically
 * Stopping one-sided trading if limits are hit
 
-You don't need to manually rebalance — the bot does this continuously.
+You don't need to manually rebalance - the bot does this continuously.
 
 ## Directional Bias
 
 Directional bias allows you to tilt execution toward buying or selling earlier in time, while still running a two-sided market making strategy.
 
 * The bot will always place both buy and sell orders.
-* Bias only affects **when** buys and sells happen — not **whether** they happen.
+* Bias only affects **when** buys and sells happen - not **whether** they happen.
 
-### Neutral (0.0)
+### Neutral&#x20;
 
 * Buy and sell orders are distributed evenly over time
 * Inventory stays close to zero
@@ -35,21 +35,21 @@ Directional bias allows you to tilt execution toward buying or selling earlier i
 
 This is pure market making.
 
-### Long Bias (+0.5 to +1.0)
+### Long Bias&#x20;
 
 * Buy orders are executed earlier than sell orders
 * Sell orders are executed later, not removed
 * Inventory becomes temporarily long
 
-This allows you to accumulate a position gradually, while continuing to earn maker fees.
+Long bias causes the bot to build a long position early, then even out over time through continued market making.
 
-### Short Bias (-0.5 to -1.0)
+### Short Bias&#x20;
 
 * Sell orders are executed earlier than buy orders
 * Buy orders are executed later, not removed
 * Inventory becomes temporarily short
 
-This allows you to reduce or distribute a position gradually, while continuing to earn maker fees.
+Short bias causes the bot to build a short position early, then even out over time through continued market making.
 
 ### Important Notes
 
