@@ -2,7 +2,7 @@
 
 Arbital lets you run automated market making strategies on perp DEXes to generate trading volume and farm points - without needing to actively trade.
 
-## The Problem
+### The Problem
 
 Market making is one of the most profitable and consistent trading strategies in crypto - but historically:
 
@@ -13,7 +13,7 @@ Market making is one of the most profitable and consistent trading strategies in
 
 Retail users were locked out.
 
-## The Arbital Solution
+### The Arbital Solution
 
 Arbital abstracts all of that complexity into simple, configurable bots that:
 
