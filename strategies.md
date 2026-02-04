@@ -1,10 +1,12 @@
-# What Kind of Strategies Does Arbital Run?
+# Strategies
 
 ## Core Strategy: TWAP Market Making
 
 Arbital's core strategy is a TWAP-based passive market maker.
 
-TWAP (Time-Weighted Average Price) means orders are placed gradually over time, rather than all at once. But unlike traditional TWAP (used for execution), Arbital's TWAP is designed for market making, not directional trading.
+TWAP (Time-Weighted Average Price) means orders are placed gradually over time, rather than all at once. \
+\
+But unlike traditional TWAP (used for execution), Arbital's TWAP is designed for market making, not directional trading.
 
 ## What the Bot Actually Does
 
@@ -24,7 +26,6 @@ This creates:
 
 * Trading volume
 * Spread capture
-* Maker fee rebates
 
 ## Why Use Arbital?
 
@@ -40,6 +41,6 @@ In return, Arbital users earn rewards through exchange incentive programs and ai
 
 ## Incentive Opportunities
 
-Professional market makers have historically earned six to eight figure rewards from ecosystem incentives such as $HYPE (Hyperliquid), $LIT (Lighter) and $ASTER (Aster).
+Professional market makers have historically captured a significant share of ecosystem incentive programs on exchanges such as Hyperliquid, Lighter, and Aster.
 
-While these opportunities were previously limited to top-tier firms, Arbital makes market making and its rewards accessible to everyone.
+These opportunities were previously limited to top-tier firms with specialized infrastructure. Arbital now makes market making and participation in ecosystem incentive programs accessible to everyone.
