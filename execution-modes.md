@@ -1,8 +1,8 @@
-# Execution Modes (Risk Profiles)
+# Execution Modes
 
 Arbital offers three execution modes, depending on how aggressive you want to be.
 
-## Aggressive (Default)
+## Aggressive
 
 * Fastest order refresh
 * Orders closer to top of the book/mid price
@@ -10,7 +10,7 @@ Arbital offers three execution modes, depending on how aggressive you want to be
 
 Aggressive mode will allow you to hit the target volume fastest, but is more prone to slippage and faster inventory accumulation during volatile conditions.
 
-## Normal
+## Normal (Default)
 
 * Balanced refresh
 * Moderate spreads
