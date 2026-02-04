@@ -1,6 +1,6 @@
-# Bot Parameters You Can Customize
+# Bot Parameters
 
-## Required Settings
+### Required Settings
 
 * **Strategy Type** — Short / Neutral / Long
 * **Exchange**
