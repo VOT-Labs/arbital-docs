@@ -20,6 +20,7 @@ Demo Video
 * Choose supported exchange
 * If you have not created the exchange accounts, feel free to use our referral links to get boosted points for your accounts
 * Choose trading pair
+* Most users should start with **BTC, ETH, SOL, HYPE**
 
 ## Step 4: Choose Execution Mode
 
