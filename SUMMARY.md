@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [What is Arbital?](what-is-arbital.md)
+* [Why Use Arbital?](why-use-arbital.md)
 * [Strategies](strategies.md)
 * [Execution Modes](execution-modes.md)
 * [Inventory Management](inventory-management.md)
