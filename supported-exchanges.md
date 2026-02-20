@@ -4,6 +4,7 @@
 
 * Pacifica
 * Extended
+* GRVT
 
 **Each exchange has:**
 
