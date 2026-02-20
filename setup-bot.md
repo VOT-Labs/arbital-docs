@@ -1,6 +1,6 @@
 # How to Set Up a Bot
 
-{% embed url="https://www.loom.com/share/009b1e3f75d14c38bcead32d1d3363da" %}
+{% embed url="https://drive.google.com/file/d/1zeQVuTfDbSGctpLsUC4rkGiRjZiPhqEy/preview" %}
 Demo Video
 {% endembed %}
 
