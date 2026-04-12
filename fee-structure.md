@@ -6,14 +6,14 @@
 
 For exchanges with a builder fee program:
 
-Arbital charges **2 bps (0.02%)** on executed volume.
+Arbital charges **1 bps (0.01%)** on executed volume.
 
 ### Example
 
 If:
 
 * Exchange maker fee = 1.5 bps
-* Arbital builder fee = 2.0 bps
-* **Total cost = 3.5 bps**
+* Arbital builder fee = 1.0 bps
+* **Total cost = 2.5 bps**
 
-This means: every $1M in volume will cost around \~$350 in fees paid.
+This means: every $1M in volume will cost around \~$250 in fees paid.
